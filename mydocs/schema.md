@@ -6,6 +6,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 title       | string    | not null
 url         | string    | not null
+description | string    | not null
 puppy_id    | integer   | not null, foreign key (references users), indexed
 
 
