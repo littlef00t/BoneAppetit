@@ -23,4 +23,6 @@ class ApplicationController < ActionController::Base
     current_user.reset_token!
     session[:session_token] = nil
   end
+
+  #require_no_user
 end
