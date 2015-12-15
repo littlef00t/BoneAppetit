@@ -1,4 +1,4 @@
-# Phase 2: Map (3 days)
+# Phase 3: Map (3 days)
 ## Rails
 ### Models
 

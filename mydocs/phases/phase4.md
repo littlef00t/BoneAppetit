@@ -1,4 +1,4 @@
-# Phase 2: Map (1-2 days)
+# Phase 4: The Search (1-2 days)
 ## Rails
 ### Models
 
