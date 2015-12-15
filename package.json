@@ -1,0 +1,24 @@
+{
+  "name": "sample-project-proposal-master",
+  "version": "1.0.0",
+  "description": "[Heroku link][heroku] **NB:** This should be a link to your production site",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/littlef00t/BoneAppetit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/littlef00t/BoneAppetit/issues"
+  },
+  "homepage": "https://github.com/littlef00t/BoneAppetit#readme"
+}

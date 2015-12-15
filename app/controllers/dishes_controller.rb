@@ -34,7 +34,7 @@ class DishesController < ApplicationController
 
   def update
     @dish = Dish.find(params[:id])
-    if @dish.update(dish_params)
+    if @dish.update_attributes(dish_params)
       render json: @dish
     else
       flash.now[:errors] = @dish.errors.full_messages

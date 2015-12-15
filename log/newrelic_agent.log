@@ -94,3 +94,5 @@
 [2015-12-15 13:41:21 -0800 Christines-MacBook-Pro.local (5605)] INFO : Installing Rails 4 Error instrumentation
 [2015-12-15 13:41:21 -0800 Christines-MacBook-Pro.local (5605)] INFO : Finished instrumentation
 [2015-12-15 13:41:21 -0800 Christines-MacBook-Pro.local (5605)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-15 14:06:35 -0800 Christines-MacBook-Pro.local (5605)] ERROR : Invalid license key, please contact support@newrelic.com
+[2015-12-15 14:06:35 -0800 Christines-MacBook-Pro.local (5605)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

@@ -1,1 +1,26 @@
 <h1>New Dish</h1>
+
+<%= render "shared/errors" %>
+
+<form action="<%= dishes_url %>" method="post">
+
+  <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+  <label for="dish_name">Dish</label>
+  <input type="text" name="dish[name]" value="" id="dish_name">
+  <br>
+
+  <label for="dish_description">Description</label>
+  <input type="text" name="dish[description]" value="" id="dish_description">
+  <br>
+
+  <input type="submit">
+
+  <br>
+
+  <%= link_to "Back to dishes", dishes_url %>
+
+</form>

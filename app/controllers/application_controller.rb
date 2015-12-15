@@ -28,5 +28,7 @@ class ApplicationController < ActionController::Base
     redirect_to new_session_url unless signed_in?
   end
 
-  #require_no_user
+  def require_no_user!
+    redirect_to dishes_url if current_user
+  end
 end
