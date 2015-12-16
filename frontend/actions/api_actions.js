@@ -9,6 +9,12 @@ var ApiActions = {
       actionType: DishConstants.DISHES_RECEIVED,
       dishes: dishes
     });
+  },
+  receiveOne: function (dish) {
+    AppDispatcher.dispatch({
+      actionType: DishConstants.DISH_RECEIVED,
+      dish: dish
+    });
   }
 }
 

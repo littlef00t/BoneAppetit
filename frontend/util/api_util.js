@@ -8,6 +8,14 @@ ApiUtil = {
         ApiActions.receiveAll(dishes);
       }
     })
+  },
+  fetchDish: function (id) {
+    $.ajax({
+      url: "api/dishes" + id,
+      success: function (dish) {
+        ApiActions.receiveOne(dish);
+      }
+    })
   }
 }
 
