@@ -1,14 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Index = require('./components/index');
 
-var Dish = React.createClass({
-  render: function () {
-    return (<div>I am a dish</div>);
-  }
 
-});
 
 document.addEventListener("DOMContentLoaded", function () {
-  ReactDOM.render(<Dish/>, document.getElementById('root')
+  ReactDOM.render(<Index/>, document.getElementById('root')
 );
 });

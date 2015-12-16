@@ -2810,3 +2810,258 @@ Started GET "/assets/bundle.self-ad8e860e3e7d0bef09f983fcdc8ee9220d0bee4d2d9bbd7
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-15 17:07:26 -0800
+
+
+Started GET "/" for ::1 at 2015-12-15 18:04:53 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 347ms (Views: 346.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:04:53 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:04:53 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:04:53 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:04:53 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-15 18:04:53 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:04:53 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-15 18:04:53 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-15 18:04:53 -0800
+
+
+Started GET "/assets/bundle.self-63b837fa2ce3bcf7f18567e2a35515f3b5ef009f35c1a562dfad753fa76cd377.js?body=1" for ::1 at 2015-12-15 18:04:53 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-15 18:04:53 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-15 18:04:53 -0800
+
+
+Started GET "/" for ::1 at 2015-12-15 18:05:55 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 285ms (Views: 284.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:05:56 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:05:56 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:05:56 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:05:56 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:05:56 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-15 18:05:56 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-15 18:05:56 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-15 18:05:56 -0800
+
+
+Started GET "/assets/bundle.self-749e4b3cc983ce2768066cd0458cf72d0d13d1251fa12ce014fe82977d242922.js?body=1" for ::1 at 2015-12-15 18:05:56 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-15 18:05:56 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-15 18:05:56 -0800
+
+
+Started GET "/" for ::1 at 2015-12-15 18:09:02 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 321ms (Views: 320.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.self-32a664f6c44a4b14610af28f6d6b348b3781ead0351c46d13339d7e5b8be4000.js?body=1" for ::1 at 2015-12-15 18:09:02 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:09:02 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:09:02 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:09:02 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:09:02 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 18:09:02 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-15 18:09:02 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-15 18:09:02 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-15 18:09:02 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-15 18:09:02 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-15 18:09:02 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-15 18:09:02 -0800
+Processing by Api::DishesController#index as JSON
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate - Missing template api/dishes/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/christineliao/Desktop/capstone/sample-project-proposal-master/app/views"
+:
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/rack/agent_hooks.rb:30:in `traced_call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/rack/browser_monitoring.rb:32:in `traced_call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
