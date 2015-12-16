@@ -3,9 +3,10 @@ var DishConstants = require('../constants/dish_constants');
 
 
 var ApiActions = {
-  recieveAll: function (dishes) {
+  receiveAll: function (dishes) {
+    // debugger;
     AppDispatcher.dispatch({
-      ActionType: DishConstants.DISHES_RECEIVED,
+      actionType: DishConstants.DISHES_RECEIVED,
       dishes: dishes
     });
   }

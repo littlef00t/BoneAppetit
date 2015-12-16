@@ -19671,7 +19671,7 @@
 	        return React.createElement(
 	          'li',
 	          { key: idx },
-	          dish.name
+	          dish.name + ": " + dish.description
 	        );
 	      })
 	    );
@@ -26409,12 +26409,12 @@
 
 	var ApiActions = __webpack_require__(183);
 
-	var ApiUtil = {
+	ApiUtil = {
 	  fetchDishes: function () {
 	    $.ajax({
 	      url: "api/dishes",
 	      success: function (dishes) {
-	        ApiActions.recieveAll(dishes);
+	        ApiActions.receiveAll(dishes);
 	      }
 	    });
 	  }
@@ -26430,9 +26430,10 @@
 	var DishConstants = __webpack_require__(181);
 
 	var ApiActions = {
-	  recieveAll: function (dishes) {
+	  receiveAll: function (dishes) {
+	    // debugger;
 	    AppDispatcher.dispatch({
-	      ActionType: DishConstants.DISHES_RECEIVED,
+	      actionType: DishConstants.DISHES_RECEIVED,
 	      dishes: dishes
 	    });
 	  }

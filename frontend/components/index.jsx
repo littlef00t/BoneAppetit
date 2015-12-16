@@ -22,7 +22,7 @@ var Index = React.createClass({
       <ul>
         {
           this.state.dishes.map(function (dish, idx) {
-            return <li key={idx}>{dish.name}</li>
+            return <li key={idx}>{dish.name + ": " + dish.description}</li>
           })
         }
       </ul>

@@ -1,11 +1,11 @@
 var ApiActions = require('../actions/api_actions');
 
-var ApiUtil = {
+ApiUtil = {
   fetchDishes: function () {
     $.ajax({
       url: "api/dishes",
       success: function (dishes) {
-        ApiActions.recieveAll(dishes);
+        ApiActions.receiveAll(dishes);
       }
     })
   }
