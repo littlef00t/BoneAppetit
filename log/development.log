@@ -4527,3 +4527,755 @@ Processing by Api::DishesController#index as JSON
   [1m[35mDish Load (1.4ms)[0m  SELECT "dishes".* FROM "dishes"
   Rendered api/dishes/index.json.jbuilder (17.7ms)
 Completed 200 OK in 26ms (Views: 12.1ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 10:05:10 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 32ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:05:10 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:05:10 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:05:10 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:05:10 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:05:10 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 10:05:10 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 10:05:10 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 10:05:10 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 10:05:10 -0800
+
+
+Started GET "/assets/bundle.self-8204940dce59aebad347190de6b2854f03988f7021b0cd5e6b19c8e4256a1a72.js?body=1" for ::1 at 2015-12-16 10:05:10 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 10:05:10 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 10:05:10 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.6ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (10.5ms)
+Completed 200 OK in 110ms (Views: 9.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 10:07:14 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 10:07:15 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (1.1ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (15.0ms)
+Completed 200 OK in 19ms (Views: 11.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 10:12:37 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 314ms (Views: 313.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:12:37 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:12:37 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:12:37 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:12:37 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 10:12:37 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 10:12:38 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:12:38 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 10:12:38 -0800
+
+
+Started GET "/assets/bundle.self-c106113cdcdac95291777b471ab1bd8b4a74863d505aa878066ca7fd08edeb45.js?body=1" for ::1 at 2015-12-16 10:12:38 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 10:12:38 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 10:12:38 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 10:13:12 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 356ms (Views: 355.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:13:13 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:13:13 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:13:13 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:13:13 -0800
+
+
+Started GET "/assets/bundle.self-fb10aee7ce22ac8a0d3cf229700e3ee1972b25e47bf904022c757b6d9fa10c8a.js?body=1" for ::1 at 2015-12-16 10:13:13 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:13:13 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 10:13:13 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 10:13:13 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 10:13:13 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 10:13:13 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 10:13:13 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 10:13:23 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 392ms (Views: 391.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:13:24 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:13:24 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:13:24 -0800
+
+
+Started GET "/assets/bundle.self-101ead4775d0fdb28e35cc84504a1fdac7c6d4de9c8527e8fab118dd4834d6b2.js?body=1" for ::1 at 2015-12-16 10:13:24 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:13:24 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:13:24 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 10:13:24 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 10:13:24 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 10:13:24 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 10:13:24 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 10:13:24 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 10:13:24 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (13.4ms)
+Completed 200 OK in 21ms (Views: 11.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 10:15:55 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 315ms (Views: 314.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:15:55 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:15:55 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:15:55 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:15:55 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:15:55 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 10:15:55 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 10:15:55 -0800
+
+
+Started GET "/assets/bundle.self-be18777a9d6b00af9322afd54ab42492cd203250aa82ff44a9128a16e914d99e.js?body=1" for ::1 at 2015-12-16 10:15:55 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 10:15:55 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 10:15:55 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 10:15:55 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 10:15:55 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.5ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (2.1ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 10:18:05 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 10:18:05 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (1.4ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 10:26:38 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 345ms (Views: 344.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:26:38 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:26:38 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:26:38 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:26:38 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:26:38 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 10:26:38 -0800
+
+
+Started GET "/assets/bundle.self-e98dcac1f4bdb095e723ca198945a1ddcca77d07994f80518df102c70341154b.js?body=1" for ::1 at 2015-12-16 10:26:38 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 10:26:38 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 10:26:38 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 10:26:38 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 10:26:38 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 10:26:38 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.9ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (2.4ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 10:27:03 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 308ms (Views: 307.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:27:03 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:27:03 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:27:03 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:27:03 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 10:27:03 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 10:27:03 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 10:27:04 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 10:27:04 -0800
+
+
+Started GET "/assets/bundle.self-7ddf5207fb58e194e39ab6b4beda2d9bb458f11ea751cab08537753c3a837711.js?body=1" for ::1 at 2015-12-16 10:27:04 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 10:27:04 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 10:27:04 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 10:27:04 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (1.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 11:13:55 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 308ms (Views: 307.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.self-16f85547268d1f6e500224dba90071e912815427af3413cf9ac545fbc2a44019.js?body=1" for ::1 at 2015-12-16 11:13:55 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:13:55 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:13:55 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:13:55 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:13:55 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:13:55 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 11:13:55 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 11:13:55 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 11:13:55 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 11:13:55 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 11:13:55 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 11:13:55 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (1.8ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 11:17:55 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 340ms (Views: 339.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:17:55 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:17:55 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:17:55 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:17:55 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:17:56 -0800
+
+
+Started GET "/assets/bundle.self-58ea1536dab6807ebea57da8f606bcd78bc82a166089f014f61f0c5b93a64965.js?body=1" for ::1 at 2015-12-16 11:17:56 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 11:17:56 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 11:17:56 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 11:17:56 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 11:17:56 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 11:17:56 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 11:17:56 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (1.5ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 11:45:09 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 303ms (Views: 302.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:45:10 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:45:10 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:45:10 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:45:10 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 11:45:10 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:45:10 -0800
+
+
+Started GET "/assets/bundle.self-98f91bdbebc0773900ce5dc195cf70f059a5484f344bbc2096c3e346d4f806cc.js?body=1" for ::1 at 2015-12-16 11:45:10 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 11:45:10 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 11:45:10 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 11:45:10 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 11:45:10 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 11:46:13 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 300ms (Views: 299.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:46:13 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:46:13 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 11:46:13 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:46:13 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:46:13 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:46:13 -0800
+
+
+Started GET "/assets/bundle.self-ae2ddb9d51d616d4acabc8fcee86aeb5fd0dd8e0e8019ede43f8ce9ddb7b01f2.js?body=1" for ::1 at 2015-12-16 11:46:13 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 11:46:13 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 11:46:13 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 11:46:13 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 11:46:13 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 11:46:13 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.3ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (1.5ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 11:48:26 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 332ms (Views: 331.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:48:26 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:48:26 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:48:26 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:48:26 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:48:26 -0800
+
+
+Started GET "/assets/bundle.self-a30fc4a724a735c6c1d74611357c4d694e36c4d3beaa196940576a36221e686c.js?body=1" for ::1 at 2015-12-16 11:48:26 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 11:48:26 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 11:48:26 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 11:48:26 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 11:48:26 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 11:48:26 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 11:50:04 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 310ms (Views: 309.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:50:04 -0800
+
+
+Started GET "/assets/bundle.self-3d02af65d95005daf831565ba83e9e41d7a7e02d56fb1719a4ecec203b82e3d7.js?body=1" for ::1 at 2015-12-16 11:50:04 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:50:04 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:50:04 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:50:04 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 11:50:04 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 11:50:04 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 11:50:04 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 11:50:04 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 11:50:04 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 11:50:04 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 12:00:37 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 300ms (Views: 299.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 12:00:37 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 12:00:37 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 12:00:37 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 12:00:37 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 12:00:37 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 12:00:37 -0800
+
+
+Started GET "/assets/bundle.self-4a15560ebd156da4d60dd9fbbf7f919f3a0ed593c5ff072d04f7c9cc22f7e307.js?body=1" for ::1 at 2015-12-16 12:00:37 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 12:00:37 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 12:00:37 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 12:00:37 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 12:00:37 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 12:02:08 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 12:02:08 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 12:02:08 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 12:02:08 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 12:02:08 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 12:02:08 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 12:02:08 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 12:02:08 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 12:02:08 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 12:02:08 -0800
+
+
+Started GET "/assets/bundle.self-4a15560ebd156da4d60dd9fbbf7f919f3a0ed593c5ff072d04f7c9cc22f7e307.js?body=1" for ::1 at 2015-12-16 12:02:08 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 12:02:08 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 14:26:30 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 339ms (Views: 338.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:26:30 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:26:30 -0800
+
+
+Started GET "/assets/bundle.self-bce82d5f14938f0e44895fdb2ff605636b2eb2b19283451a155cab11cdf46883.js?body=1" for ::1 at 2015-12-16 14:26:30 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:26:30 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:26:30 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:26:30 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 14:26:30 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 14:26:30 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 14:26:30 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 14:26:30 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 14:26:30 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 14:47:38 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 310ms (Views: 309.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:47:38 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:47:38 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:47:38 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:47:38 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 14:47:38 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 14:47:38 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:47:38 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 14:47:38 -0800
+
+
+Started GET "/assets/bundle.self-a3c372baa8f91ce791c4928bd0942cd4d3d275260f57ba77d72fd222fc06dcb1.js?body=1" for ::1 at 2015-12-16 14:47:38 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 14:47:38 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 14:47:38 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 14:47:39 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (1.7ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.4ms)

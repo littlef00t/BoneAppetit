@@ -1,6 +1,7 @@
 var React = require('react');
 var DishStore = require('../stores/dish');
 var ApiUtil = require('../util/api_util');
+var DishIndexItem = require('./indexItem');
 
 var Index = React.createClass({
   getInitialState: function () {
@@ -17,16 +18,23 @@ var Index = React.createClass({
   componentWillUnmount: function () {
     this.dishListener.remove();
   },
+  // handleItemClick: function (dish) {
+  //   this.props.history.pushState(null, "dishes/" + dish.id)
   render: function () {
     return (
-      <ul>
-        {
-          this.state.dishes.map(function (dish, idx) {
-            return <li key={idx}>{dish.name + ": " + dish.description}</li>
-          })
-        }
-      </ul>
-    )
+      <div>
+        <ul>
+          {
+            this.state.dishes.map(function (dish) {
+              return <DishIndexItem key={dish.id} dish={dish} />
+            })
+          }
+        </ul>
+        <input type="button" value="Sign Up"></input>
+        <input type="button" value="Sign In"></input>
+
+      </div>
+    );
   }
 })
 
