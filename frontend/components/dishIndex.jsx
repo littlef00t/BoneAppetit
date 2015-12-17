@@ -3,7 +3,7 @@ var DishStore = require('../stores/dish');
 var ApiUtil = require('../util/api_util');
 var DishIndexItem = require('./indexItem');
 
-var Index = React.createClass({
+var DishIndex = React.createClass({
   getInitialState: function () {
     return { dishes: DishStore.all() };
   },
@@ -13,13 +13,10 @@ var Index = React.createClass({
   componentDidMount: function () {
     this.dishListener = DishStore.addListener(this._onChange);
     ApiUtil.fetchDishes();
-
   },
   componentWillUnmount: function () {
     this.dishListener.remove();
   },
-  // handleItemClick: function (dish) {
-  //   this.props.history.pushState(null, "dishes/" + dish.id)
   render: function () {
     return (
       <div>
@@ -38,4 +35,4 @@ var Index = React.createClass({
   }
 })
 
-module.exports = Index;
+module.exports = DishIndex;

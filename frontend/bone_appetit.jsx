@@ -1,8 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var Index = require('./components/index');
+var DishIndex = require('./components/dishIndex');
 var IndexItem = require('./components/indexItem');
+var DishDetail = require('./components/dishDetail');
+
 
 var Router = require('react-router').Router;
 var Route = require('react-router').Route;
@@ -12,10 +14,12 @@ var App = require('./components/app');
 
 var routes = (
   <Route path="/" component={App}>
-    // <IndexRoute component={Index}/>
-    <Route path="dishes/:dishId" component={IndexItem}></Route>
+    <IndexRoute component={DishIndex}/>
+    <Route path="dishes" component={DishIndex} />
+    <Route path="dishes/:dishId" component={DishDetail}></Route>
   </Route>
 );
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   ReactDOM.render(<Index/>, document.getElementById('root')
 // );

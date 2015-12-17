@@ -14,7 +14,6 @@ var IndexItem = React.createClass({
     return (
       <li onClick={this.showDetail}>
         <p>Dish: {dish.name}</p>
-        <p>Description: {dish.description}</p>
       </li>
     );
   }
