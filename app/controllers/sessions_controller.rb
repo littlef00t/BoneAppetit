@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :require_no_user!, only: [:new, :create]
+  # before_action :require_no_user!, only: [:new, :create]
 
   def create
     user = User.find_by_credentials(
@@ -12,13 +12,14 @@ class SessionsController < ApplicationController
       render :new
     else
       sign_in(user)
-      redirect_to api_dishes_url
+      redirect_to :root
     end
   end
 
   def destroy
     sign_out
-    redirect_to new_session_url
+    # redirect_to new_session_url
+    render :index
   end
 
   def new

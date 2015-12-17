@@ -19738,10 +19738,12 @@
 	  dishes.forEach(function (dish) {
 	    _dishes[dish.id] = dish;
 	  });
+	  DishStore.__emitChange();
 	};
 	
 	var resetDish = function (dish) {
 	  _dishes[dish.id] = dish;
+	  DishStore.__emitChange();
 	};
 	
 	DishStore.__onDispatch = function (payload) {
@@ -19753,7 +19755,6 @@
 	      resetDish(payload.dish);
 	      break;
 	  }
-	  DishStore.__emitChange();
 	};
 	
 	module.exports = DishStore;
@@ -31293,18 +31294,21 @@
 	  getInitialState: function () {
 	    return {
 	      name: '',
-	      description: ''
+	      description: '',
+	      id: ''
 	    };
 	  },
 	  createDish: function (e) {
 	    e.preventDefault();
 	    var dish = this.state;
+	    debugger;
 	    ApiUtil.createDish(dish, (function (id) {
 	      this.history.pushState(null, "/dish/" + id, {});
 	    }).bind(this));
 	    this.setState({
 	      name: '',
-	      description: ''
+	      description: '',
+	      id: ''
 	    });
 	  },
 	
@@ -31649,28 +31653,18 @@
 	var React = __webpack_require__(1);
 	
 	var App = React.createClass({
-	  displayName: "App",
+	  displayName: 'App',
 	
 	  render: function () {
 	    return React.createElement(
-	      "div",
+	      'div',
 	      null,
 	      React.createElement(
-	        "h1",
+	        'h1',
 	        null,
-	        "Bone Appetit"
+	        'Bone Appetit'
 	      ),
-	      this.props.children,
-	      React.createElement(
-	        "a",
-	        { href: "/users/new" },
-	        "Sign Up"
-	      ),
-	      React.createElement(
-	        "a",
-	        { href: "/session/new" },
-	        "Sign In"
-	      )
+	      this.props.children
 	    );
 	  }
 	});

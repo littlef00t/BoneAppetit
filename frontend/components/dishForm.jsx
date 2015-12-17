@@ -8,18 +8,21 @@ var DishForm = React.createClass({
   getInitialState: function () {
     return {
       name: '',
-      description: ''
+      description: '',
+      id: ''
     };
   },
   createDish: function (e) {
     e.preventDefault();
     var dish = this.state;
+    debugger;
     ApiUtil.createDish(dish, function (id) {
       this.history.pushState(null, "/dish/" + id, {});
     }.bind(this));
     this.setState({
       name: '',
-      description: ''
+      description: '',
+      id: ''
     });
   },
 

@@ -23,10 +23,12 @@ var resetDishes = function (dishes) {
   dishes.forEach(function (dish) {
     _dishes[dish.id] = dish;
   })
+  DishStore.__emitChange();
 }
 
 var resetDish = function (dish) {
   _dishes[dish.id] = dish;
+  DishStore.__emitChange();
 }
 
 DishStore.__onDispatch = function (payload) {
@@ -38,7 +40,6 @@ DishStore.__onDispatch = function (payload) {
       resetDish(payload.dish);
       break;
   }
-  DishStore.__emitChange();
 }
 
 module.exports = DishStore;
