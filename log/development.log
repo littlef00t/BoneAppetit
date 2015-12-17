@@ -7044,3 +7044,532 @@ Processing by Api::DishesController#index as JSON
   [1m[35mDish Load (1.2ms)[0m  SELECT "dishes".* FROM "dishes"
   Rendered api/dishes/index.json.jbuilder (3.8ms)
 Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 18:01:55 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 18:01:56 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (1.3ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 18:01:57 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 18:01:57 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (1.5ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 18:01:57 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-16 18:01:57 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 18:01:57 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (1.7ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/dishes/1" for ::1 at 2015-12-16 18:02:04 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mDish Load (0.3ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered api/dishes/show.json.jbuilder (0.5ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 18:02:08 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 18:02:08 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (1.8ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 18:03:15 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 178ms (Views: 178.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 18:03:15 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 18:03:15 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 18:03:15 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 18:03:15 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 18:03:15 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-16 18:03:15 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 18:03:15 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 18:03:15 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 18:03:15 -0800
+
+
+Started GET "/assets/bundle.self-31622c865297f15b8f35060eb32902e4a52c61e30b2d4f136ebeece9a2dee178.js?body=1" for ::1 at 2015-12-16 18:03:15 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-16 18:03:15 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-16 18:03:15 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (2.0ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  BEGIN
+  [1m[36mSQL (4.1ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Karli"], ["password_digest", "$2a$10$joyRDO8Xia9cdVBWyggf/OfUBXPualmXKBlWFHuKBC/SbczD21SMm"], ["session_token", "76c03X9HGz5zCrwvBKXgtw"], ["created_at", "2015-12-17 02:13:58.912456"], ["updated_at", "2015-12-17 02:13:58.912456"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Seamus"], ["password_digest", "$2a$10$/taUQY/XQd0voNM9qrQmpeBBi12WtbD4f6NulvXUs7JIfALOP6yx."], ["session_token", "3nBqL9vFpIMREKcrul23Dw"], ["created_at", "2015-12-17 02:13:58.989163"], ["updated_at", "2015-12-17 02:13:58.989163"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Fatima"], ["password_digest", "$2a$10$kneJX7e3k2gO5XiMoUkwHu1t0g.R1RVlsIxgBsMROnBRz/Jatdgne"], ["session_token", "5HmyWb_nsl1m7r0jhjcQTA"], ["created_at", "2015-12-17 02:13:59.057560"], ["updated_at", "2015-12-17 02:13:59.057560"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Noemie"], ["password_digest", "$2a$10$qf90Z3I0.I5sD0iDdpaTaenZ4.tIaD3y7WmZ70rxI.3KnW.TKFn42"], ["session_token", "oGMZ8XQp5S60Ltd7qi0GAA"], ["created_at", "2015-12-17 02:13:59.127239"], ["updated_at", "2015-12-17 02:13:59.127239"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Vidal"], ["password_digest", "$2a$10$hhKTp9atVBTpCxxVFwaFi.lxKAD0tfU2wdh7UX.Gc68t7lYQaJCZG"], ["session_token", "2FOdy7h_DcBTiUNBIYR5zA"], ["created_at", "2015-12-17 02:13:59.198337"], ["updated_at", "2015-12-17 02:13:59.198337"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Ray"], ["password_digest", "$2a$10$2IBkHWXtVMMwDcSqtDmVZOpA1ctgy4/0IB3RSXA8p0SdecEsvOh.."], ["session_token", "XHMwvfnR8CVu-3vSlhQJdg"], ["created_at", "2015-12-17 02:13:59.272150"], ["updated_at", "2015-12-17 02:13:59.272150"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Dayne"], ["password_digest", "$2a$10$4lIXK444XdY76UmfEGjXWuGIBArxHj3ZLEV3ySO6DQArXC/Z0TaDu"], ["session_token", "AsM2jdAddZXwJ-xSD_YYAA"], ["created_at", "2015-12-17 02:13:59.342484"], ["updated_at", "2015-12-17 02:13:59.342484"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Newton"], ["password_digest", "$2a$10$wOUpjDv/FgpAotiQcWFrkeFiB1Vjn0QqOf0LTNeJXoM./siYb2eVO"], ["session_token", "hr2if_pGO91d1LuJOfYNWA"], ["created_at", "2015-12-17 02:13:59.410371"], ["updated_at", "2015-12-17 02:13:59.410371"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Dariana"], ["password_digest", "$2a$10$9wsRwdDA7BtGhVu3njaqyu9.8kbBCM9CiJrke0LuFpX2EPQGQNwvS"], ["session_token", "jDL3afY_kEeS0ZL8p0dRBQ"], ["created_at", "2015-12-17 02:13:59.479365"], ["updated_at", "2015-12-17 02:13:59.479365"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Flavio"], ["password_digest", "$2a$10$O.V.iwvVE.aSogil9tvnWuGFLR6qvQIj/.M1NDF0v9G4mlytZKznK"], ["session_token", "g9FHWuCN-7skQh2O0SOWEg"], ["created_at", "2015-12-17 02:13:59.553631"], ["updated_at", "2015-12-17 02:13:59.553631"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":fish_cake:"], ["description", "ipsam"], ["user_id", 1], ["created_at", "2015-12-17 02:13:59.565653"], ["updated_at", "2015-12-17 02:13:59.565653"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":green_apple:"], ["description", "maxime"], ["user_id", 4], ["created_at", "2015-12-17 02:13:59.567971"], ["updated_at", "2015-12-17 02:13:59.567971"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":rice_cracker:"], ["description", "illum"], ["user_id", 4], ["created_at", "2015-12-17 02:13:59.570075"], ["updated_at", "2015-12-17 02:13:59.570075"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":cocktail:"], ["description", "et"], ["user_id", 8], ["created_at", "2015-12-17 02:13:59.572279"], ["updated_at", "2015-12-17 02:13:59.572279"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":melon:"], ["description", "aut"], ["user_id", 2], ["created_at", "2015-12-17 02:13:59.574514"], ["updated_at", "2015-12-17 02:13:59.574514"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":tomato:"], ["description", "voluptas"], ["user_id", 1], ["created_at", "2015-12-17 02:13:59.576428"], ["updated_at", "2015-12-17 02:13:59.576428"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":candy:"], ["description", "est"], ["user_id", 2], ["created_at", "2015-12-17 02:13:59.578341"], ["updated_at", "2015-12-17 02:13:59.578341"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":custard:"], ["description", "quod"], ["user_id", 5], ["created_at", "2015-12-17 02:13:59.580267"], ["updated_at", "2015-12-17 02:13:59.580267"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":baby_bottle:"], ["description", "eligendi"], ["user_id", 8], ["created_at", "2015-12-17 02:13:59.582135"], ["updated_at", "2015-12-17 02:13:59.582135"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":apple:"], ["description", "distinctio"], ["user_id", 10], ["created_at", "2015-12-17 02:13:59.583965"], ["updated_at", "2015-12-17 02:13:59.583965"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDish Load (0.7ms)[0m  SELECT "dishes".* FROM "dishes"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Nelle"], ["password_digest", "$2a$10$heLuIqkaOhxUDkhyhUjcn.NXmhW0n/c.DA9d11wssn2zgQgcrarTa"], ["session_token", "fDPORhBIaf6sJrLIiaZGig"], ["created_at", "2015-12-17 02:14:57.694241"], ["updated_at", "2015-12-17 02:14:57.694241"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Laurianne"], ["password_digest", "$2a$10$Hu4UfadKhU2/A4TF8zDZHOTD3U5VkXVvFkO71O6YKrRBLg5AsKnWG"], ["session_token", "JMEd00T9pi_Ge0EPck84kw"], ["created_at", "2015-12-17 02:14:57.767918"], ["updated_at", "2015-12-17 02:14:57.767918"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Jaeden"], ["password_digest", "$2a$10$dZk3eFsEYX/hiDdy8M/e4e9SulQm4cIdmS/DuRt7AlApEXcqa7GS2"], ["session_token", "wkcpXiiZNbilAdyTPOZV2g"], ["created_at", "2015-12-17 02:14:57.839723"], ["updated_at", "2015-12-17 02:14:57.839723"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Vicky"], ["password_digest", "$2a$10$w65eaTXhNW5i2U33tij6U.SKx7GOlpMNzli18lSiDju/fQCMNO2fO"], ["session_token", "XbokOagoT9IY4KvJT-tmsw"], ["created_at", "2015-12-17 02:14:57.919280"], ["updated_at", "2015-12-17 02:14:57.919280"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Conner"], ["password_digest", "$2a$10$Td0E1/dsWTYzApfxEdT6guiD7w7PLFWVwfq35Ar1DNZGL77xTLHta"], ["session_token", "k_zlKxrj-4UEW077SCZX2w"], ["created_at", "2015-12-17 02:14:57.990773"], ["updated_at", "2015-12-17 02:14:57.990773"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Citlalli"], ["password_digest", "$2a$10$7v7PYqNRuQ4wnNuEAIHfKeQOFNChxFLPUHyyZZmxyksWdFy.rptp6"], ["session_token", "Te8cI2sapHw599v-vJ5UwQ"], ["created_at", "2015-12-17 02:14:58.059676"], ["updated_at", "2015-12-17 02:14:58.059676"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Victoria"], ["password_digest", "$2a$10$Pi6jUM0keChhJWz/1F2GZO/BBd81NIgRz77QJKOvhFj7aJ6NYeov6"], ["session_token", "nYK4pJPv2o4XnTRUalcQ9g"], ["created_at", "2015-12-17 02:14:58.128781"], ["updated_at", "2015-12-17 02:14:58.128781"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Devan"], ["password_digest", "$2a$10$MK5i/pvXoJZw7S1sZVFMje5h8PIQrMlJWs1MFcEpArtmf7c8vyRH2"], ["session_token", "izjRr8QY0jS4iVCP6DK3AQ"], ["created_at", "2015-12-17 02:14:58.193270"], ["updated_at", "2015-12-17 02:14:58.193270"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Ransom"], ["password_digest", "$2a$10$idEL6ZvreQ1BHQiUKwaYz.yjw/gnJ3mOH7MVD7I3RrG94sJ1Hh6H."], ["session_token", "8IgwCl5wwY9brUC6Xz-CZw"], ["created_at", "2015-12-17 02:14:58.264220"], ["updated_at", "2015-12-17 02:14:58.264220"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Dewayne"], ["password_digest", "$2a$10$mxsDPU3DWxwn0E89V27VzeYQnEvW0JjxdZzKYLFhsej9B3dP3RbjO"], ["session_token", "tKwzME7eDqXHQ1moMDMlfw"], ["created_at", "2015-12-17 02:14:58.334208"], ["updated_at", "2015-12-17 02:14:58.334208"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":fries:"], ["description", "et"], ["user_id", 6], ["created_at", "2015-12-17 02:14:58.348158"], ["updated_at", "2015-12-17 02:14:58.348158"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":lemon:"], ["description", "quia"], ["user_id", 10], ["created_at", "2015-12-17 02:14:58.351226"], ["updated_at", "2015-12-17 02:14:58.351226"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":apple:"], ["description", "reiciendis"], ["user_id", 3], ["created_at", "2015-12-17 02:14:58.354179"], ["updated_at", "2015-12-17 02:14:58.354179"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":lemon:"], ["description", "error"], ["user_id", 5], ["created_at", "2015-12-17 02:14:58.356993"], ["updated_at", "2015-12-17 02:14:58.356993"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":bento:"], ["description", "omnis"], ["user_id", 1], ["created_at", "2015-12-17 02:14:58.359036"], ["updated_at", "2015-12-17 02:14:58.359036"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":fork_and_knife:"], ["description", "similique"], ["user_id", 3], ["created_at", "2015-12-17 02:14:58.361237"], ["updated_at", "2015-12-17 02:14:58.361237"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":apple:"], ["description", "omnis"], ["user_id", 6], ["created_at", "2015-12-17 02:14:58.363625"], ["updated_at", "2015-12-17 02:14:58.363625"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":apple:"], ["description", "quia"], ["user_id", 2], ["created_at", "2015-12-17 02:14:58.365554"], ["updated_at", "2015-12-17 02:14:58.365554"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":rice_cracker:"], ["description", "repudiandae"], ["user_id", 1], ["created_at", "2015-12-17 02:14:58.367450"], ["updated_at", "2015-12-17 02:14:58.367450"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":rice_cracker:"], ["description", "tempora"], ["user_id", 4], ["created_at", "2015-12-17 02:14:58.369274"], ["updated_at", "2015-12-17 02:14:58.369274"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mDish Load (0.7ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Julius"], ["password_digest", "$2a$10$Hk6zpZOH8QcFVT7qzf4dqudnUx3vwQYk1.5xJtp.YEWCG3/SvSXna"], ["session_token", "m6TkvSWdAP9FcyraoHcQ8g"], ["created_at", "2015-12-17 02:16:30.221134"], ["updated_at", "2015-12-17 02:16:30.221134"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Annette"], ["password_digest", "$2a$10$FJOOip1rf0SMSP2Bz0ljY.W7zdh07i.h6SteQ1HBdJeCDyK8/ABUS"], ["session_token", "Zy2Wrn5uaCyLmHb5aCCR3A"], ["created_at", "2015-12-17 02:16:30.289568"], ["updated_at", "2015-12-17 02:16:30.289568"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Milo"], ["password_digest", "$2a$10$Enyi0NdkbkMHJL.s7xeoaex3aTLf3gIM1sEmGRPKk3TDaWuK4ZIXq"], ["session_token", "mWh7VWpQHI4AYlG1j1tmxw"], ["created_at", "2015-12-17 02:16:30.356852"], ["updated_at", "2015-12-17 02:16:30.356852"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Kyleigh"], ["password_digest", "$2a$10$yZJKrvjcI8J/7F1fpwrmO.wBU.aFZ1262ZpikJXh6Tgj3ueF8ZkbS"], ["session_token", "-kbQZbusmRTIwU3P78cgyg"], ["created_at", "2015-12-17 02:16:30.434960"], ["updated_at", "2015-12-17 02:16:30.434960"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Lula"], ["password_digest", "$2a$10$L.aHNhMYs2Q3qCJyCZ7q3uVIvIjHaD67SIrc47Hch73uSjEIniZua"], ["session_token", "kNGOCr_PnEM68aHcc91tFA"], ["created_at", "2015-12-17 02:16:30.504958"], ["updated_at", "2015-12-17 02:16:30.504958"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Helene"], ["password_digest", "$2a$10$sDn5ti2416hhBT2YmE94/.CighuYvdQ2XwdGk3OGhsvBDb7VzCkKS"], ["session_token", "YhIF7mpvD9xCizFyZ1j4kg"], ["created_at", "2015-12-17 02:16:30.572880"], ["updated_at", "2015-12-17 02:16:30.572880"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Ollie"], ["password_digest", "$2a$10$LLG5piDFaHRGzNlrVhADTOdm9UmSbTelUxbkXbukGzS8Xuojhg0J."], ["session_token", "-lEEYvu8Bkkp9jMues4ceQ"], ["created_at", "2015-12-17 02:16:30.642415"], ["updated_at", "2015-12-17 02:16:30.642415"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Bernhard"], ["password_digest", "$2a$10$rmkQSlUWJ7uLM31sm3HbhOOVh/1aK/rv2MLMoU6is4rZP6UBPfG4O"], ["session_token", "B9twbCbMcgV9ylQ8hwiNuA"], ["created_at", "2015-12-17 02:16:30.710829"], ["updated_at", "2015-12-17 02:16:30.710829"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Axel"], ["password_digest", "$2a$10$ohRmANO0kM7RA7qTRpcnSO.XqOW6pjjkT9wrYRR0NLFnEj3h1F1ry"], ["session_token", "S7aQwY4DnBSh8bQEEd8G9g"], ["created_at", "2015-12-17 02:16:30.777147"], ["updated_at", "2015-12-17 02:16:30.777147"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Shawn"], ["password_digest", "$2a$10$jL22k4TFsVCDYLwd7FH9/ec6sFlcxam/ApOgTP3zn41N8e9.4wLSy"], ["session_token", "SZs82TzmEpX8z4N-lhRPlw"], ["created_at", "2015-12-17 02:16:30.843753"], ["updated_at", "2015-12-17 02:16:30.843753"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":tomato:"], ["description", "amet"], ["user_id", 6], ["created_at", "2015-12-17 02:16:30.857135"], ["updated_at", "2015-12-17 02:16:30.857135"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":pear:"], ["description", "quidem"], ["user_id", 4], ["created_at", "2015-12-17 02:16:30.859585"], ["updated_at", "2015-12-17 02:16:30.859585"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":cake:"], ["description", "sit"], ["user_id", 1], ["created_at", "2015-12-17 02:16:30.861633"], ["updated_at", "2015-12-17 02:16:30.861633"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":shaved_ice:"], ["description", "est"], ["user_id", 1], ["created_at", "2015-12-17 02:16:30.863582"], ["updated_at", "2015-12-17 02:16:30.863582"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":lemon:"], ["description", "temporibus"], ["user_id", 3], ["created_at", "2015-12-17 02:16:30.865394"], ["updated_at", "2015-12-17 02:16:30.865394"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":dango:"], ["description", "et"], ["user_id", 3], ["created_at", "2015-12-17 02:16:30.867229"], ["updated_at", "2015-12-17 02:16:30.867229"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":coffee:"], ["description", "qui"], ["user_id", 4], ["created_at", "2015-12-17 02:16:30.869042"], ["updated_at", "2015-12-17 02:16:30.869042"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":custard:"], ["description", "voluptate"], ["user_id", 1], ["created_at", "2015-12-17 02:16:30.870738"], ["updated_at", "2015-12-17 02:16:30.870738"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":sushi:"], ["description", "et"], ["user_id", 8], ["created_at", "2015-12-17 02:16:30.872520"], ["updated_at", "2015-12-17 02:16:30.872520"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":rice_ball:"], ["description", "ut"], ["user_id", 4], ["created_at", "2015-12-17 02:16:30.874491"], ["updated_at", "2015-12-17 02:16:30.874491"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mDish Load (0.6ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[36mSQL (1.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.1ms)[0m  CREATE TABLE "dishes" ("id" serial primary key, "name" character varying NOT NULL, "description" character varying NOT NULL, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (4.2ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215195612')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215173149')
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.4ms)[0m  CREATE TABLE "dishes" ("id" serial primary key, "name" character varying NOT NULL, "description" character varying NOT NULL, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (6.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (2.8ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215195612')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215173149')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Fredrick"], ["password_digest", "$2a$10$WgX4.TX77eq4R1YL/UqnbucbqvSg6KahGsGtUhfefg5H/ohyz8vrm"], ["session_token", "aVwou7kbR1v6YSiYnI16_g"], ["created_at", "2015-12-17 02:17:00.429078"], ["updated_at", "2015-12-17 02:17:00.429078"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Westley"], ["password_digest", "$2a$10$qaVE4HtH/vMWENp4klh5H.PrVGG.oZ8mU672vLdBM3ivqc0oxOXGm"], ["session_token", "ArHKHup4iEi7Mcn4uhHTVg"], ["created_at", "2015-12-17 02:17:00.502176"], ["updated_at", "2015-12-17 02:17:00.502176"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Filiberto"], ["password_digest", "$2a$10$g61/ZcvRg6XYDAhCEjUz6uB8tiDjN9miLa3Lm2246QhZo9.iCDH26"], ["session_token", "qFB6KQwFsMP-t153Wdc8gg"], ["created_at", "2015-12-17 02:17:00.574133"], ["updated_at", "2015-12-17 02:17:00.574133"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Krystina"], ["password_digest", "$2a$10$GCVCu0bvoBRNrlY75VgYIuOb82kUIEdzXmd.WXhyzaBc7XoBO6zBK"], ["session_token", "JHjV9mt0Vl3SImVxK6jXiQ"], ["created_at", "2015-12-17 02:17:00.641504"], ["updated_at", "2015-12-17 02:17:00.641504"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Werner"], ["password_digest", "$2a$10$TQ8/2LZyRnS7E1cUJ9xlJu7hJMWEcvBOrlAp5iOLdK1elRv/mb4N."], ["session_token", "7VTQYtSRGbsQGC0QUI0RCw"], ["created_at", "2015-12-17 02:17:00.709031"], ["updated_at", "2015-12-17 02:17:00.709031"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Jeff"], ["password_digest", "$2a$10$s9fWP4L6gF5f5Zk2dpoagOezY8GzubEhHS87GPf.ksAAlKUpyMID."], ["session_token", "VKsfmgAg_MZvgqnJ2Uq0Gw"], ["created_at", "2015-12-17 02:17:00.778944"], ["updated_at", "2015-12-17 02:17:00.778944"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Dolores"], ["password_digest", "$2a$10$fB4nW21vE1gfDU5xbcVfL.CvS.5lP36A8guMkkjh83paI9MPnqzl."], ["session_token", "Te0ny8xDh0Dpit15NxnPwg"], ["created_at", "2015-12-17 02:17:00.849151"], ["updated_at", "2015-12-17 02:17:00.849151"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Betsy"], ["password_digest", "$2a$10$NTvmBi0tpdWtU3tIKmWfjOI5AJ5/Zrb424I8buCxMdbI5j0Rr3dce"], ["session_token", "8BGGh-lInTGWzX0TGzVCnw"], ["created_at", "2015-12-17 02:17:00.916289"], ["updated_at", "2015-12-17 02:17:00.916289"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Wilhelm"], ["password_digest", "$2a$10$.jtrXjJXLNWts3f9oEW/QuTAh7gyR/.nQmbwG2xwev0mNNT6zKTAu"], ["session_token", "tR01lPOKHPgDKhpGxpYqew"], ["created_at", "2015-12-17 02:17:00.986511"], ["updated_at", "2015-12-17 02:17:00.986511"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Rollin"], ["password_digest", "$2a$10$kVrXr73WHccSBhFUSoxh4ONqBB4aSrBFoqkAlGLdZxweRDRTvxMwe"], ["session_token", "RUNOQIDj7TB8NQiezMjWCw"], ["created_at", "2015-12-17 02:17:01.061664"], ["updated_at", "2015-12-17 02:17:01.061664"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":eggplant:"], ["description", "voluptates"], ["user_id", 9], ["created_at", "2015-12-17 02:17:01.072175"], ["updated_at", "2015-12-17 02:17:01.072175"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":banana:"], ["description", "et"], ["user_id", 4], ["created_at", "2015-12-17 02:17:01.074617"], ["updated_at", "2015-12-17 02:17:01.074617"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":chocolate_bar:"], ["description", "est"], ["user_id", 6], ["created_at", "2015-12-17 02:17:01.076557"], ["updated_at", "2015-12-17 02:17:01.076557"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":green_apple:"], ["description", "atque"], ["user_id", 8], ["created_at", "2015-12-17 02:17:01.078313"], ["updated_at", "2015-12-17 02:17:01.078313"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":dango:"], ["description", "delectus"], ["user_id", 6], ["created_at", "2015-12-17 02:17:01.080048"], ["updated_at", "2015-12-17 02:17:01.080048"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":ice_cream:"], ["description", "commodi"], ["user_id", 8], ["created_at", "2015-12-17 02:17:01.081815"], ["updated_at", "2015-12-17 02:17:01.081815"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":oden:"], ["description", "excepturi"], ["user_id", 6], ["created_at", "2015-12-17 02:17:01.083580"], ["updated_at", "2015-12-17 02:17:01.083580"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":apple:"], ["description", "illum"], ["user_id", 5], ["created_at", "2015-12-17 02:17:01.085275"], ["updated_at", "2015-12-17 02:17:01.085275"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ":corn:"], ["description", "ratione"], ["user_id", 3], ["created_at", "2015-12-17 02:17:01.086961"], ["updated_at", "2015-12-17 02:17:01.086961"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", ":cake:"], ["description", "non"], ["user_id", 3], ["created_at", "2015-12-17 02:17:01.088738"], ["updated_at", "2015-12-17 02:17:01.088738"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mDish Load (0.5ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/" for ::1 at 2015-12-17 09:12:33 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (1.5ms)
+Completed 200 OK in 648ms (Views: 648.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-17 09:12:34 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-17 09:12:34 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-17 09:12:34 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (1.2ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (13.4ms)
+Completed 200 OK in 21ms (Views: 10.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/dishes/1" for ::1 at 2015-12-17 09:12:41 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered api/dishes/show.json.jbuilder (0.4ms)
+Completed 200 OK in 15ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-17 09:12:44 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (2.0ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/dishes/3" for ::1 at 2015-12-17 09:12:46 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered api/dishes/show.json.jbuilder (0.3ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-17 09:12:48 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.5ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (1.9ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/dishes/9" for ::1 at 2015-12-17 09:12:49 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"9"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  Rendered api/dishes/show.json.jbuilder (0.2ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-17 09:12:52 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (1.8ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for ::1 at 2015-12-17 09:14:22 -0800
+Processing by SessionsController#new as HTML
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-12-17 09:15:11 -0800
+Processing by SessionsController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-12-17 09:15:37 -0800
+Processing by UsersController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 29.9ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users" for ::1 at 2015-12-17 09:15:47 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"hxy2mW4d0HCdj3xF9wJE9JwKA4cBURJHuV4tWr8/SBM7TUzddE7fLnUv5J3lqsupPnJ+9NQvKJI87L2KdZ/+fw==", "user"=>{"username"=>"Koda", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "Koda"], ["password_digest", "$2a$10$WEIv5hKjggQreXsmfP9pTOvn8S/SApaH2c63ICmwzDR744Xwb9h4a"], ["session_token", "AtpymWIE-U5q_fnKfAOvhA"], ["created_at", "2015-12-17 17:15:47.408194"], ["updated_at", "2015-12-17 17:15:47.408194"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "2ZQGKoH28sKpelCllfxgNA"], ["updated_at", "2015-12-17 17:15:47.412451"], ["id", 11]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/api/dishes
+Completed 302 Found in 77ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-17 09:15:47 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (1.3ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-17 09:18:44 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-17 09:18:44 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.3ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (1.3ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/dishes/5" for ::1 at 2015-12-17 09:24:34 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mDish Load (0.6ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered api/dishes/show.json.jbuilder (0.3ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-17 09:24:37 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (1.8ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/dishes/10" for ::1 at 2015-12-17 09:24:39 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  Rendered api/dishes/show.json.jbuilder (0.5ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-17 09:24:41 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.3ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (2.4ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms)
