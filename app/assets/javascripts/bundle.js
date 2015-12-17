@@ -49,13 +49,13 @@
 	
 	var DishIndex = __webpack_require__(159);
 	var IndexItem = __webpack_require__(184);
-	var DishDetail = __webpack_require__(236);
+	var DishDetail = __webpack_require__(240);
 	
 	var Router = __webpack_require__(185).Router;
 	var Route = __webpack_require__(185).Route;
 	var IndexRoute = __webpack_require__(185).IndexRoute;
 	
-	var App = __webpack_require__(237);
+	var App = __webpack_require__(241);
 	
 	var routes = React.createElement(
 	  Route,
@@ -31283,7 +31283,7 @@
 
 	var React = __webpack_require__(1);
 	var History = __webpack_require__(185).History;
-	var LinkedStateMixin = __webpack_require__(238);
+	var LinkedStateMixin = __webpack_require__(236);
 	var ApiUtil = __webpack_require__(182);
 	
 	var DishForm = React.createClass({
@@ -31353,107 +31353,10 @@
 /* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(1);
-	var DishStore = __webpack_require__(160);
-	var ApiUtil = __webpack_require__(182);
-	var ReactRouter = __webpack_require__(185);
-	
-	var DishDetail = React.createClass({
-	  displayName: 'DishDetail',
-	
-	  getStateFromStore: function () {
-	    return { dish: DishStore.find(parseInt(this.props.params.dishId)) };
-	  },
-	
-	  getInitialState: function () {
-	    return this.getStateFromStore();
-	  },
-	
-	  _onChange: function () {
-	    this.setState(this.getStateFromStore());
-	  },
-	
-	  componentWillReceiveProps: function (newProps) {
-	    ApiUtil.fetchDish(parseInt(newProps.params.dishId));
-	    this._onChange();
-	  },
-	  componentDidMount: function () {
-	    this.dishListener = DishStore.addListener(this._onChange);
-	    ApiUtil.fetchDish(parseInt(this.props.params.dishId));
-	  },
-	  componentWillUnmount: function () {
-	    this.dishListener.remove();
-	  },
-	  render: function () {
-	    var Link = ReactRouter.Link;
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(
-	        'h4',
-	        null,
-	        'Dish: ',
-	        this.state.dish.name
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        'Description: ',
-	        this.state.dish.description
-	      ),
-	      React.createElement(
-	        Link,
-	        { to: '/' },
-	        ' Back to Dishes Index '
-	      )
-	    );
-	  }
-	});
-	
-	module.exports = DishDetail;
+	module.exports = __webpack_require__(237);
 
 /***/ },
 /* 237 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(1);
-	
-	var App = React.createClass({
-	  displayName: "App",
-	
-	  render: function () {
-	    return React.createElement(
-	      "div",
-	      null,
-	      React.createElement(
-	        "h1",
-	        null,
-	        "Bone Appetit"
-	      ),
-	      this.props.children,
-	      React.createElement(
-	        "a",
-	        { href: "/users/new" },
-	        "Sign Up"
-	      ),
-	      React.createElement(
-	        "a",
-	        { href: "/session/new" },
-	        "Sign In"
-	      )
-	    );
-	  }
-	});
-	module.exports = App;
-
-/***/ },
-/* 238 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(239);
-
-/***/ },
-/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -31470,8 +31373,8 @@
 	
 	'use strict';
 	
-	var ReactLink = __webpack_require__(240);
-	var ReactStateSetters = __webpack_require__(241);
+	var ReactLink = __webpack_require__(238);
+	var ReactStateSetters = __webpack_require__(239);
 	
 	/**
 	 * A simple mixin around ReactLink.forState().
@@ -31494,7 +31397,7 @@
 	module.exports = LinkedStateMixin;
 
 /***/ },
-/* 240 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -31568,7 +31471,7 @@
 	module.exports = ReactLink;
 
 /***/ },
-/* 241 */
+/* 239 */
 /***/ function(module, exports) {
 
 	/**
@@ -31675,6 +31578,103 @@
 	};
 	
 	module.exports = ReactStateSetters;
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var DishStore = __webpack_require__(160);
+	var ApiUtil = __webpack_require__(182);
+	var ReactRouter = __webpack_require__(185);
+	
+	var DishDetail = React.createClass({
+	  displayName: 'DishDetail',
+	
+	  getStateFromStore: function () {
+	    return { dish: DishStore.find(parseInt(this.props.params.dishId)) };
+	  },
+	
+	  getInitialState: function () {
+	    return this.getStateFromStore();
+	  },
+	
+	  _onChange: function () {
+	    this.setState(this.getStateFromStore());
+	  },
+	
+	  componentWillReceiveProps: function (newProps) {
+	    ApiUtil.fetchDish(parseInt(newProps.params.dishId));
+	    this._onChange();
+	  },
+	  componentDidMount: function () {
+	    this.dishListener = DishStore.addListener(this._onChange);
+	    ApiUtil.fetchDish(parseInt(this.props.params.dishId));
+	  },
+	  componentWillUnmount: function () {
+	    this.dishListener.remove();
+	  },
+	  render: function () {
+	    var Link = ReactRouter.Link;
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h4',
+	        null,
+	        'Dish: ',
+	        this.state.dish.name
+	      ),
+	      React.createElement(
+	        'p',
+	        null,
+	        'Description: ',
+	        this.state.dish.description
+	      ),
+	      React.createElement(
+	        Link,
+	        { to: '/' },
+	        ' Back to Dishes Index '
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = DishDetail;
+
+/***/ },
+/* 241 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var App = React.createClass({
+	  displayName: "App",
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h1",
+	        null,
+	        "Bone Appetit"
+	      ),
+	      this.props.children,
+	      React.createElement(
+	        "a",
+	        { href: "/users/new" },
+	        "Sign Up"
+	      ),
+	      React.createElement(
+	        "a",
+	        { href: "/session/new" },
+	        "Sign In"
+	      )
+	    );
+	  }
+	});
+	module.exports = App;
 
 /***/ }
 /******/ ]);

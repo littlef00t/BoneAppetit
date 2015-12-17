@@ -8,7 +8,10 @@ class Api::DishesController < ApplicationController
   end
 
   def create
-    @dish = Dish.new(dish_params)
+    dish = Dish.new(dish_params)
+    dish.user_id = current_user.id
+    Dish.save!
+    render json: dish
   end
 
   private
