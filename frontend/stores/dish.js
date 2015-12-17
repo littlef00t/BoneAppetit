@@ -26,7 +26,7 @@ var resetDishes = function (dishes) {
 }
 
 var resetDish = function (dish) {
-  _dish[dish.id] = dish;
+  _dishes[dish.id] = dish;
 }
 
 DishStore.__onDispatch = function (payload) {
@@ -34,7 +34,7 @@ DishStore.__onDispatch = function (payload) {
     case DishConstants.DISHES_RECEIVED:
       resetDishes(payload.dishes);
       break;
-    case DishConstant.DISH_RECEIVED:
+    case DishConstants.DISH_RECEIVED:
       resetDish(payload.dish);
       break;
   }

@@ -1,6 +1,7 @@
 var React = require('react');
 var DishStore = require('../stores/dish');
 var ApiUtil = require('../util/api_util');
+var ReactRouter = require('react-router');
 
 var DishDetail = React.createClass({
   getStateFromStore: function () {
@@ -17,6 +18,7 @@ var DishDetail = React.createClass({
 
   componentWillReceiveProps: function (newProps) {
     ApiUtil.fetchDish(parseInt(newProps.params.dishId));
+    this._onChange();
   },
   componentDidMount: function () {
     this.dishListener = DishStore.addListener(this._onChange);
@@ -26,10 +28,12 @@ var DishDetail = React.createClass({
     this.dishListener.remove();
   },
   render: function () {
+    var Link = ReactRouter.Link;
     return (
       <div>
         <h4>Dish: {this.state.dish.name}</h4>
         <p>Description: {this.state.dish.description}</p>
+        <Link to="/" > Back to Dishes Index </Link>
       </div>
     );
   }

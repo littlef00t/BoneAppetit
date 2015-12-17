@@ -11,7 +11,7 @@ ApiUtil = {
   },
   fetchDish: function (id) {
     $.ajax({
-      url: "api/dishes" + id,
+      url: "api/dishes/" + id,
       success: function (dish) {
         ApiActions.receiveOne(dish);
       }
