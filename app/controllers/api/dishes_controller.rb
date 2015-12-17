@@ -6,4 +6,13 @@ class Api::DishesController < ApplicationController
   def show
     @dish = Dish.find(params[:id])
   end
+
+  def create
+    @dish = Dish.new(dish_params)
+  end
+
+  private
+  def dish_params
+    params.require(:dish).permit(:name, :description)
+  end
 end

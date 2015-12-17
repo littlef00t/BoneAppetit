@@ -6,6 +6,8 @@ var App = React.createClass({
       <div>
         <h1>Bone Appetit</h1>
         {this.props.children}
+        <a href="/users/new">Sign Up</a>
+        <a href="/session/new">Sign In</a>
       </div>
     )
   }
