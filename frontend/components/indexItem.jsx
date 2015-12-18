@@ -14,9 +14,21 @@ var IndexItem = React.createClass({
   },
   render: function () {
     var dish = this.props.dish;
+    debugger;
     return (
       <li>
         <p onClick={this.showDetail}>Dish: {dish.name}</p>
+        <ul>
+          {dish.images.map(function (image) {
+                return (
+                  <li key={image.id}>
+                    <img src={image.url}/>
+                  </li>
+                );
+              }
+            )
+          }
+        </ul>
         <input type="button" dish={dish} onClick={this.handleDelete} value="Delete"/>
       </li>
     );

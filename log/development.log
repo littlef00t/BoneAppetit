@@ -14937,3 +14937,2350 @@ Processing by Api::DishesController#show as JSON
   [1m[35mDish Load (0.3ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 28]]
   Rendered api/dishes/show.json.jbuilder (0.2ms)
 Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 11:08:49 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError - 
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+:
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/ce26b37af3243fcd/variables" for ::1 at 2015-12-18 11:08:49 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 11:10:02 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 309ms (Views: 308.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-c95670fb8e913392a761e940c882d4d23fd1e24f76587a6b56258bb4e2d45765.js?body=1" for ::1 at 2015-12-18 11:10:02 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 11:10:02 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (6.3ms)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 11:10:02 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 11:19:00 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 11:19:00 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 70ms (Views: 69.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 11:19:00 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 11:19:01 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.5ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (2.9ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 11:41:47 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 55ms (Views: 54.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 11:41:47 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 11:41:47 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 11:41:47 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 11:41:47 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 11:41:47 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 11:41:47 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 11:41:47 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 11:41:47 -0800
+
+
+Started GET "/assets/bundle.self-c95670fb8e913392a761e940c882d4d23fd1e24f76587a6b56258bb4e2d45765.js?body=1" for ::1 at 2015-12-18 11:41:47 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 11:41:47 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 11:41:47 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 11:41:47 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.3ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (2.4ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 11:42:20 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 345ms (Views: 344.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 11:42:21 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 11:42:21 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 11:42:21 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 11:42:21 -0800
+
+
+Started GET "/assets/bundle.self-b0f9ec1eab1a8b9e435e5d54be3809fb1ee0d4000baec880f8f0b6749fd28b26.js?body=1" for ::1 at 2015-12-18 11:42:21 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 11:42:21 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 11:42:21 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 11:42:21 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 11:42:21 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 11:42:21 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 11:42:21 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 11:42:21 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.6ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (2.9ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateImages (20151218194901)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (15.3ms)[0m  [1mCREATE TABLE "images" ("id" serial primary key, "url" character varying NOT NULL, "dish_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151218194901"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'dishes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'images'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2015-12-18 12:26:59 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 126ms (Views: 123.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:27:00 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:27:00 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:27:00 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:27:00 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:27:00 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:27:00 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 12:27:00 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 12:27:00 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 12:27:00 -0800
+
+
+Started GET "/assets/bundle.self-b0f9ec1eab1a8b9e435e5d54be3809fb1ee0d4000baec880f8f0b6749fd28b26.js?body=1" for ::1 at 2015-12-18 12:27:00 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 12:27:00 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 12:27:00 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 12:27:00 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.7ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (10.4ms)
+Completed 200 OK in 20ms (Views: 9.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 12:29:18 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 298ms (Views: 298.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:29:19 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:29:19 -0800
+
+
+Started GET "/assets/bundle.self-4dfaf934d1f731b0882fb150aa832a11f66f9330b550857c1e4e09cd177b13be.js?body=1" for ::1 at 2015-12-18 12:29:19 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:29:19 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:29:19 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 12:29:19 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:29:19 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:29:19 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 12:29:19 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 12:29:19 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 12:29:19 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 12:29:19 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 12:31:31 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 378ms (Views: 377.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 12:31:32 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-8f0567ebcb5ea4dbccfe2d3a366dbe830a2b09eeaad12bfca51b6769bb2cb210.js?body=1" for ::1 at 2015-12-18 12:31:32 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 12:31:32 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 12:31:55 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 345ms (Views: 344.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 12:31:56 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 32ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-39caa0c8d95585f047b98ac26ff23113a054fdb24740b2f781763d8625a88a43.js?body=1" for ::1 at 2015-12-18 12:31:56 -0800
+
+
+Started GET "/api/images" for ::1 at 2015-12-18 12:31:56 -0800
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+      render: show
+             ^
+/Users/christineliao/Desktop/capstone/sample-project-proposal-master/app/controllers/api/images_controller.rb:18: syntax error, unexpected ':', expecting keyword_end
+    render: show
+           ^:
+  app/controllers/api/images_controller.rb:10:in `'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:457:in `block in load_file'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:647:in `new_constants_in'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:456:in `load_file'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:354:in `require_or_load'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:494:in `load_missing_constant'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:263:in `block in constantize'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 12:31:56 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 12:33:26 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 331ms (Views: 331.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-3af72c33294c5d3758c05f7b68639ef8f3caf6a1044f227d5d081deb4bb57908.js?body=1" for ::1 at 2015-12-18 12:33:27 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:33:27 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:33:27 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:33:27 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:33:27 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:33:27 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 12:33:27 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 12:33:27 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 12:33:27 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 12:33:27 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 12:33:27 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 12:33:27 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 12:41:24 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (1.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 724ms (Views: 719.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 12:41:25 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bundle.self-278be51bb0c5d0876e759cbdd06afcb7a901bbe6bffcfb87b3c9cd9b02da2518.js?body=1" for ::1 at 2015-12-18 12:41:25 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 12:41:25 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.8ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (21.8ms)
+Completed 200 OK in 31ms (Views: 21.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 12:41:25 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 13:32:21 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 306ms (Views: 305.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.self-ac599e7bd39c9227174dae8ff7d6e1a07f8d31961f2bbc1420ebd06caa97d352.js?body=1" for ::1 at 2015-12-18 13:32:21 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 13:32:21 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (1.7ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 13:32:23 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 13:32:23 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.3ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (1.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 13:32:23 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 13:35:44 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (2.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 250ms (Views: 245.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 13:35:45 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 13:35:45 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (1.5ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (22.7ms)
+Completed 200 OK in 37ms (Views: 20.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 13:35:45 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 13:41:41 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 375ms (Views: 374.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.self-f9d164304e8ec250bd90e48ba221d4c83a70a1015210a7d9458564273b583db8.js?body=1" for ::1 at 2015-12-18 13:41:42 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:41:42 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:41:42 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:41:42 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:41:42 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:41:42 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:41:42 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 13:41:42 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 13:41:42 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 13:41:42 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 13:41:42 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 13:41:42 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 13:41:45 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 56ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:41:46 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:41:46 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:41:46 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 13:41:46 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:41:46 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:41:46 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:41:46 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 13:41:46 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 13:41:46 -0800
+
+
+Started GET "/assets/bundle.self-f9d164304e8ec250bd90e48ba221d4c83a70a1015210a7d9458564273b583db8.js?body=1" for ::1 at 2015-12-18 13:41:46 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 13:41:46 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 13:41:46 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 13:42:21 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 301ms (Views: 300.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:42:22 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:42:22 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:42:22 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:42:22 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:42:22 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:42:22 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 13:42:22 -0800
+
+
+Started GET "/assets/bundle.self-66df7659554752559f93cc7205cec45aca7f8a76e352a7c2e6c2a572f21b4c0b.js?body=1" for ::1 at 2015-12-18 13:42:22 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 13:42:22 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 13:42:22 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 13:42:22 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 13:42:22 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 13:42:23 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.3ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (1.7ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 13:44:15 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 423ms (Views: 422.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.self-09f2a55917408a0bf95793bbd2cf737d43e476917aa300dba57a458c86423d1e.js?body=1" for ::1 at 2015-12-18 13:44:16 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:44:16 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:44:16 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:44:16 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:44:16 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:44:16 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:44:16 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 13:44:16 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 13:44:16 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 13:44:16 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 13:44:16 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 13:44:16 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 13:44:16 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.5ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (2.7ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 13:47:37 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:47:38 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:47:38 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:47:38 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:47:38 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:47:38 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:47:38 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 13:47:38 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 13:47:38 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 13:47:38 -0800
+
+
+Started GET "/assets/bundle.self-f9d164304e8ec250bd90e48ba221d4c83a70a1015210a7d9458564273b583db8.js?body=1" for ::1 at 2015-12-18 13:47:38 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 13:47:38 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 13:47:38 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 13:47:48 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 362ms (Views: 361.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:47:48 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:47:48 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:47:48 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 13:47:48 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:47:48 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:47:48 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:47:48 -0800
+
+
+Started GET "/assets/bundle.self-2c308ae18c4440095090c84e488e7c638d45e8f0eb16494b8815a7371fcc2d96.js?body=1" for ::1 at 2015-12-18 13:47:48 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 13:47:48 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 13:47:48 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 13:47:48 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 13:47:48 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.6ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (2.8ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 13:47:48 -0800
+
+
+Started POST "/api/dishes" for ::1 at 2015-12-18 13:48:49 -0800
+Processing by Api::DishesController#create as JSON
+  Parameters: {"dish"=>{"id"=>"", "name"=>"burrito", "description"=>"so good.", "images"=>{"0"=>{"url"=>"http://res.cloudinary.com/littlef00t/image/upload/v1450475281/vm3oh8nrwmcvfaewyz1v.png"}}}}
+Unpermitted parameters: id, images
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "burrito"], ["description", "so good."], ["user_id", 12], ["created_at", "2015-12-18 21:48:49.729568"], ["updated_at", "2015-12-18 21:48:49.729568"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  Rendered api/dishes/show.json.jbuilder (0.4ms)
+Completed 200 OK in 9ms (Views: 2.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/dishes/29" for ::1 at 2015-12-18 13:48:49 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[35mDish Load (0.5ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 29]]
+  Rendered api/dishes/show.json.jbuilder (0.6ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/dishes/29" for ::1 at 2015-12-18 13:48:49 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mDish Load (0.6ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  Rendered api/dishes/show.json.jbuilder (0.1ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 13:49:50 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:49:50 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:49:50 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:49:50 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:49:50 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:49:50 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:49:50 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 13:49:50 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 13:49:50 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 13:49:50 -0800
+
+
+Started GET "/assets/bundle.self-2c308ae18c4440095090c84e488e7c638d45e8f0eb16494b8815a7371fcc2d96.js?body=1" for ::1 at 2015-12-18 13:49:50 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 13:49:50 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 13:49:50 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 13:50:25 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 53ms (Views: 49.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 13:50:25 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 13:50:36 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.8ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (7.4ms)
+Completed 200 OK in 13ms (Views: 6.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 13:50:56 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 13:50:56 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (1.7ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/dishes" for ::1 at 2015-12-18 13:51:17 -0800
+Processing by Api::DishesController#create as JSON
+  Parameters: {"dish"=>{"id"=>"", "name"=>"burrio", "description"=>"good", "images"=>{"0"=>{"url"=>"http://res.cloudinary.com/littlef00t/image/upload/v1450475472/x9dcpvzb2swgp3ask98l.png"}}}}
+Unpermitted parameter: id
+Unpermitted parameter: id
+Completed 500 Internal Server Error in 43894ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::AssociationTypeMismatch - Image(#70147230581280) expected, got Array(#70147159560220):
+  activerecord (4.2.4) lib/active_record/associations/association.rb:218:in `raise_on_type_mismatch!'
+  activerecord (4.2.4) lib/active_record/associations/collection_association.rb:365:in `block in replace'
+  actionpack (4.2.4) lib/action_controller/metal/strong_parameters.rb:185:in `each_pair'
+  activerecord (4.2.4) lib/active_record/associations/collection_association.rb:365:in `replace'
+  activerecord (4.2.4) lib/active_record/associations/collection_association.rb:47:in `writer'
+  activerecord (4.2.4) lib/active_record/associations/builder/association.rb:123:in `images='
+  activerecord (4.2.4) lib/active_record/attribute_assignment.rb:54:in `_assign_attribute'
+  activerecord (4.2.4) lib/active_record/attribute_assignment.rb:65:in `block in assign_nested_parameter_attributes'
+  activerecord (4.2.4) lib/active_record/attribute_assignment.rb:65:in `assign_nested_parameter_attributes'
+  activerecord (4.2.4) lib/active_record/attribute_assignment.rb:45:in `assign_attributes'
+  activerecord (4.2.4) lib/active_record/core.rb:564:in `init_attributes'
+  activerecord (4.2.4) lib/active_record/core.rb:281:in `initialize'
+  activerecord (4.2.4) lib/active_record/inheritance.rb:61:in `new'
+  app/controllers/api/dishes_controller.rb:11:in `create'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for ::1 at 2015-12-18 13:54:15 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:54:15 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:54:15 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:54:15 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:54:15 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:54:15 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:54:15 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 13:54:15 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 13:54:15 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 13:54:15 -0800
+
+
+Started GET "/assets/bundle.self-2c308ae18c4440095090c84e488e7c638d45e8f0eb16494b8815a7371fcc2d96.js?body=1" for ::1 at 2015-12-18 13:54:15 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 13:54:15 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 13:54:15 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.5ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (10.1ms)
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/api/dishes" for ::1 at 2015-12-18 13:54:34 -0800
+Processing by Api::DishesController#create as JSON
+  Parameters: {"dish"=>{"id"=>"", "name"=>"food", "description"=>"asdf", "images"=>{"0"=>{"url"=>"http://res.cloudinary.com/littlef00t/image/upload/v1450475669/f14h9cl1kfpry06pyqg1.png"}}}}
+Unpermitted parameters: id, images
+Unpermitted parameters: id, name, description
+Unpermitted parameter: 0
+Unpermitted parameter: 0
+Unpermitted parameters: id, name, description
+Completed 500 Internal Server Error in 310479ms (ActiveRecord: 2.0ms)
+
+ActiveRecord::UnknownAttributeError - unknown attribute 'images' for Image.:
+  activerecord (4.2.4) lib/active_record/attribute_assignment.rb:59:in `rescue in _assign_attribute'
+  activerecord (4.2.4) lib/active_record/attribute_assignment.rb:54:in `_assign_attribute'
+  activerecord (4.2.4) lib/active_record/attribute_assignment.rb:65:in `block in assign_nested_parameter_attributes'
+  activerecord (4.2.4) lib/active_record/attribute_assignment.rb:65:in `assign_nested_parameter_attributes'
+  activerecord (4.2.4) lib/active_record/attribute_assignment.rb:45:in `assign_attributes'
+  activerecord (4.2.4) lib/active_record/core.rb:564:in `init_attributes'
+  activerecord (4.2.4) lib/active_record/core.rb:281:in `initialize'
+  activerecord (4.2.4) lib/active_record/inheritance.rb:61:in `new'
+  activerecord (4.2.4) lib/active_record/reflection.rb:131:in `build_association'
+  activerecord (4.2.4) lib/active_record/associations/association.rb:250:in `build_record'
+  activerecord (4.2.4) lib/active_record/associations/collection_association.rb:146:in `build'
+  activerecord (4.2.4) lib/active_record/associations/collection_proxy.rb:259:in `build'
+  app/controllers/api/dishes_controller.rb:13:in `create'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for ::1 at 2015-12-18 13:59:44 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 338ms (Views: 335.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/bundle.self-8d2f7bb8e40e6fb02d2e354f46596640f11ddc5c93c7c2b0c22f875a3842fdc2.js?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/assets/bundle.self-8d2f7bb8e40e6fb02d2e354f46596640f11ddc5c93c7c2b0c22f875a3842fdc2.js?body=1" for ::1 at 2015-12-18 13:59:45 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 14:00:28 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (1.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 227ms (Views: 222.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/bundle.self-8d2f7bb8e40e6fb02d2e354f46596640f11ddc5c93c7c2b0c22f875a3842fdc2.js?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/bundle.self-8d2f7bb8e40e6fb02d2e354f46596640f11ddc5c93c7c2b0c22f875a3842fdc2.js?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 14:00:29 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 14:00:48 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 14:00:50 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:00:52 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 14:01:14 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 36ms (Views: 35.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:14 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:14 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:14 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:14 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 14:01:14 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:14 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:14 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 14:01:14 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 14:01:14 -0800
+
+
+Started GET "/assets/bundle.self-8d2f7bb8e40e6fb02d2e354f46596640f11ddc5c93c7c2b0c22f875a3842fdc2.js?body=1" for ::1 at 2015-12-18 14:01:14 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 14:01:14 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 14:01:15 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:01:15 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 14:01:17 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 360ms (Views: 359.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/assets/bundle.self-017db32e9d7ef49b3f262185512cc5f3ef1b8f65906ddfbd8155805134876ce8.js?body=1" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/assets/bundle.self-017db32e9d7ef49b3f262185512cc5f3ef1b8f65906ddfbd8155805134876ce8.js?body=1" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 14:01:17 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.6ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (13.5ms)
+Completed 200 OK in 22ms (Views: 12.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:01:17 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 14:01:43 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:43 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:43 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:43 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:43 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:43 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:01:43 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 14:01:43 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 14:01:43 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 14:01:43 -0800
+
+
+Started GET "/assets/bundle.self-017db32e9d7ef49b3f262185512cc5f3ef1b8f65906ddfbd8155805134876ce8.js?body=1" for ::1 at 2015-12-18 14:01:43 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 14:01:43 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 14:01:43 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (1.9ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (4.9ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:01:43 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 14:02:05 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 377ms (Views: 377.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:02:05 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:02:05 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:02:05 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:02:05 -0800
+
+
+Started GET "/assets/bundle.self-f7059c1971dca2e4cc183613c633d95a36cd6a85a97deb44eeeb47c6ba1b5c9f.js?body=1" for ::1 at 2015-12-18 14:02:05 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:02:06 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:02:06 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 14:02:06 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 14:02:06 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 14:02:06 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 14:02:06 -0800
+
+
+Started GET "/assets/bundle.self-f7059c1971dca2e4cc183613c633d95a36cd6a85a97deb44eeeb47c6ba1b5c9f.js?body=1" for ::1 at 2015-12-18 14:02:06 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 14:02:06 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.9ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (4.0ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:02:06 -0800
+
+
+Started POST "/api/dishes" for ::1 at 2015-12-18 14:02:23 -0800
+Processing by Api::DishesController#create as JSON
+  Parameters: {"dish"=>{"id"=>"", "name"=>"w", "description"=>"ww", "image_urls"=>["http://res.cloudinary.com/littlef00t/image/upload/v1450476137/l9vbw9egbldgrt3zxg9w.png"]}}
+Unpermitted parameters: id, name, description, image_urls
+Unpermitted parameters: id, image_urls
+Unpermitted parameters: id, name, description, image_urls
+Unpermitted parameters: id, name, description
+Unpermitted parameters: id, image_urls
+Unpermitted parameters: id, name, description, image_urls
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "w"], ["description", "ww"], ["user_id", 12], ["created_at", "2015-12-18 22:04:12.742052"], ["updated_at", "2015-12-18 22:04:12.742052"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  Rendered api/dishes/show.json.jbuilder (1.2ms)
+Completed 200 OK in 108812ms (Views: 5.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/dishes/30" for ::1 at 2015-12-18 14:04:12 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"30"}
+  [1m[35mDish Load (0.2ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered api/dishes/show.json.jbuilder (0.2ms)
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/dishes/30" for ::1 at 2015-12-18 14:04:12 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mDish Load (0.5ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered api/dishes/show.json.jbuilder (0.2ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 14:04:34 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (1.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 251ms (Views: 246.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:35 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:35 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:35 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:35 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:35 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:35 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 14:04:35 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 14:04:35 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 14:04:35 -0800
+
+
+Started GET "/assets/bundle.self-f7059c1971dca2e4cc183613c633d95a36cd6a85a97deb44eeeb47c6ba1b5c9f.js?body=1" for ::1 at 2015-12-18 14:04:35 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 14:04:35 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:04:35 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 14:04:37 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:37 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:37 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:37 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:37 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:37 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:37 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 14:04:37 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 14:04:37 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 14:04:37 -0800
+
+
+Started GET "/assets/bundle.self-f7059c1971dca2e4cc183613c633d95a36cd6a85a97deb44eeeb47c6ba1b5c9f.js?body=1" for ::1 at 2015-12-18 14:04:37 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 14:04:37 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:04:37 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 14:04:41 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:41 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:41 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:41 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:41 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:41 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:04:41 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 14:04:41 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 14:04:41 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 14:04:41 -0800
+
+
+Started GET "/assets/bundle.self-f7059c1971dca2e4cc183613c633d95a36cd6a85a97deb44eeeb47c6ba1b5c9f.js?body=1" for ::1 at 2015-12-18 14:04:41 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 14:04:41 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 14:04:41 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.9ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (13.8ms)
+Completed 200 OK in 26ms (Views: 13.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:04:41 -0800
+
+
+Started POST "/api/dishes" for ::1 at 2015-12-18 14:04:57 -0800
+Processing by Api::DishesController#create as JSON
+  Parameters: {"dish"=>{"id"=>"", "name"=>"e", "description"=>"ee", "image_urls"=>["http://res.cloudinary.com/littlef00t/image/upload/v1450476292/zvaxtvtp4yafyawwb55i.png"]}}
+Unpermitted parameters: id, image_urls
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+Completed 422 Unprocessable Entity in 22128ms (ActiveRecord: 3.8ms)
+
+ActiveRecord::RecordInvalid - Validation failed: Images is invalid:
+  activerecord (4.2.4) lib/active_record/validations.rb:79:in `raise_record_invalid'
+  activerecord (4.2.4) lib/active_record/validations.rb:43:in `save!'
+  activerecord (4.2.4) lib/active_record/attribute_methods/dirty.rb:29:in `save!'
+  activerecord (4.2.4) lib/active_record/transactions.rb:291:in `block in save!'
+  activerecord (4.2.4) lib/active_record/transactions.rb:351:in `block in with_transaction_returning_status'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `block in transaction'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/transaction.rb:184:in `within_new_transaction'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `transaction'
+  activerecord (4.2.4) lib/active_record/transactions.rb:220:in `transaction'
+  activerecord (4.2.4) lib/active_record/transactions.rb:348:in `with_transaction_returning_status'
+  activerecord (4.2.4) lib/active_record/transactions.rb:291:in `save!'
+  app/controllers/api/dishes_controller.rb:16:in `create'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:05:41 -0800
+
+
+Started POST "/api/dishes" for ::1 at 2015-12-18 14:06:00 -0800
+Processing by Api::DishesController#create as JSON
+  Parameters: {"dish"=>{"id"=>"", "name"=>"h", "description"=>"hh", "image_urls"=>["http://res.cloudinary.com/littlef00t/image/upload/v1450476355/scasxumdsaaxolkvifmk.png"]}}
+Unpermitted parameters: id, image_urls
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 422 Unprocessable Entity in 35010ms (ActiveRecord: 1.2ms)
+
+ActiveRecord::RecordInvalid - Validation failed: Images is invalid:
+  activerecord (4.2.4) lib/active_record/validations.rb:79:in `raise_record_invalid'
+  activerecord (4.2.4) lib/active_record/validations.rb:43:in `save!'
+  activerecord (4.2.4) lib/active_record/attribute_methods/dirty.rb:29:in `save!'
+  activerecord (4.2.4) lib/active_record/transactions.rb:291:in `block in save!'
+  activerecord (4.2.4) lib/active_record/transactions.rb:351:in `block in with_transaction_returning_status'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `block in transaction'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/transaction.rb:184:in `within_new_transaction'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `transaction'
+  activerecord (4.2.4) lib/active_record/transactions.rb:220:in `transaction'
+  activerecord (4.2.4) lib/active_record/transactions.rb:348:in `with_transaction_returning_status'
+  activerecord (4.2.4) lib/active_record/transactions.rb:291:in `save!'
+  app/controllers/api/dishes_controller.rb:16:in `create'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for ::1 at 2015-12-18 14:06:39 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:06:39 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:06:39 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:06:39 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:06:39 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:06:39 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 14:06:39 -0800
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:06:39 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 14:06:39 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 14:06:39 -0800
+
+
+Started GET "/assets/bundle.self-f7059c1971dca2e4cc183613c633d95a36cd6a85a97deb44eeeb47c6ba1b5c9f.js?body=1" for ::1 at 2015-12-18 14:06:39 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 14:06:39 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 14:06:39 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.5ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (11.1ms)
+Completed 200 OK in 19ms (Views: 11.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:06:40 -0800
+
+
+Started POST "/api/dishes" for ::1 at 2015-12-18 14:06:57 -0800
+Processing by Api::DishesController#create as JSON
+  Parameters: {"dish"=>{"id"=>"", "name"=>"e", "description"=>"ee", "image_urls"=>["http://res.cloudinary.com/littlef00t/image/upload/v1450476410/cbd8vxuexl83bfxlgjiq.png"]}}
+Unpermitted parameters: id, image_urls
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "dishes" ("name", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "e"], ["description", "ee"], ["user_id", 12], ["created_at", "2015-12-18 22:07:14.471645"], ["updated_at", "2015-12-18 22:07:14.471645"]]
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "images" ("url", "dish_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url", "http://res.cloudinary.com/littlef00t/image/upload/v1450476410/cbd8vxuexl83bfxlgjiq.png"], ["dish_id", 31], ["created_at", "2015-12-18 22:07:14.474639"], ["updated_at", "2015-12-18 22:07:14.474639"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered api/dishes/show.json.jbuilder (0.5ms)
+Completed 200 OK in 16591ms (Views: 2.5ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/api/dishes/31" for ::1 at 2015-12-18 14:07:14 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"31"}
+  [1m[36mDish Load (1.2ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  Rendered api/dishes/show.json.jbuilder (0.2ms)
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/dishes/31" for ::1 at 2015-12-18 14:07:14 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"31"}
+  [1m[35mDish Load (0.8ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 31]]
+  Rendered api/dishes/show.json.jbuilder (0.2ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 14:07:21 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.7ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (4.0ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/dishes/31" for ::1 at 2015-12-18 14:13:47 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"31"}
+  [1m[35mDish Load (0.6ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 31]]
+  Rendered api/dishes/show.json.jbuilder (0.2ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/dishes/31" for ::1 at 2015-12-18 14:13:47 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"31"}
+  [1m[36mDish Load (0.6ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  Rendered api/dishes/show.json.jbuilder (0.1ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 14:16:52 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.8ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (3.2ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/dishes/31" for ::1 at 2015-12-18 14:21:46 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"31"}
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  Rendered api/dishes/show.json.jbuilder (0.2ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 14:21:55 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.6ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (3.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 14:22:02 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 14:22:03 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (1.9ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 14:22:03 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 14:22:03 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.5ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (15.4ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:22:03 -0800
+
+
+Started DELETE "/api/dishes/30" for ::1 at 2015-12-18 14:22:10 -0800
+Processing by Api::DishesController#destroy as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 30]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  Rendered api/dishes/show.json.jbuilder (0.2ms)
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/dishes/29" for ::1 at 2015-12-18 14:35:46 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mDish Load (0.2ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  Rendered api/dishes/show.json.jbuilder (0.1ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/dishes/29" for ::1 at 2015-12-18 14:35:46 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[35mDish Load (0.2ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 29]]
+  Rendered api/dishes/show.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 14:36:38 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.8ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (3.5ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/dishes" for ::1 at 2015-12-18 14:36:50 -0800
+Processing by Api::DishesController#create as JSON
+  Parameters: {"dish"=>{"id"=>"", "name"=>"testing", "description"=>"work?"}}
+Unpermitted parameter: id
+Completed 400 Bad Request in 312164ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing - param is missing or the value is empty: image_urls:
+  actionpack (4.2.4) lib/action_controller/metal/strong_parameters.rb:251:in `require'
+  app/controllers/api/dishes_controller.rb:32:in `image_params'
+  app/controllers/api/dishes_controller.rb:13:in `create'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+  [1m[36mImage Load (0.8ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  [1m[35mDish Load (0.7ms)[0m  SELECT "dishes".* FROM "dishes"
+
+
+Started GET "/" for ::1 at 2015-12-18 14:53:08 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (1.4ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 556ms (Views: 551.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:53:09 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:53:09 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 14:53:09 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:53:09 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:53:09 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:53:09 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 14:53:09 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 14:53:09 -0800
+
+
+Started GET "/assets/bundle.self-8873e9d4dd4bdb48fb832cd0cdbc5483419fe115bcd8c9c2f0dbd20eeb13379a.js?body=1" for ::1 at 2015-12-18 14:53:09 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 14:53:09 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 14:53:09 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:53:09 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 14:57:06 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 14:57:06 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 14:57:07 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 15:08:05 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 372ms (Views: 371.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 15:08:05 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 15:08:05 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 15:08:05 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 15:08:05 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 15:08:05 -0800
+
+
+Started GET "/assets/bundle.self-10be1d9ce961286bfa3fae258f0c130faf2ae9b61d8170bc39c45e3ec871c93f.js?body=1" for ::1 at 2015-12-18 15:08:05 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 15:08:05 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 15:08:05 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 15:08:05 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 15:08:05 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 15:08:05 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 15:08:06 -0800
+
+
+Started GET "/" for ::1 at 2015-12-18 15:11:44 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 394ms (Views: 393.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 15:11:44 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 15:11:44 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 15:11:44 -0800
+
+
+Started GET "/assets/bundle.self-4a91d6b6c1807aa66dfd681887ba5360e1147b948eb413aba4f39bb84e7bcc4e.js?body=1" for ::1 at 2015-12-18 15:11:44 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 15:11:44 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 15:11:44 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-18 15:11:44 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-18 15:11:44 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-18 15:11:44 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-18 15:11:44 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-18 15:11:44 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 15:11:44 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 15:11:45 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.7ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered api/dishes/index.json.jbuilder (12.3ms)
+Completed 200 OK in 30ms (Views: 13.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 15:12:13 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 326ms (Views: 325.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-18 15:12:14 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-41ba31f67b892fa904509b1bc3b5cce4fef394e9810653d10d928973b714b1f3.js?body=1" for ::1 at 2015-12-18 15:12:14 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-18 15:12:14 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.3ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered api/dishes/index.json.jbuilder (1.9ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-18 15:12:14 -0800

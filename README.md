@@ -6,6 +6,9 @@
 
 ## Minimum Viable Product
 
+Filling the empty/Hungry Heart is a web application inspired by Foodspotting build on Ruby on Rials and React.js. Hungry Heart allows users who want to share food or surplus of food with those who are in need/hungry. In filling another's empty stomach, you fill your own heart.
+Hungry Heart allows users to:
+
 Bone Appetit is a web application inspired by Foodspotting built using Ruby on Rails
 and React.js. Bone Appetit targets the puppy population, finding and sharing delicious dishes in the area. Bone Appetit allows puppy users to:
 

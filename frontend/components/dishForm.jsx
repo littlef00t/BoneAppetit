@@ -2,6 +2,8 @@ var React = require('react');
 var History = require('react-router').History;
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var ApiUtil = require('../util/api_util');
+var Cloud = require('./Cloud');
+var UploadButton = require('./UploadButton');
 
 var DishForm = React.createClass({
   mixins: [LinkedStateMixin, History],
@@ -10,7 +12,13 @@ var DishForm = React.createClass({
       id: '',
       name: '',
       description: '',
+      image_urls: []
     };
+  },
+  addImage: function (image) {
+    var image_urls = this.state.image_urls;
+    image_urls.push(image)
+    this.setState({image_urls: image_urls});
   },
   createDish: function (e) {
     e.preventDefault();
@@ -21,7 +29,8 @@ var DishForm = React.createClass({
     this.setState({
       name: '',
       description: '',
-      id: ''
+      id: '',
+      image_urls: []
     });
   },
 
@@ -43,6 +52,12 @@ var DishForm = React.createClass({
             valueLink={this.linkState('description')}
             />
         </div>
+        {
+          this.state.image_urls.map(function (url) {
+            return <img src={url}/>
+          })
+        }
+        <UploadButton addImage={this.addImage}/>
 
         <button>Add Dish</button>
         <br />
