@@ -4,7 +4,6 @@ var DishConstants = require('../constants/dish_constants');
 
 var ApiActions = {
   receiveAll: function (dishes) {
-    // debugger;
     AppDispatcher.dispatch({
       actionType: DishConstants.DISHES_RECEIVED,
       dishes: dishes
@@ -15,6 +14,12 @@ var ApiActions = {
       actionType: DishConstants.DISH_RECEIVED,
       dish: dish
     });
+  },
+  deleteDish: function (dish) {
+    AppDispatcher.dispatch({
+      actionType: DishConstants.REMOVE_DISH,
+      dish: dish
+    })
   }
 }
 

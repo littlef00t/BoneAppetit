@@ -61,7 +61,6 @@
 	  Route,
 	  { path: '/', component: App },
 	  React.createElement(IndexRoute, { component: DishIndex }),
-	  React.createElement(Route, { path: 'dishes', component: DishIndex }),
 	  React.createElement(Route, { path: 'dishes/:dishId', component: DishDetail })
 	);
 	
@@ -19691,6 +19690,10 @@
 	  componentWillUnmount: function () {
 	    this.dishListener.remove();
 	  },
+	  handleDelete: function () {
+	    debugger;
+	    ApiUtil.deleteDish();
+	  },
 	  render: function () {
 	    return React.createElement(
 	      'div',
@@ -19698,8 +19701,13 @@
 	      React.createElement(
 	        'ul',
 	        null,
-	        this.state.dishes.map(function (dish) {
-	          return React.createElement(DishIndexItem, { key: dish.id, dish: dish });
+	        this.state.dishes.map(function (dish, idx) {
+	          return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(DishIndexItem, { key: dish.id, dish: dish }),
+	            React.createElement('input', { type: 'button', key: idx, dish: dish, onClick: this.handleDelete, value: 'Delete' })
+	          );
 	        })
 	      ),
 	      React.createElement(DishForm, null)
@@ -19746,6 +19754,12 @@
 	  DishStore.__emitChange();
 	};
 	
+	var removeDish = function (dish) {
+	  debugger;
+	  delete _dishes[dish.id];
+	  DishStore.__emitChange();
+	};
+	
 	DishStore.__onDispatch = function (payload) {
 	  switch (payload.actionType) {
 	    case DishConstants.DISHES_RECEIVED:
@@ -19753,6 +19767,9 @@
 	      break;
 	    case DishConstants.DISH_RECEIVED:
 	      resetDish(payload.dish);
+	      break;
+	    case DishConstants.REMOVE_DISH:
+	      removeDish(payload.dish);
 	      break;
 	  }
 	};
@@ -26469,7 +26486,8 @@
 
 	DishConstants = {
 	  DISHES_RECEIVED: "DISHES_RECEIVED",
-	  DISH_RECEIVED: "DISH_RECEIVED"
+	  DISH_RECEIVED: "DISH_RECEIVED",
+	  REMOVE_DISH: "REMOVE_DISH"
 	};
 	
 	module.exports = DishConstants;
@@ -26502,9 +26520,21 @@
 	      url: "api/dishes",
 	      type: "POST",
 	      data: { dish: dish },
-	      success: function () {
+	      success: function (dish) {
+	        console.log('success');
 	        ApiActions.receiveOne(dish);
 	        callback && callback(dish.id);
+	      }
+	    });
+	  },
+	  deleteDish: function (id) {
+	    debugger;
+	    $.ajax({
+	      url: "api/dishes/" + id,
+	      type: "DELETE",
+	      success: function (dish) {
+	        debugger;
+	        ApiActions.deleteDish(dish);
 	      }
 	    });
 	  }
@@ -26521,7 +26551,6 @@
 	
 	var ApiActions = {
 	  receiveAll: function (dishes) {
-	    // debugger;
 	    AppDispatcher.dispatch({
 	      actionType: DishConstants.DISHES_RECEIVED,
 	      dishes: dishes
@@ -26530,6 +26559,12 @@
 	  receiveOne: function (dish) {
 	    AppDispatcher.dispatch({
 	      actionType: DishConstants.DISH_RECEIVED,
+	      dish: dish
+	    });
+	  },
+	  deleteDish: function (dish) {
+	    AppDispatcher.dispatch({
+	      actionType: DishConstants.REMOVE_DISH,
 	      dish: dish
 	    });
 	  }
@@ -26543,6 +26578,7 @@
 
 	var React = __webpack_require__(1);
 	var History = __webpack_require__(185).History;
+	var ApiUtil = __webpack_require__(182);
 	
 	var IndexItem = React.createClass({
 	  displayName: 'IndexItem',
@@ -31293,17 +31329,16 @@
 	  mixins: [LinkedStateMixin, History],
 	  getInitialState: function () {
 	    return {
+	      id: '',
 	      name: '',
-	      description: '',
-	      id: ''
+	      description: ''
 	    };
 	  },
 	  createDish: function (e) {
 	    e.preventDefault();
 	    var dish = this.state;
-	    debugger;
 	    ApiUtil.createDish(dish, (function (id) {
-	      this.history.pushState(null, "/dish/" + id, {});
+	      this.history.pushState(null, "dishes/" + id, {});
 	    }).bind(this));
 	    this.setState({
 	      name: '',

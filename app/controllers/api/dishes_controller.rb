@@ -14,6 +14,12 @@ class Api::DishesController < ApplicationController
     render :show
   end
 
+  def destroy
+    @dish = Dish.find(params[:id])
+    @dish.destroy
+    render :show
+  end
+
   private
   def dish_params
     params.require(:dish).permit(:name, :description)

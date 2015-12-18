@@ -7,17 +7,16 @@ var DishForm = React.createClass({
   mixins: [LinkedStateMixin, History],
   getInitialState: function () {
     return {
+      id: '',
       name: '',
       description: '',
-      id: ''
     };
   },
   createDish: function (e) {
     e.preventDefault();
     var dish = this.state;
-    debugger;
     ApiUtil.createDish(dish, function (id) {
-      this.history.pushState(null, "/dish/" + id, {});
+      this.history.pushState(null, "dishes/" + id, {});
     }.bind(this));
     this.setState({
       name: '',

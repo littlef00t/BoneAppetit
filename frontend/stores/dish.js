@@ -31,6 +31,12 @@ var resetDish = function (dish) {
   DishStore.__emitChange();
 }
 
+var removeDish = function (dish) {
+  debugger;
+  delete _dishes[dish.id];
+  DishStore.__emitChange();
+}
+
 DishStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case DishConstants.DISHES_RECEIVED:
@@ -38,6 +44,9 @@ DishStore.__onDispatch = function (payload) {
       break;
     case DishConstants.DISH_RECEIVED:
       resetDish(payload.dish);
+      break;
+    case DishConstants.REMOVE_DISH:
+      removeDish(payload.dish);
       break;
   }
 }
