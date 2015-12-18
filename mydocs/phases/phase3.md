@@ -1,17 +1,20 @@
-# Phase 3: Map (3 days)
+# Phase 3: Images (and styling of Dishes?)(1 day)
 ## Rails
 ### Models
+* Image
 
 ### Controllers
+
 
 ### Views
 
 ## Flux
 ### Views (React Components)
-* Map (map markers using googlemaps api)
-* register an event listener on change of the ImageStore
+* Possible image component
+
 
 ### Stores
+* ImageStore
 
 ### Actions
 
@@ -20,3 +23,4 @@
 
 
 ## Gems/Libraries
+* Cloudinary

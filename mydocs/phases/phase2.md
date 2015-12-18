@@ -1,4 +1,4 @@
-# Phase 2: Flux Architecture and Image CRUD (3 days)
+# Phase 2: Flux Architecture and Dish CRUD (2 days)
 
 ## Rails
 ### Models
@@ -9,29 +9,31 @@
 
 ## Flux
 ### Views (React Components)
-* ImagesIndex
-  - ImagesIndexItem
-* ImageForm
+* DishesIndex
+  - DishIndexItem
+  - DishDetail
+* DishForm
+
 
 ### Stores
-* Image
+* Dish
 
 ### Actions
-* ApiActions.receiveAllImages -> triggered by ApiUtil
-* ApiActions.receiveSingleImage
-* ApiActions.deleteImage
-* ImageActions.fetchAllImages -> triggers ApiUtil
-* ImageActions.fetchSingleImage
-* ImageActions.createImage
-* ImageActions.editImage
-* ImageActions.destroyImage
+* ApiActions.receiveAllDishes -> triggered by ApiUtil
+* ApiActions.receiveSingleDish
+* ApiActions.deleteDish
+* DishActions.fetchAllDishes -> triggers ApiUtil
+* DishActions.fetchSingleDish
+* DishActions.createDish
+* DishActions.editDish
+* DishActions.destroyDish
 
 ### ApiUtil
-* ApiUtil.fetchAllImages
-* ApiUtil.fetchSingleImage
-* ApiUtil.createImage
-* ApiUtil.editImage
-* ApiUtil.destroyImage
+* ApiUtil.fetchAllDishes
+* ApiUtil.fetchSingleDish
+* ApiUtil.createDish
+* ApiUtil.editDish?
+* ApiUtil.destroyDish
 
 ## Gems/Libraries
 * Flux Dispatcher (npm)

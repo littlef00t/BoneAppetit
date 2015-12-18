@@ -8,13 +8,13 @@
 ### Controllers
 * UsersController (create, new)
 * SessionsController (create, new, destroy)
-* Api::ImagesController (create, destroy, index, show, update)
+* Api::DishesController (create, destroy, index, show, update?)
 
 ### Views
 * users/new.html.erb
 * session/new.html.erb
-* images/index.json.jbuilder -not sure how to work with images quite yet...
-* images/show.json.jbuilder
+* dishes/index.json.jbuilder
+* dishes/show.json.jbuilder
 
 ## Flux
 ### Views (React Components)

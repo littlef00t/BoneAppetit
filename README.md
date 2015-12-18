@@ -13,9 +13,9 @@ and React.js. Bone Appetit targets the puppy population, finding and sharing del
 
 - [ ] Create an account
 - [ ] Log in / Log out
-- [ ] CRUD images (along with a description of the dish)
-- [ ] Able to link the above photos to map location
-- [ ] Search for dishes in area (search by dish or puppy user)
+- [ ] CRUD dishes
+- [ ] Able to upload images with dish
+Bonus?
 - [ ] Rate the dish by clicking ('tried it and loved it')
 - [ ] Comment on other puppy users' dishes
 - [ ] See dishes by highest ratings
@@ -32,39 +32,42 @@ and React.js. Bone Appetit targets the puppy population, finding and sharing del
 ### Phase 1: User Authentication, Image Model (1.5 days)
 
 In Phase 1, I will begin by implementing user signup and authentication (using
-BCrypt). After signup, user will be directed to their profile, where a list of all their photos and brief descriptions will be (the ImageIndex component), which will be done in phase 2.
+BCrypt). I will also implement JSON API for dishes.
 
 [Details][phase-one]
 
-### Phase 2: Flux Architecture and Image CRUD (3 days)
+### Phase 2: Flux Architecture and DISH CRUD (2 days)
 
 Phase 2 is focused on setting up Flux, the React Router, and the React view
 structure for the main application. After the basic Flux architecture has been
-set up, an Image store will be implemented and a set of actions corresponding to
+set up, a Dish store will be implemented and a set of actions corresponding to
 the needed CRUD functionality created.  Once this is done, I will create React
-views for the Images `Index`, `IndexItem` and `Form`.  At the end of Phase 2,
-Images can be created, read, edited and destroyed in the browser. I may or may not start working on basic styling. It depends on how quickly I can finish the content of this phase. Content is my priority right now, not styling.
+views for the Dish `Index`, `IndexItem` and `Form`.  At the end of Phase 2,
+Images can be created, read, (updated as bonus?) and destroyed in the browser.
 
 [Details][phase-two]
 
-### Phase 3: Map and Map Markers(3 days)
+### Phase 3: Images (and styling of Dishes?)(1 day)
 
-Phase 3 adds a map to the main page. I'm planning on making it the application's React root component. You do not need to be signed in to access the map with treats in the area. When you click a treat/bone on the map, it takes you to the ImageIndexItem.
+Phase 3 allows the upload of images with the Dish. I will be using Cloudinary to store photos. I will also start adding styling using CSS.
 
 [Details][phase-three]
 
-### Phase 4: The Search (1-2 days)
+### Phase 4: Comments (1 day)
 
-I am not quite sure how I'm going to implement the search aspect yet. I may create a Search Index, perhaps matching searches to keywords. To keep it simple, I may just keep it as a drop down to search for 5-8 specific dishes in the area.
-
+I will be adding a new Comment Store and possible component.
 
 [Details][phase-four]
 
 
-### Phase 5: Styling Cleanup and Seeding (2-3 day)
+### Phase 5: Likes (1 day)
 
-I will be adding a lot more data to the database and more complex styling to the application.
+I will be adding a new Likes Store and possible component.
 
+### Bonus:
+I will be implementing a map so puppies can search for treats near their area.
+Puppies will be able to search by treats by highest ratings.
+Puppies can update their dishes.
 
 
 [phase-one]: ./docs/phases/phase1.md

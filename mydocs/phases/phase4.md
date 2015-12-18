@@ -1,6 +1,7 @@
 # Phase 4: The Search (1-2 days)
 ## Rails
 ### Models
+* Comments
 
 ### Controllers
 
@@ -8,9 +9,10 @@
 
 ## Flux
 ### Views (React Components)
-* SearchIndex
+* Comments
 
 ### Stores
+* Comment Store
 
 ### Actions
 
