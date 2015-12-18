@@ -26580,19 +26580,18 @@
 	  showDetail: function () {
 	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
 	  },
-	  handleDelete: function () {
-	    ApiUtil.deleteDish(this.props.dish.id, function () {
-	      this.history.pushState(null, '/');
-	    });
+	  handleDelete: function (e) {
+	    e.preventDefault();
+	    ApiUtil.deleteDish(this.props.dish.id);
 	  },
 	  render: function () {
 	    var dish = this.props.dish;
 	    return React.createElement(
 	      'li',
-	      { onClick: this.showDetail },
+	      null,
 	      React.createElement(
 	        'p',
-	        null,
+	        { onClick: this.showDetail },
 	        'Dish: ',
 	        dish.name
 	      ),
