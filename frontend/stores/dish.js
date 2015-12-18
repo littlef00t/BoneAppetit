@@ -32,7 +32,6 @@ var resetDish = function (dish) {
 }
 
 var removeDish = function (dish) {
-  debugger;
   delete _dishes[dish.id];
   DishStore.__emitChange();
 }

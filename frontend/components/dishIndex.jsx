@@ -18,10 +18,6 @@ var DishIndex = React.createClass({
   componentWillUnmount: function () {
     this.dishListener.remove();
   },
-  handleDelete: function () {
-    debugger;
-    ApiUtil.deleteDish();
-  },
   render: function () {
     return (
       <div>
@@ -31,7 +27,6 @@ var DishIndex = React.createClass({
               return (
                 <div>
                   <DishIndexItem key={dish.id} dish={dish} />
-                  <input type="button" key={idx} dish={dish} onClick={this.handleDelete} value="Delete"/>
                 </div>
               )
             })

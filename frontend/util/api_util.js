@@ -23,20 +23,18 @@ ApiUtil = {
       type: "POST",
       data: {dish: dish},
       success: function (dish) {
-        console.log('success');
         ApiActions.receiveOne(dish);
         callback && callback(dish.id);
       }
     })
   },
-  deleteDish: function (id) {
-    debugger;
+  deleteDish: function (id, callback) {
     $.ajax({
       url: "api/dishes/" + id,
       type: "DELETE",
       success: function (dish) {
-        debugger;
         ApiActions.deleteDish(dish);
+        callback && callback();
       }
     })
   }

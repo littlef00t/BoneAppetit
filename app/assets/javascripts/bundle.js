@@ -19690,10 +19690,6 @@
 	  componentWillUnmount: function () {
 	    this.dishListener.remove();
 	  },
-	  handleDelete: function () {
-	    debugger;
-	    ApiUtil.deleteDish();
-	  },
 	  render: function () {
 	    return React.createElement(
 	      'div',
@@ -19705,8 +19701,7 @@
 	          return React.createElement(
 	            'div',
 	            null,
-	            React.createElement(DishIndexItem, { key: dish.id, dish: dish }),
-	            React.createElement('input', { type: 'button', key: idx, dish: dish, onClick: this.handleDelete, value: 'Delete' })
+	            React.createElement(DishIndexItem, { key: dish.id, dish: dish })
 	          );
 	        })
 	      ),
@@ -19755,7 +19750,6 @@
 	};
 	
 	var removeDish = function (dish) {
-	  debugger;
 	  delete _dishes[dish.id];
 	  DishStore.__emitChange();
 	};
@@ -26521,20 +26515,18 @@
 	      type: "POST",
 	      data: { dish: dish },
 	      success: function (dish) {
-	        console.log('success');
 	        ApiActions.receiveOne(dish);
 	        callback && callback(dish.id);
 	      }
 	    });
 	  },
-	  deleteDish: function (id) {
-	    debugger;
+	  deleteDish: function (id, callback) {
 	    $.ajax({
 	      url: "api/dishes/" + id,
 	      type: "DELETE",
 	      success: function (dish) {
-	        debugger;
 	        ApiActions.deleteDish(dish);
+	        callback && callback();
 	      }
 	    });
 	  }
@@ -26586,9 +26578,13 @@
 	  mixins: [History],
 	
 	  showDetail: function () {
-	    this.history.pushState(null, '/dishes/' + this.props.dish.id, {});
+	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
 	  },
-	
+	  handleDelete: function () {
+	    ApiUtil.deleteDish(this.props.dish.id, function () {
+	      this.history.pushState(null, '/');
+	    });
+	  },
 	  render: function () {
 	    var dish = this.props.dish;
 	    return React.createElement(
@@ -26599,7 +26595,8 @@
 	        null,
 	        'Dish: ',
 	        dish.name
-	      )
+	      ),
+	      React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete' })
 	    );
 	  }
 	});
