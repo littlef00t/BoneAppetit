@@ -29,7 +29,7 @@ var DishForm = React.createClass({
       name: '',
       description: '',
       id: '',
-      image_urls: []
+      image_publicids: []
     });
   },
 

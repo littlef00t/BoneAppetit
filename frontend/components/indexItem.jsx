@@ -21,7 +21,7 @@ var IndexItem = React.createClass({
           {dish.images.map(function (image) {
                 return (
                   <div key={image.id}>
-                    <img src={"http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + "png"}/>
+                    <img src={"http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + ".png"}/>
                   </div>
                 );
               }

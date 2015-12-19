@@ -29,10 +29,11 @@ var DishDetail = React.createClass({
   },
   render: function () {
     var Link = ReactRouter.Link;
+    var dish = this.state.dish;
     return (
       <div>
-        <h4>Dish: {this.state.dish.name}</h4>
-        <p>Description: {this.state.dish.description}</p>
+        <h4>Dish: {dish.name}</h4>
+        <p>Description: {dish.description}</p>
         <Link to="/" > Back to Dishes Index </Link>
       </div>
     );

@@ -26602,7 +26602,7 @@
 	          return React.createElement(
 	            'div',
 	            { key: image.id },
-	            React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + "png" })
+	            React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + ".png" })
 	          );
 	        })
 	      ),
@@ -26650,7 +26650,7 @@
 	      name: '',
 	      description: '',
 	      id: '',
-	      image_urls: []
+	      image_publicids: []
 	    });
 	  },
 	
@@ -31713,6 +31713,7 @@
 	  },
 	  render: function () {
 	    var Link = ReactRouter.Link;
+	    var dish = this.state.dish;
 	    return React.createElement(
 	      'div',
 	      null,
@@ -31720,13 +31721,13 @@
 	        'h4',
 	        null,
 	        'Dish: ',
-	        this.state.dish.name
+	        dish.name
 	      ),
 	      React.createElement(
 	        'p',
 	        null,
 	        'Description: ',
-	        this.state.dish.description
+	        dish.description
 	      ),
 	      React.createElement(
 	        Link,
