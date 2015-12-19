@@ -4,7 +4,6 @@ class Api::DishesController < ApplicationController
   end
 
   def show
-    debugger
     @dish = Dish.find(params[:id])
     # image_params.each { |image_publicid| @dish.images.build(url: image_publicid) }
     # @dish.save!

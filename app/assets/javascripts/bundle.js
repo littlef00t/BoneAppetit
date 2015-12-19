@@ -19745,6 +19745,7 @@
 	};
 	
 	var resetDish = function (dish) {
+	  // debugger;
 	  _dishes[dish.id] = dish;
 	  DishStore.__emitChange();
 	};
@@ -31729,6 +31730,7 @@
 	        'Description: ',
 	        dish.description
 	      ),
+	      React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + dish.images[0].url + ".png" }),
 	      React.createElement(
 	        Link,
 	        { to: '/' },

@@ -27,6 +27,7 @@ var resetDishes = function (dishes) {
 }
 
 var resetDish = function (dish) {
+  // debugger;
   _dishes[dish.id] = dish;
   DishStore.__emitChange();
 }

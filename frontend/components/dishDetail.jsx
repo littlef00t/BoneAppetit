@@ -34,6 +34,7 @@ var DishDetail = React.createClass({
       <div>
         <h4>Dish: {dish.name}</h4>
         <p>Description: {dish.description}</p>
+        <img src={"http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + dish.images[0].url + ".png"}/>
         <Link to="/" > Back to Dishes Index </Link>
       </div>
     );
