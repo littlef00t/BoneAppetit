@@ -31760,6 +31760,11 @@
 	        null,
 	        'Hungry Heart'
 	      ),
+	      React.createElement(
+	        'p',
+	        null,
+	        '"Pure love is a willingness to give without a thought of receiving anything in return." -- Peace Pilgrim'
+	      ),
 	      this.props.children
 	    );
 	  }

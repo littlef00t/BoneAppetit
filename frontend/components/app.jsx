@@ -5,6 +5,7 @@ var App = React.createClass({
     return (
       <div>
         <h1>Hungry Heart</h1>
+        <p>"Pure love is a willingness to give without a thought of receiving anything in return." -- Peace Pilgrim</p>
         {this.props.children}
       </div>
     )
