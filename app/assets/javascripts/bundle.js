@@ -26586,7 +26586,6 @@
 	  },
 	  render: function () {
 	    var dish = this.props.dish;
-	    debugger;
 	    return React.createElement(
 	      'li',
 	      null,
@@ -26601,9 +26600,9 @@
 	        null,
 	        dish.images.map(function (image) {
 	          return React.createElement(
-	            'li',
+	            'div',
 	            { key: image.id },
-	            React.createElement('img', { src: image.url })
+	            React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + "png" })
 	          );
 	        })
 	      ),
@@ -26622,7 +26621,6 @@
 	var History = __webpack_require__(186).History;
 	var LinkedStateMixin = __webpack_require__(236);
 	var ApiUtil = __webpack_require__(182);
-	var Cloud = __webpack_require__(240);
 	var UploadButton = __webpack_require__(241);
 	
 	var DishForm = React.createClass({
@@ -26634,13 +26632,13 @@
 	      id: '',
 	      name: '',
 	      description: '',
-	      image_urls: []
+	      image_publicids: []
 	    };
 	  },
-	  addImage: function (image) {
-	    var image_urls = this.state.image_urls;
-	    image_urls.push(image);
-	    this.setState({ image_urls: image_urls });
+	  addImage: function (image_publicid) {
+	    var image_publicids = this.state.image_publicids;
+	    image_publicids.push(image_publicid);
+	    this.setState({ image_publicids: image_publicids });
 	  },
 	  createDish: function (e) {
 	    e.preventDefault();
@@ -26686,8 +26684,8 @@
 	          valueLink: this.linkState('description')
 	        })
 	      ),
-	      this.state.image_urls.map(function (url) {
-	        return React.createElement('img', { src: url });
+	      this.state.image_publicids.map(function (public_id) {
+	        return React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png" });
 	      }),
 	      React.createElement(UploadButton, { addImage: this.addImage }),
 	      React.createElement(
@@ -31640,42 +31638,7 @@
 	module.exports = ReactStateSetters;
 
 /***/ },
-/* 240 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(1),
-	    ReactDOM = __webpack_require__(158),
-	    UploadButton = __webpack_require__(241);
-	
-	var Images = React.createClass({
-	  displayName: 'Images',
-	
-	  getInitialState: function () {
-	    return { images: [] };
-	  },
-	  componentDidMount: function () {
-	    $.get("/api/images", (function (images) {
-	      this.setState({ images: images });
-	    }).bind(this));
-	  },
-	  postImage: function (image) {
-	    var data = { image: { url: image.url } };
-	    $.post("/api/images", data, (function (savedImage) {
-	      var images = this.state.images;
-	      images.push(savedImage);
-	      this.setState({ images: images });
-	    }).bind(this));
-	  },
-	  render: function () {
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(UploadButton, { postImage: this.postImage })
-	    );
-	  }
-	});
-
-/***/ },
+/* 240 */,
 /* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31692,8 +31655,8 @@
 	        //here we probably want to include public id at some point
 	        //for now we will just use url
 	        //we will eventually probably store public id instead of url
-	        // debugger
-	        this.props.addImage(image.url);
+	        // debugger below was addImage(image.url)
+	        this.props.addImage(image.public_id);
 	      }
 	    }).bind(this));
 	  },
@@ -31792,7 +31755,7 @@
 	      React.createElement(
 	        'h1',
 	        null,
-	        'Bone Appetit'
+	        'Hungry Heart'
 	      ),
 	      this.props.children
 	    );

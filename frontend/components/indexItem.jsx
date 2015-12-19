@@ -14,16 +14,15 @@ var IndexItem = React.createClass({
   },
   render: function () {
     var dish = this.props.dish;
-    debugger;
     return (
       <li>
         <p onClick={this.showDetail}>Dish: {dish.name}</p>
         <ul>
           {dish.images.map(function (image) {
                 return (
-                  <li key={image.id}>
-                    <img src={image.url}/>
-                  </li>
+                  <div key={image.id}>
+                    <img src={"http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + "png"}/>
+                  </div>
                 );
               }
             )

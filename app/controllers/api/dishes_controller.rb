@@ -8,10 +8,9 @@ class Api::DishesController < ApplicationController
   end
 
   def create
-    #debugger
+    debugger
     @dish = Dish.new(dish_params)
-    image_params.each { |image_url| @dish.images.build(url: image_url) }
-    # @dish.images.build(image_params)
+    image_params.each { |image_publicid| @dish.images.build(url: image_publicid) }
     @dish.user_id = current_user.id
     @dish.save!
     render :show
@@ -29,6 +28,6 @@ class Api::DishesController < ApplicationController
   end
 
   def image_params
-    params.require(:dish).require(:image_urls)
+    params.require(:dish).require(:image_publicids)
   end
 end

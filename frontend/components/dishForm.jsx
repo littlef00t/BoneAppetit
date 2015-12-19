@@ -2,7 +2,6 @@ var React = require('react');
 var History = require('react-router').History;
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var ApiUtil = require('../util/api_util');
-var Cloud = require('./Cloud');
 var UploadButton = require('./UploadButton');
 
 var DishForm = React.createClass({
@@ -12,13 +11,13 @@ var DishForm = React.createClass({
       id: '',
       name: '',
       description: '',
-      image_urls: []
+      image_publicids: []
     };
   },
-  addImage: function (image) {
-    var image_urls = this.state.image_urls;
-    image_urls.push(image)
-    this.setState({image_urls: image_urls});
+  addImage: function (image_publicid) {
+    var image_publicids = this.state.image_publicids;
+    image_publicids.push(image_publicid)
+    this.setState({image_publicids: image_publicids});
   },
   createDish: function (e) {
     e.preventDefault();
@@ -53,8 +52,8 @@ var DishForm = React.createClass({
             />
         </div>
         {
-          this.state.image_urls.map(function (url) {
-            return <img src={url}/>
+          this.state.image_publicids.map(function (public_id) {
+            return <img src={"http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png"}/>
           })
         }
         <UploadButton addImage={this.addImage}/>
