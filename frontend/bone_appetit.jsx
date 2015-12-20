@@ -2,7 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 var DishIndex = require('./components/dishIndex');
-var IndexItem = require('./components/indexItem');
+var DishIndexItem = require('./components/DishIndexItem');
 var DishDetail = require('./components/dishDetail');
 
 

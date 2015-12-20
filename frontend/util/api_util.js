@@ -48,6 +48,16 @@ ApiUtil = {
         callback && callback(comment.dish_id);
       }
     })
+  },
+  deleteComment: function (id, callback) {
+    $.ajax({
+      url: "api/comments/" + id,
+      type: "DELETE",
+      success: function (comment) {
+        ApiActions.deleteComment(comment);
+        callback && callback(comment.dish_id);
+      }
+    })
   }
 }
 

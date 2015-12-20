@@ -24038,3 +24038,2293 @@ Processing by Api::DishesController#show as JSON
   [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
   Rendered api/dishes/show.json.jbuilder (5.9ms)
 Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 21:42:04 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mDish Load (0.8ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mImage Load (0.9ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (4.3ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/comments" for ::1 at 2015-12-19 21:42:12 -0800
+Processing by Api::CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"ba-na-na", "dish_id"=>"38"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "dish_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "ba-na-na"], ["dish_id", 38], ["user_id", 12], ["created_at", "2015-12-20 05:42:12.578561"], ["updated_at", "2015-12-20 05:42:12.578561"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered api/comments/show.json.jbuilder (0.1ms)
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/dishes/38" for ::1 at 2015-12-19 21:42:12 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mDish Load (1.1ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/show.json.jbuilder (6.9ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/dishes/38" for ::1 at 2015-12-19 21:42:12 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[35mDish Load (0.4ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/show.json.jbuilder (5.4ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 21:42:23 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 44ms (Views: 43.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 21:42:23 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 21:42:24 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 21:42:24 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (1.1ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (1.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (4.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (1.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (1.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (79.2ms)
+Completed 200 OK in 82ms (Views: 59.2ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 21:42:48 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mDish Load (0.7ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mImage Load (2.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (2.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (7.9ms)
+Completed 200 OK in 13ms (Views: 6.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 21:42:48 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (3.5ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/comments" for ::1 at 2015-12-19 21:43:03 -0800
+Processing by Api::CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"will this work?", "dish_id"=>"36"}}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("body", "dish_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "will this work?"], ["dish_id", 36], ["user_id", 12], ["created_at", "2015-12-20 05:43:03.314205"], ["updated_at", "2015-12-20 05:43:03.314205"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  Rendered api/comments/show.json.jbuilder (0.2ms)
+Completed 200 OK in 11ms (Views: 3.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 21:43:03 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mDish Load (0.8ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (1.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (4.8ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 21:43:03 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (4.0ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.9ms)
+  [1m[36mComment Load (0.7ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  [1m[35mComment Load (0.8ms)[0m  SELECT  "comments".* FROM "comments"  ORDER BY "comments"."id" ASC LIMIT 1
+
+
+Started GET "/" for ::1 at 2015-12-19 22:28:54 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 426ms (Views: 425.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-5c6eca43d23eb618b6e8af000e034b0b66e25180fdcc59a61e5b1249fd9cc0c2.js?body=1" for ::1 at 2015-12-19 22:28:54 -0800
+
+
+Started GET "/" for ::1 at 2015-12-19 22:28:54 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:28:55 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  [1m[36mImage Load (2.8ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mComment Load (0.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (58.4ms)
+Completed 200 OK in 62ms (Views: 47.5ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 22:28:55 -0800
+
+
+Started GET "/api/dishes/38" for ::1 at 2015-12-19 22:29:07 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/show.json.jbuilder (5.2ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/dishes/38" for ::1 at 2015-12-19 22:29:07 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[35mDish Load (0.3ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/show.json.jbuilder (7.2ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:29:18 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (51.6ms)
+Completed 200 OK in 54ms (Views: 44.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/dishes/38" for ::1 at 2015-12-19 22:29:22 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[35mDish Load (0.7ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (1.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/show.json.jbuilder (5.1ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/dishes/38" for ::1 at 2015-12-19 22:29:22 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/show.json.jbuilder (5.2ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 22:31:41 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 321ms (Views: 320.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 22:31:41 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 72ms (Views: 71.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.self-eb6a46a5f49f61a85c4e791466f4e924ddb0df967709c32631482b4e5b08de28.js?body=1" for ::1 at 2015-12-19 22:31:41 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:31:42 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  [1m[36mImage Load (0.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mImage Load (0.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mComment Load (0.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mComment Load (2.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mImage Load (0.8ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mComment Load (0.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mImage Load (2.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mComment Load (0.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mImage Load (1.9ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mComment Load (2.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (2.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mImage Load (1.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (71.4ms)
+Completed 200 OK in 74ms (Views: 48.3ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 22:31:42 -0800
+
+
+Started GET "/api/dishes/38" for ::1 at 2015-12-19 22:31:45 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mDish Load (1.5ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mImage Load (1.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/show.json.jbuilder (8.6ms)
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/dishes/38" for ::1 at 2015-12-19 22:31:45 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[35mDish Load (0.4ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/show.json.jbuilder (6.3ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 22:32:43 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 334ms (Views: 333.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 22:32:43 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-36b9bc49b3af8a98174eeed43b28bf9e0d037ccf865a61bb73df1c710b05bf8e.js?body=1" for ::1 at 2015-12-19 22:32:43 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:32:44 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.5ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (2.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.9ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (1.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (2.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (71.4ms)
+Completed 200 OK in 73ms (Views: 53.8ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 22:32:44 -0800
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 22:32:47 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[35mDish Load (1.5ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mImage Load (1.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (1.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (7.9ms)
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 22:32:47 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[36mDish Load (0.7ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (8.0ms)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:33:12 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.5ms)[0m  SELECT "dishes".* FROM "dishes"
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (62.9ms)
+Completed 200 OK in 65ms (Views: 56.9ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 22:33:15 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (5.9ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 22:33:15 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[35mDish Load (0.4ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (5.3ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 22:34:34 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 337ms (Views: 336.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 22:34:34 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-d60a5343785f01399c9eb4faa99afa79e472a714ab577f4082f64a40d6dd263b.js?body=1" for ::1 at 2015-12-19 22:34:34 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:34:34 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (0.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (2.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (54.7ms)
+Completed 200 OK in 57ms (Views: 44.5ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 22:34:35 -0800
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 22:34:38 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[35mDish Load (0.6ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (5.2ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 22:34:38 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[36mDish Load (0.9ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (6.8ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:35:14 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.6ms)[0m  SELECT "dishes".* FROM "dishes"
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mImage Load (0.8ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (51.4ms)
+Completed 200 OK in 53ms (Views: 43.1ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/api/dishes/29" for ::1 at 2015-12-19 22:35:18 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mDish Load (1.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 29]]
+  Rendered api/dishes/show.json.jbuilder (3.5ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/dishes/29" for ::1 at 2015-12-19 22:35:18 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[35mDish Load (0.6ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 29]]
+  Rendered api/dishes/show.json.jbuilder (2.5ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:35:26 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (1.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (51.3ms)
+Completed 200 OK in 53ms (Views: 42.2ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/api/dishes/28" for ::1 at 2015-12-19 22:35:28 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[35mDish Load (0.5ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 28]]
+  Rendered api/dishes/show.json.jbuilder (2.9ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/dishes/28" for ::1 at 2015-12-19 22:35:28 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  Rendered api/dishes/show.json.jbuilder (2.5ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:35:30 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.7ms)[0m  SELECT "dishes".* FROM "dishes"
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mComment Load (0.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mComment Load (0.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mComment Load (0.8ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (49.6ms)
+Completed 200 OK in 52ms (Views: 41.7ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/api/dishes/9" for ::1 at 2015-12-19 22:35:32 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"9"}
+  [1m[36mDish Load (0.8ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  Rendered api/dishes/show.json.jbuilder (2.8ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/dishes/9" for ::1 at 2015-12-19 22:35:32 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"9"}
+  [1m[35mDish Load (0.5ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 9]]
+  Rendered api/dishes/show.json.jbuilder (2.3ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:35:36 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.8ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (49.8ms)
+Completed 200 OK in 52ms (Views: 42.7ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/api/dishes/29" for ::1 at 2015-12-19 22:35:40 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[35mDish Load (0.9ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 29]]
+  Rendered api/dishes/show.json.jbuilder (3.5ms)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/dishes/29" for ::1 at 2015-12-19 22:35:40 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 29]]
+  Rendered api/dishes/show.json.jbuilder (3.0ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:35:44 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 29]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (49.5ms)
+Completed 200 OK in 52ms (Views: 43.0ms | ActiveRecord: 8.6ms)
+
+
+Started DELETE "/api/dishes/29" for ::1 at 2015-12-19 22:35:46 -0800
+Processing by Api::DishesController#destroy as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 29]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 29]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 29]]
+  Rendered api/dishes/show.json.jbuilder (2.2ms)
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 22:36:32 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[36mDish Load (0.7ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (5.5ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 22:36:32 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[35mDish Load (0.3ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (5.9ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 22:42:10 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 379ms (Views: 378.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 22:42:11 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-5e886b109345646fed63247c7bcc3cf44127186653bae8f6e263c1956692c403.js?body=1" for ::1 at 2015-12-19 22:42:11 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:42:11 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.5ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (2.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (51.0ms)
+Completed 200 OK in 54ms (Views: 41.4ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 22:42:11 -0800
+
+
+Started GET "/api/dishes/21" for ::1 at 2015-12-19 22:42:17 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"21"}
+  [1m[35mDish Load (1.8ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 21]]
+  Rendered api/dishes/show.json.jbuilder (3.3ms)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/dishes/21" for ::1 at 2015-12-19 22:42:17 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  Rendered api/dishes/show.json.jbuilder (3.2ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/comments" for ::1 at 2015-12-19 22:42:24 -0800
+Processing by Api::CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"so healthy!", "dish_id"=>"21"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("body", "dish_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "so healthy!"], ["dish_id", 21], ["user_id", 12], ["created_at", "2015-12-20 06:42:24.733387"], ["updated_at", "2015-12-20 06:42:24.733387"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered api/comments/show.json.jbuilder (0.2ms)
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/dishes/21" for ::1 at 2015-12-19 22:42:24 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"21"}
+  [1m[35mDish Load (2.2ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 21]]
+  Rendered api/dishes/show.json.jbuilder (4.2ms)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/dishes/21" for ::1 at 2015-12-19 22:42:24 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  Rendered api/dishes/show.json.jbuilder (3.3ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 22:52:45 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 354ms (Views: 353.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 22:52:45 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-d0280fcd432d22351b621dc5ac2bcceb770348aad5056e7571af39f767384d84.js?body=1" for ::1 at 2015-12-19 22:52:45 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:52:46 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mImage Load (0.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (55.6ms)
+Completed 200 OK in 59ms (Views: 47.9ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 22:52:46 -0800
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 22:52:49 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[36mDish Load (0.9ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (4.9ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 22:52:49 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[35mDish Load (0.3ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (5.4ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/api/comments/3" for ::1 at 2015-12-19 22:53:05 -0800
+Processing by Api::CommentsController#destroy as JSON
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError - undefined method `find' for nil:NilClass:
+  app/controllers/api/comments_controller.rb:18:in `destroy'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for ::1 at 2015-12-19 22:58:41 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 327ms (Views: 326.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 22:58:41 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 36ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-c61d090e80ba43719190783e71b5ca8bb0690c32a4b6b747eb737dbeda438ced.js?body=1" for ::1 at 2015-12-19 22:58:41 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 22:58:42 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (2.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (0.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (58.5ms)
+Completed 200 OK in 62ms (Views: 48.7ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 22:58:42 -0800
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 22:58:46 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[35mDish Load (1.1ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (9.5ms)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 22:58:47 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (4.5ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/api/comments/3" for ::1 at 2015-12-19 22:58:49 -0800
+Processing by Api::CommentsController#destroy as JSON
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError - undefined method `find' for nil:NilClass:
+  app/controllers/api/comments_controller.rb:18:in `destroy'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/christineliao/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for ::1 at 2015-12-19 23:01:03 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 44ms (Views: 40.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 23:01:03 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (56.3ms)
+Completed 200 OK in 61ms (Views: 47.5ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 23:01:03 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 23:01:04 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 23:01:04 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.9ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (53.9ms)
+Completed 200 OK in 57ms (Views: 45.3ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 23:01:06 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[35mDish Load (0.9ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mImage Load (1.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (6.7ms)
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 23:01:06 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[36mDish Load (0.5ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mImage Load (1.8ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (7.5ms)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/api/comments/3" for ::1 at 2015-12-19 23:01:09 -0800
+Processing by Api::CommentsController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mComment Load (1.4ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = $1  [["id", 3]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  Rendered api/comments/show.json.jbuilder (0.3ms)
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 23:02:50 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 309ms (Views: 308.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/api/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-19 23:02:50 -0800
+
+
+Started GET "/assets/api/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-19 23:02:50 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-19 23:02:50 -0800
+
+
+Started GET "/assets/api/images.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-19 23:02:50 -0800
+
+
+Started GET "/assets/staticpages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-19 23:02:51 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-19 23:02:51 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-19 23:02:51 -0800
+
+
+Started GET "/assets/application.self-e5aec6f537ead63c3861a4a73115de1093132cb85fdce0e44f96ebb6156b5443.css?body=1" for ::1 at 2015-12-19 23:02:51 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-19 23:02:51 -0800
+
+
+Started GET "/assets/bundle.self-1d79372fd18490b9a861345a9488ac363da08a57ca3b3d5f3956370a63724830.js?body=1" for ::1 at 2015-12-19 23:02:51 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-19 23:02:51 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-19 23:02:51 -0800
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 23:02:51 -0800
+
+
+Started GET "/" for ::1 at 2015-12-19 23:02:53 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 23:02:54 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 23:02:54 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 23:02:54 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (1.2ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (0.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (0.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (56.8ms)
+Completed 200 OK in 60ms (Views: 48.2ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 23:02:57 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[35mDish Load (1.0ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (8.6ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/dishes/37" for ::1 at 2015-12-19 23:02:57 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"37"}
+  [1m[36mDish Load (2.0ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  Rendered api/dishes/show.json.jbuilder (7.4ms)
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 23:03:04 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes"
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (48.5ms)
+Completed 200 OK in 51ms (Views: 42.7ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/api/dishes/38" for ::1 at 2015-12-19 23:03:06 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/show.json.jbuilder (5.8ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/dishes/38" for ::1 at 2015-12-19 23:03:06 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[35mDish Load (0.3ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/show.json.jbuilder (6.2ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/api/comments/5" for ::1 at 2015-12-19 23:03:09 -0800
+Processing by Api::CommentsController#destroy as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.6ms)[0m  COMMIT
+  Rendered api/comments/show.json.jbuilder (0.3ms)
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/dishes/38" for ::1 at 2015-12-19 23:03:09 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mDish Load (2.7ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (1.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/show.json.jbuilder (8.1ms)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/api/dishes/38" for ::1 at 2015-12-19 23:03:09 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[35mDish Load (0.6ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/show.json.jbuilder (7.2ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 23:05:22 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 305ms (Views: 304.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-0574f368b16b9660190b6a036550a65b7f593be05d2e825c1f9544b8b84f244f.js?body=1" for ::1 at 2015-12-19 23:05:22 -0800
+
+
+Started GET "/" for ::1 at 2015-12-19 23:05:22 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 40ms (Views: 39.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.self-0574f368b16b9660190b6a036550a65b7f593be05d2e825c1f9544b8b84f244f.js?body=1" for ::1 at 2015-12-19 23:05:22 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 23:05:23 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (3.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (2.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (61.2ms)
+Completed 200 OK in 64ms (Views: 46.0ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 23:05:23 -0800
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:05:29 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mDish Load (1.0ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (5.4ms)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:05:29 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mImage Load (0.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (6.3ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 23:06:25 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 367ms (Views: 366.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 23:06:25 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-f89280f37150f031c2f53d1173b76861cd33f8b6b6ae6264dd7626cde4b8434e.js?body=1" for ::1 at 2015-12-19 23:06:25 -0800
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 23:06:25 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.7ms)[0m  SELECT "dishes".* FROM "dishes"
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mImage Load (0.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (56.6ms)
+Completed 200 OK in 59ms (Views: 46.9ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 23:06:25 -0800
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:06:29 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[36mDish Load (1.1ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (1.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (5.0ms)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:06:29 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mDish Load (0.9ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (5.2ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/api/comments/8" for ::1 at 2015-12-19 23:06:31 -0800
+Processing by Api::CommentsController#destroy as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 8]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  Rendered api/comments/show.json.jbuilder (0.1ms)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 23:06:36 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[36mDish Load (0.7ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 38]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (50.7ms)
+Completed 200 OK in 53ms (Views: 43.5ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:06:39 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mDish Load (0.7ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mImage Load (1.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (5.3ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:06:39 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (3.5ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 23:07:14 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-19 23:07:14 -0800
+Processing by StaticpagesController#root as HTML
+  Rendered staticpages/root.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/dishes" for ::1 at 2015-12-19 23:07:15 -0800
+Processing by Api::DishesController#index as JSON
+  [1m[35mDish Load (0.7ms)[0m  SELECT "dishes".* FROM "dishes"
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 1]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 1]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 2]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 2]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 3]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 3]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 4]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 4]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 5]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 5]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 6]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 6]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 7]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 7]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 8]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 8]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 9]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 9]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 10]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 10]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 11]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 11]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 13]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 13]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 21]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 21]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 24]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 24]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 27]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 27]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 28]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 28]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 37]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 37]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 38]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 38]]
+  Rendered api/dishes/index.json.jbuilder (57.5ms)
+Completed 200 OK in 60ms (Views: 48.0ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2015-12-19 23:07:15 -0800
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:07:18 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[36mDish Load (1.2ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (5.4ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:07:18 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mDish Load (0.5ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (5.2ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/comments" for ::1 at 2015-12-19 23:07:22 -0800
+Processing by Api::CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"aldkfjadfa", "dish_id"=>"36"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comments" ("body", "dish_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "aldkfjadfa"], ["dish_id", 36], ["user_id", 12], ["created_at", "2015-12-20 07:07:22.379755"], ["updated_at", "2015-12-20 07:07:22.379755"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered api/comments/show.json.jbuilder (0.1ms)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:07:22 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[36mDish Load (0.6ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (3.5ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:07:22 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mDish Load (1.1ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (3.6ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/api/comments/10" for ::1 at 2015-12-19 23:07:24 -0800
+Processing by Api::CommentsController#destroy as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 10]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  Rendered api/comments/show.json.jbuilder (0.2ms)
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:07:24 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[36mDish Load (1.5ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (5.8ms)
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:07:24 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mDish Load (0.3ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (3.1ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/comments" for ::1 at 2015-12-19 23:07:33 -0800
+Processing by Api::CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"Omg. I think it's working!", "dish_id"=>"36"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "dish_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Omg. I think it's working!"], ["dish_id", 36], ["user_id", 12], ["created_at", "2015-12-20 07:07:33.052605"], ["updated_at", "2015-12-20 07:07:33.052605"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  Rendered api/comments/show.json.jbuilder (0.3ms)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:07:33 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[36mDish Load (0.7ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (3.6ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:07:33 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mDish Load (0.6ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (4.6ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/api/comments/11" for ::1 at 2015-12-19 23:07:34 -0800
+Processing by Api::CommentsController#destroy as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 11]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  Rendered api/comments/show.json.jbuilder (0.1ms)
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:07:34 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[36mDish Load (1.1ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (9.8ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:07:34 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mDish Load (0.2ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (2.5ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/comments" for ::1 at 2015-12-19 23:07:41 -0800
+Processing by Api::CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"Hope wins...", "dish_id"=>"36"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1sKtdj0mmeJX8rcMVph6Cg"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "dish_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Hope wins..."], ["dish_id", 36], ["user_id", 12], ["created_at", "2015-12-20 07:07:41.309039"], ["updated_at", "2015-12-20 07:07:41.309039"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered api/comments/show.json.jbuilder (0.1ms)
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:07:41 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[36mDish Load (1.6ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."dish_id" = $1  [["dish_id", 36]]
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1[0m  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (5.0ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/dishes/36" for ::1 at 2015-12-19 23:07:41 -0800
+Processing by Api::DishesController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mDish Load (0.9ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."dish_id" = $1[0m  [["dish_id", 36]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dish_id" = $1  [["dish_id", 36]]
+  Rendered api/dishes/show.json.jbuilder (3.7ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 1.5ms)

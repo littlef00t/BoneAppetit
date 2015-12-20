@@ -27,6 +27,12 @@ var ApiActions = {
       actionType: CommentConstants.COMMENT_RECEIVED,
       comment: comment
     })
+  },
+  deleteComment: function (comment) {
+    AppDispatcher.dispatch({
+      actionType: CommentConstants.REMOVE_COMMENT,
+      comment: comment
+    })
   }
 }
 

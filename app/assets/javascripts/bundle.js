@@ -48,7 +48,7 @@
 	var ReactDOM = __webpack_require__(158);
 	
 	var DishIndex = __webpack_require__(159);
-	var IndexItem = __webpack_require__(184);
+	var DishIndexItem = __webpack_require__(245);
 	var DishDetail = __webpack_require__(242);
 	
 	var Router = __webpack_require__(186).Router;
@@ -19671,8 +19671,8 @@
 	var React = __webpack_require__(1);
 	var DishStore = __webpack_require__(160);
 	var ApiUtil = __webpack_require__(182);
-	var DishIndexItem = __webpack_require__(184);
-	var DishForm = __webpack_require__(185);
+	var DishIndexItem = __webpack_require__(245);
+	var DishForm = __webpack_require__(236);
 	
 	var DishIndex = React.createClass({
 	  displayName: 'DishIndex',
@@ -26541,6 +26541,16 @@
 	        callback && callback(comment.dish_id);
 	      }
 	    });
+	  },
+	  deleteComment: function (id, callback) {
+	    $.ajax({
+	      url: "api/comments/" + id,
+	      type: "DELETE",
+	      success: function (comment) {
+	        ApiActions.deleteComment(comment);
+	        callback && callback(comment.dish_id);
+	      }
+	    });
 	  }
 	};
 	
@@ -26552,7 +26562,7 @@
 
 	var AppDispatcher = __webpack_require__(178);
 	var DishConstants = __webpack_require__(181);
-	var CommentConstants = __webpack_require__(245);
+	var CommentConstants = __webpack_require__(184);
 	
 	var ApiActions = {
 	  receiveAllDishes: function (dishes) {
@@ -26578,6 +26588,12 @@
 	      actionType: CommentConstants.COMMENT_RECEIVED,
 	      comment: comment
 	    });
+	  },
+	  deleteComment: function (comment) {
+	    AppDispatcher.dispatch({
+	      actionType: CommentConstants.REMOVE_COMMENT,
+	      comment: comment
+	    });
 	  }
 	};
 	
@@ -26585,140 +26601,18 @@
 
 /***/ },
 /* 184 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	var React = __webpack_require__(1);
-	var History = __webpack_require__(186).History;
-	var ApiUtil = __webpack_require__(182);
+	CommentConstants = {
+	  COMMENTS_RECEIVED: "COMMENTS_RECEIVED",
+	  COMMENT_RECEIVED: "COMMENT_RECEIVED",
+	  REMOVE_COMMENT: "REMOVE_COMMENT"
+	};
 	
-	var IndexItem = React.createClass({
-	  displayName: 'IndexItem',
-	
-	  mixins: [History],
-	
-	  showDetail: function () {
-	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
-	  },
-	  handleDelete: function (e) {
-	    e.preventDefault();
-	    ApiUtil.deleteDish(this.props.dish.id);
-	  },
-	  render: function () {
-	    var dish = this.props.dish;
-	    return React.createElement(
-	      'li',
-	      null,
-	      React.createElement(
-	        'p',
-	        { onClick: this.showDetail },
-	        'Dish: ',
-	        dish.name
-	      ),
-	      React.createElement(
-	        'ul',
-	        null,
-	        dish.images.map(function (image) {
-	          return React.createElement(
-	            'div',
-	            { key: image.id },
-	            React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + ".png" })
-	          );
-	        })
-	      ),
-	      React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete' })
-	    );
-	  }
-	});
-	
-	module.exports = IndexItem;
+	module.exports = CommentConstants;
 
 /***/ },
-/* 185 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(1);
-	var History = __webpack_require__(186).History;
-	var LinkedStateMixin = __webpack_require__(236);
-	var ApiUtil = __webpack_require__(182);
-	var UploadButton = __webpack_require__(241);
-	
-	var DishForm = React.createClass({
-	  displayName: 'DishForm',
-	
-	  mixins: [LinkedStateMixin, History],
-	  getInitialState: function () {
-	    return {
-	      id: '',
-	      name: '',
-	      description: '',
-	      image_publicids: []
-	    };
-	  },
-	  addImage: function (image_publicid) {
-	    var image_publicids = this.state.image_publicids;
-	    image_publicids.push(image_publicid);
-	    this.setState({ image_publicids: image_publicids });
-	  },
-	  createDish: function (e) {
-	    e.preventDefault();
-	    var dish = this.state;
-	    ApiUtil.createDish(dish, (function (id) {
-	      this.history.pushState(null, "dishes/" + id, {});
-	    }).bind(this));
-	    this.setState({
-	      name: '',
-	      description: '',
-	      id: '',
-	      image_publicids: []
-	    });
-	  },
-	
-	  render: function () {
-	    return React.createElement(
-	      'form',
-	      { onSubmit: this.createDish },
-	      React.createElement(
-	        'div',
-	        null,
-	        React.createElement(
-	          'label',
-	          { htmlFor: 'dish_name' },
-	          'Dish'
-	        ),
-	        React.createElement('input', { type: 'text',
-	          id: 'dish_name',
-	          valueLink: this.linkState('name')
-	        })
-	      ),
-	      React.createElement(
-	        'div',
-	        null,
-	        React.createElement(
-	          'label',
-	          { htmlFor: 'dish_description' },
-	          'Description'
-	        ),
-	        React.createElement('input', { type: 'text',
-	          id: 'dish_description',
-	          valueLink: this.linkState('description')
-	        })
-	      ),
-	      this.state.image_publicids.map(function (public_id) {
-	        return React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png" });
-	      }),
-	      React.createElement(UploadButton, { addImage: this.addImage }),
-	      React.createElement(
-	        'button',
-	        null,
-	        'Add Dish'
-	      ),
-	      React.createElement('br', null)
-	    );
-	  }
-	});
-	module.exports = DishForm;
-
-/***/ },
+/* 185 */,
 /* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31430,10 +31324,96 @@
 /* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(237);
+	var React = __webpack_require__(1);
+	var History = __webpack_require__(186).History;
+	var LinkedStateMixin = __webpack_require__(237);
+	var ApiUtil = __webpack_require__(182);
+	var UploadButton = __webpack_require__(241);
+	
+	var DishForm = React.createClass({
+	  displayName: 'DishForm',
+	
+	  mixins: [LinkedStateMixin, History],
+	  getInitialState: function () {
+	    return {
+	      id: '',
+	      name: '',
+	      description: '',
+	      image_publicids: []
+	    };
+	  },
+	  addImage: function (image_publicid) {
+	    var image_publicids = this.state.image_publicids;
+	    image_publicids.push(image_publicid);
+	    this.setState({ image_publicids: image_publicids });
+	  },
+	  createDish: function (e) {
+	    e.preventDefault();
+	    var dish = this.state;
+	    ApiUtil.createDish(dish, (function (id) {
+	      this.history.pushState(null, "dishes/" + id, {});
+	    }).bind(this));
+	    this.setState({
+	      name: '',
+	      description: '',
+	      id: '',
+	      image_publicids: []
+	    });
+	  },
+	
+	  render: function () {
+	    return React.createElement(
+	      'form',
+	      { onSubmit: this.createDish },
+	      React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	          'label',
+	          { htmlFor: 'dish_name' },
+	          'Dish'
+	        ),
+	        React.createElement('input', { type: 'text',
+	          id: 'dish_name',
+	          valueLink: this.linkState('name')
+	        })
+	      ),
+	      React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	          'label',
+	          { htmlFor: 'dish_description' },
+	          'Description'
+	        ),
+	        React.createElement('input', { type: 'text',
+	          id: 'dish_description',
+	          valueLink: this.linkState('description')
+	        })
+	      ),
+	      this.state.image_publicids.map(function (public_id) {
+	        return React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png" });
+	      }),
+	      React.createElement(UploadButton, { addImage: this.addImage }),
+	      React.createElement(
+	        'button',
+	        null,
+	        'Add Dish'
+	      ),
+	      React.createElement('br', null)
+	    );
+	  }
+	});
+	module.exports = DishForm;
 
 /***/ },
 /* 237 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(238);
+
+/***/ },
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -31450,8 +31430,8 @@
 	
 	'use strict';
 	
-	var ReactLink = __webpack_require__(238);
-	var ReactStateSetters = __webpack_require__(239);
+	var ReactLink = __webpack_require__(239);
+	var ReactStateSetters = __webpack_require__(240);
 	
 	/**
 	 * A simple mixin around ReactLink.forState().
@@ -31474,7 +31454,7 @@
 	module.exports = LinkedStateMixin;
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -31548,7 +31528,7 @@
 	module.exports = ReactLink;
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports) {
 
 	/**
@@ -31657,7 +31637,6 @@
 	module.exports = ReactStateSetters;
 
 /***/ },
-/* 240 */,
 /* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31704,6 +31683,7 @@
 	var ApiUtil = __webpack_require__(182);
 	var ReactRouter = __webpack_require__(186);
 	var CommentForm = __webpack_require__(244);
+	var CommentIndexItem = __webpack_require__(247);
 	
 	var DishDetail = React.createClass({
 	  displayName: 'DishDetail',
@@ -31766,11 +31746,7 @@
 	        'ul',
 	        null,
 	        dish.comments.map(function (comment) {
-	          return React.createElement(
-	            'li',
-	            { key: comment.id },
-	            comment.body
-	          );
+	          return React.createElement(CommentIndexItem, { comment: comment });
 	        })
 	      ),
 	      React.createElement(
@@ -31819,7 +31795,7 @@
 
 	var React = __webpack_require__(1);
 	var History = __webpack_require__(186).History;
-	var LinkedStateMixin = __webpack_require__(236);
+	var LinkedStateMixin = __webpack_require__(237);
 	var ApiUtil = __webpack_require__(182);
 	
 	var CommentForm = React.createClass({
@@ -31874,15 +31850,88 @@
 
 /***/ },
 /* 245 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	CommentConstants = {
-	  COMMENTS_RECEIVED: "COMMENTS_RECEIVED",
-	  COMMENT_RECEIVED: "COMMENT_RECEIVED",
-	  REMOVE_COMMENT: "REMOVE_COMMENT"
-	};
+	var React = __webpack_require__(1);
+	var History = __webpack_require__(186).History;
+	var ApiUtil = __webpack_require__(182);
 	
-	module.exports = CommentConstants;
+	var DishIndexItem = React.createClass({
+	  displayName: 'DishIndexItem',
+	
+	  mixins: [History],
+	
+	  showDetail: function () {
+	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
+	  },
+	  handleDelete: function (e) {
+	    e.preventDefault();
+	    ApiUtil.deleteDish(this.props.dish.id);
+	  },
+	  render: function () {
+	    var dish = this.props.dish;
+	    return React.createElement(
+	      'li',
+	      null,
+	      React.createElement(
+	        'p',
+	        { onClick: this.showDetail },
+	        'Dish: ',
+	        dish.name
+	      ),
+	      React.createElement(
+	        'ul',
+	        null,
+	        dish.images.map(function (image) {
+	          return React.createElement(
+	            'div',
+	            { key: image.id },
+	            React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + ".png" })
+	          );
+	        })
+	      ),
+	      React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete' })
+	    );
+	  }
+	});
+	
+	module.exports = DishIndexItem;
+
+/***/ },
+/* 246 */,
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ApiUtil = __webpack_require__(182);
+	var History = __webpack_require__(186).History;
+	
+	var CommentIndexItem = React.createClass({
+	  displayName: 'CommentIndexItem',
+	
+	  mixins: [History],
+	  handleDelete: function (e) {
+	    e.preventDefault();
+	    ApiUtil.deleteComment(this.props.comment.id, (function (dish_id) {
+	      this.history.pushState(null, "dishes/" + dish_id, {});
+	    }).bind(this));
+	  },
+	  render: function () {
+	    var comment = this.props.comment;
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'li',
+	        { key: comment.id },
+	        comment.body
+	      ),
+	      React.createElement('input', { type: 'button', comment: comment, onClick: this.handleDelete, value: 'Delete' })
+	    );
+	  }
+	});
+	
+	module.exports = CommentIndexItem;
 
 /***/ }
 /******/ ]);

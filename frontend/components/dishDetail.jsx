@@ -3,6 +3,7 @@ var DishStore = require('../stores/dish');
 var ApiUtil = require('../util/api_util');
 var ReactRouter = require('react-router');
 var CommentForm = require('./commentForm');
+var CommentIndexItem = require('./CommentIndexItem');
 
 var DishDetail = React.createClass({
   getStateFromStore: function () {
@@ -49,7 +50,9 @@ var DishDetail = React.createClass({
         <ul>
           {
             dish.comments.map(function (comment) {
-              return <li key={comment.id}>{comment.body}</li>
+              return (
+                  <CommentIndexItem comment={comment}/>
+              )
             })
           }
         </ul>
