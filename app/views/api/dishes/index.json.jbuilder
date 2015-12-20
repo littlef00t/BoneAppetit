@@ -3,4 +3,5 @@ json.array! @dishes do |dish|
   json.name dish.name
   json.description dish.description
   json.images dish.images
+  json.comments dish.comments
 end

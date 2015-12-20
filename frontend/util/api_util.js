@@ -5,7 +5,7 @@ ApiUtil = {
     $.ajax({
       url: "api/dishes",
       success: function (dishes) {
-        ApiActions.receiveAll(dishes);
+        ApiActions.receiveAllDishes(dishes);
       }
     })
   },
@@ -13,7 +13,7 @@ ApiUtil = {
     $.ajax({
       url: "api/dishes/" + id,
       success: function (dish) {
-        ApiActions.receiveOne(dish);
+        ApiActions.receiveOneDish(dish);
       }
     })
   },
@@ -23,7 +23,7 @@ ApiUtil = {
       type: "POST",
       data: {dish: dish},
       success: function (dish) {
-        ApiActions.receiveOne(dish);
+        ApiActions.receiveOneDish(dish);
         callback && callback(dish.id);
       }
     })
@@ -35,6 +35,17 @@ ApiUtil = {
       success: function (dish) {
         ApiActions.deleteDish(dish);
         callback && callback();
+      }
+    })
+  },
+  createComment: function (comment, callback) {
+    $.ajax({
+      url: "api/comments",
+      type: "POST",
+      data: { comment: comment },
+      success: function (comment) {
+        ApiActions.receiveOneComment(comment);
+        callback && callback(comment.dish_id);
       }
     })
   }

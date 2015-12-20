@@ -2,6 +2,7 @@ var React = require('react');
 var DishStore = require('../stores/dish');
 var ApiUtil = require('../util/api_util');
 var ReactRouter = require('react-router');
+var CommentForm = require('./commentForm');
 
 var DishDetail = React.createClass({
   getStateFromStore: function () {
@@ -34,7 +35,24 @@ var DishDetail = React.createClass({
       <div>
         <h4>Dish: {dish.name}</h4>
         <p>Description: {dish.description}</p>
-        <img src={"http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + dish.images[0].url + ".png"}/>
+        <div>
+          {
+            dish.images.map(function (image) {
+            return (
+              <img src={"http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + ".png"}/>
+              )
+            })
+          }
+        </div>
+        <CommentForm dish={dish}/>
+        <label>Some Love</label>
+        <ul>
+          {
+            dish.comments.map(function (comment) {
+              return <li key={comment.id}>{comment.body}</li>
+            })
+          }
+        </ul>
         <Link to="/" > Back to Dishes Index </Link>
       </div>
     );

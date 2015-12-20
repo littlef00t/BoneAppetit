@@ -26498,7 +26498,7 @@
 	    $.ajax({
 	      url: "api/dishes",
 	      success: function (dishes) {
-	        ApiActions.receiveAll(dishes);
+	        ApiActions.receiveAllDishes(dishes);
 	      }
 	    });
 	  },
@@ -26506,7 +26506,7 @@
 	    $.ajax({
 	      url: "api/dishes/" + id,
 	      success: function (dish) {
-	        ApiActions.receiveOne(dish);
+	        ApiActions.receiveOneDish(dish);
 	      }
 	    });
 	  },
@@ -26516,7 +26516,7 @@
 	      type: "POST",
 	      data: { dish: dish },
 	      success: function (dish) {
-	        ApiActions.receiveOne(dish);
+	        ApiActions.receiveOneDish(dish);
 	        callback && callback(dish.id);
 	      }
 	    });
@@ -26530,6 +26530,17 @@
 	        callback && callback();
 	      }
 	    });
+	  },
+	  createComment: function (comment, callback) {
+	    $.ajax({
+	      url: "api/comments",
+	      type: "POST",
+	      data: { comment: comment },
+	      success: function (comment) {
+	        ApiActions.receiveOneComment(comment);
+	        callback && callback(comment.dish_id);
+	      }
+	    });
 	  }
 	};
 	
@@ -26541,15 +26552,16 @@
 
 	var AppDispatcher = __webpack_require__(178);
 	var DishConstants = __webpack_require__(181);
+	var CommentConstants = __webpack_require__(245);
 	
 	var ApiActions = {
-	  receiveAll: function (dishes) {
+	  receiveAllDishes: function (dishes) {
 	    AppDispatcher.dispatch({
 	      actionType: DishConstants.DISHES_RECEIVED,
 	      dishes: dishes
 	    });
 	  },
-	  receiveOne: function (dish) {
+	  receiveOneDish: function (dish) {
 	    AppDispatcher.dispatch({
 	      actionType: DishConstants.DISH_RECEIVED,
 	      dish: dish
@@ -26559,6 +26571,12 @@
 	    AppDispatcher.dispatch({
 	      actionType: DishConstants.REMOVE_DISH,
 	      dish: dish
+	    });
+	  },
+	  receiveOneComment: function (comment) {
+	    AppDispatcher.dispatch({
+	      actionType: CommentConstants.COMMENT_RECEIVED,
+	      comment: comment
 	    });
 	  }
 	};
@@ -31685,6 +31703,7 @@
 	var DishStore = __webpack_require__(160);
 	var ApiUtil = __webpack_require__(182);
 	var ReactRouter = __webpack_require__(186);
+	var CommentForm = __webpack_require__(244);
 	
 	var DishDetail = React.createClass({
 	  displayName: 'DishDetail',
@@ -31730,7 +31749,30 @@
 	        'Description: ',
 	        dish.description
 	      ),
-	      React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + dish.images[0].url + ".png" }),
+	      React.createElement(
+	        'div',
+	        null,
+	        dish.images.map(function (image) {
+	          return React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + ".png" });
+	        })
+	      ),
+	      React.createElement(CommentForm, { dish: dish }),
+	      React.createElement(
+	        'label',
+	        null,
+	        'Some Love'
+	      ),
+	      React.createElement(
+	        'ul',
+	        null,
+	        dish.comments.map(function (comment) {
+	          return React.createElement(
+	            'li',
+	            { key: comment.id },
+	            comment.body
+	          );
+	        })
+	      ),
 	      React.createElement(
 	        Link,
 	        { to: '/' },
@@ -31770,6 +31812,77 @@
 	  }
 	});
 	module.exports = App;
+
+/***/ },
+/* 244 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var History = __webpack_require__(186).History;
+	var LinkedStateMixin = __webpack_require__(236);
+	var ApiUtil = __webpack_require__(182);
+	
+	var CommentForm = React.createClass({
+	  displayName: 'CommentForm',
+	
+	  mixins: [LinkedStateMixin, History],
+	  getInitialState: function () {
+	    return {
+	      body: '',
+	      dish_id: this.props.dish.id
+	    };
+	  },
+	  createComment: function (e) {
+	    e.preventDefault();
+	    var comment = this.state;
+	    ApiUtil.createComment(comment, (function (id) {
+	      this.history.pushState(null, "dishes/" + id, {});
+	    }).bind(this));
+	    this.setState({
+	      body: '',
+	      dish_id: this.props.dish.id
+	    });
+	  },
+	
+	  render: function () {
+	    return React.createElement(
+	      'form',
+	      { onSubmit: this.createComment },
+	      React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	          'label',
+	          { htmlFor: 'comment_body' },
+	          'Love note'
+	        ),
+	        React.createElement('input', { type: 'text',
+	          id: 'comment_body',
+	          valueLink: this.linkState('body')
+	        })
+	      ),
+	      React.createElement(
+	        'button',
+	        null,
+	        'Add Love Note'
+	      ),
+	      React.createElement('br', null)
+	    );
+	  }
+	});
+	module.exports = CommentForm;
+
+/***/ },
+/* 245 */
+/***/ function(module, exports) {
+
+	CommentConstants = {
+	  COMMENTS_RECEIVED: "COMMENTS_RECEIVED",
+	  COMMENT_RECEIVED: "COMMENT_RECEIVED",
+	  REMOVE_COMMENT: "REMOVE_COMMENT"
+	};
+	
+	module.exports = CommentConstants;
 
 /***/ }
 /******/ ]);
