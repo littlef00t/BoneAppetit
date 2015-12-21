@@ -31814,6 +31814,7 @@
 	    var current_user = this.state.current_user;
 	
 	    var username;
+	    var commentForm;
 	    if (current_user) {
 	      username = React.createElement(
 	        'h3',
@@ -31821,12 +31822,14 @@
 	        'Hi! ',
 	        current_user.username
 	      );
+	      commentForm = React.createElement(CommentForm, { dish: dish });
 	    } else {
 	      username = React.createElement(
 	        'h3',
 	        null,
 	        'Hi guest!'
 	      );
+	      commentForm = React.createElement('div', null);
 	    }
 	
 	    var deleteButton;
@@ -31876,7 +31879,7 @@
 	        deleteButton
 	      ),
 	      React.createElement('br', null),
-	      React.createElement(CommentForm, { dish: dish }),
+	      commentForm,
 	      React.createElement('br', null),
 	      React.createElement(
 	        'label',

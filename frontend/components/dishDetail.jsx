@@ -49,10 +49,13 @@ var DishDetail = React.createClass({
     var current_user = this.state.current_user;
 
     var username;
+    var commentForm;
     if (current_user) {
       username = <h3>Hi! {current_user.username}</h3>;
+      commentForm = <CommentForm dish={dish}/>
     } else {
       username = <h3>Hi guest!</h3>;
+      commentForm = <div></div>
     }
 
     var deleteButton;
@@ -86,7 +89,7 @@ var DishDetail = React.createClass({
           {deleteButton}
         </div>
         <br/>
-        <CommentForm dish={dish}/>
+        {commentForm}
         <br/>
         <label>Some Love</label>
         <ul>
