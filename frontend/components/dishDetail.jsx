@@ -40,22 +40,36 @@ var DishDetail = React.createClass({
   handleDelete: function (e) {
     e.preventDefault();
     ApiUtil.deleteDish(this.state.dish.id, function () {
-      debugger;
-      this.history.pushState(null, "dishes/", {})
+      this.history.pushState(null, "dishes", {})
     }.bind(this));
   },
   render: function () {
     var Link = ReactRouter.Link;
     var dish = this.state.dish;
+    var current_user = this.state.current_user;
+
     var username;
-    debugger;
-    if (this.state.current_user) {
-      username = <h3>{this.state.current_user.username}</h3>;
+    if (current_user) {
+      username = <h3>Hi! {current_user.username}</h3>;
     } else {
-      username = <h3></h3>;
+      username = <h3>Hi guest!</h3>;
     }
+
+    var deleteButton;
+    if (current_user && current_user.id === this.state.dish.user_id) {
+      deleteButton = <input type="button" dish={dish} onClick={this.handleDelete} value="Delete Dish"/>
+
+    } else {
+      deleteButton = <div></div>
+    }
+
+    if (!this.state.dish) {
+      return (<div>Loading...</div>)
+    }
+
     return (
       <div>
+        {username}
         <h4>Dish: {dish.name}</h4>
         <p>Description: {dish.description}
           <br/>
@@ -69,8 +83,7 @@ var DishDetail = React.createClass({
               )
             })
           }
-          <input type="button" dish={dish} onClick={this.handleDelete} value="Delete Dish"/>
-
+          {deleteButton}
         </div>
         <br/>
         <CommentForm dish={dish}/>
@@ -80,7 +93,7 @@ var DishDetail = React.createClass({
           {
             dish.comments.map(function (comment) {
               return (
-                  <CommentIndexItem comment={comment}/>
+                  <CommentIndexItem comment={comment} currentuser={current_user}/>
               )
             })
           }

@@ -10,11 +10,9 @@ ApiUtil = {
     })
   },
   fetchCurrentUser: function () {
-    console.log('got in ajax');
     $.ajax({
       url: "session",
       success: function (current_user) {
-        console.log("success " + current_user.username);
         ApiActions.receiveCurrentUser(current_user);
       }
     })

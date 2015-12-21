@@ -61,6 +61,7 @@
 	  Route,
 	  { path: '/', component: App },
 	  React.createElement(IndexRoute, { component: DishIndex }),
+	  React.createElement(Route, { path: 'dishes', component: DishIndex }),
 	  React.createElement(Route, { path: 'dishes/:dishId', component: DishDetail })
 	);
 	
@@ -26505,11 +26506,9 @@
 	    });
 	  },
 	  fetchCurrentUser: function () {
-	    console.log('got in ajax');
 	    $.ajax({
 	      url: "session",
 	      success: function (current_user) {
-	        console.log("success " + current_user.username);
 	        ApiActions.receiveCurrentUser(current_user);
 	      }
 	    });
@@ -26602,14 +26601,12 @@
 	    });
 	  },
 	  deleteDish: function (dish) {
-	    debugger;
 	    AppDispatcher.dispatch({
 	      actionType: DishConstants.REMOVE_DISH,
 	      dish: dish
 	    });
 	  },
 	  receiveCurrentUser: function (current_user) {
-	    console.log('apiactions ' + current_user.username);
 	    AppDispatcher.dispatch({
 	      actionType: "CURRENTUSER_RECEIVED",
 	      current_user: current_user
@@ -31808,27 +31805,49 @@
 	  handleDelete: function (e) {
 	    e.preventDefault();
 	    ApiUtil.deleteDish(this.state.dish.id, (function () {
-	      debugger;
-	      this.history.pushState(null, "dishes/", {});
+	      this.history.pushState(null, "dishes", {});
 	    }).bind(this));
 	  },
 	  render: function () {
 	    var Link = ReactRouter.Link;
 	    var dish = this.state.dish;
+	    var current_user = this.state.current_user;
+	
 	    var username;
-	    debugger;
-	    if (this.state.current_user) {
+	    if (current_user) {
 	      username = React.createElement(
 	        'h3',
 	        null,
-	        this.state.current_user.username
+	        'Hi! ',
+	        current_user.username
 	      );
 	    } else {
-	      username = React.createElement('h3', null);
+	      username = React.createElement(
+	        'h3',
+	        null,
+	        'Hi guest!'
+	      );
 	    }
+	
+	    var deleteButton;
+	    if (current_user && current_user.id === this.state.dish.user_id) {
+	      deleteButton = React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete Dish' });
+	    } else {
+	      deleteButton = React.createElement('div', null);
+	    }
+	
+	    if (!this.state.dish) {
+	      return React.createElement(
+	        'div',
+	        null,
+	        'Loading...'
+	      );
+	    }
+	
 	    return React.createElement(
 	      'div',
 	      null,
+	      username,
 	      React.createElement(
 	        'h4',
 	        null,
@@ -31854,7 +31873,7 @@
 	        dish.images.map(function (image) {
 	          return React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" });
 	        }),
-	        React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete Dish' })
+	        deleteButton
 	      ),
 	      React.createElement('br', null),
 	      React.createElement(CommentForm, { dish: dish }),
@@ -31868,7 +31887,7 @@
 	        'ul',
 	        null,
 	        dish.comments.map(function (comment) {
-	          return React.createElement(CommentIndexItem, { comment: comment });
+	          return React.createElement(CommentIndexItem, { comment: comment, currentuser: current_user });
 	        })
 	      ),
 	      React.createElement(
@@ -31923,7 +31942,6 @@
 	var current_user;
 	
 	CurrentUserStore.find = function () {
-	  console.log("store find " + current_user.username);
 	  return current_user;
 	};
 	
@@ -31931,9 +31949,7 @@
 	  switch (payload.actionType) {
 	    case "CURRENTUSER_RECEIVED":
 	      // debugger;
-	      console.log("payload " + payload.current_user.username);
 	      current_user = payload.current_user;
-	      console.log('after pushing' + current_user);
 	      CurrentUserStore.__emitChange();
 	      break;
 	  }
@@ -32020,6 +32036,13 @@
 	  },
 	  render: function () {
 	    var comment = this.props.comment;
+	    var current_user = this.props.currentuser;
+	    var deleteButton;
+	    if (current_user && current_user.id === comment.user_id) {
+	      deleteButton = React.createElement('input', { type: 'button', comment: comment, onClick: this.handleDelete, value: 'Delete' });
+	    } else {
+	      deleteButton = React.createElement('div', null);
+	    }
 	    return React.createElement(
 	      'div',
 	      null,
@@ -32037,7 +32060,7 @@
 	          comment.username
 	        )
 	      ),
-	      React.createElement('input', { type: 'button', comment: comment, onClick: this.handleDelete, value: 'Delete' })
+	      deleteButton
 	    );
 	  }
 	});
