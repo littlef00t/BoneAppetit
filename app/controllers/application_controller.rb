@@ -25,7 +25,9 @@ class ApplicationController < ActionController::Base
   end
 
   def require_logged_in!
-    redirect_to new_session_url unless signed_in?
+    unless signed_in?
+      render json: {error: "Please sign in"}, status: 404
+    end
   end
 
   def require_no_user!

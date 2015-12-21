@@ -17,9 +17,17 @@ var ApiActions = {
     });
   },
   deleteDish: function (dish) {
+    debugger;
     AppDispatcher.dispatch({
       actionType: DishConstants.REMOVE_DISH,
       dish: dish
+    })
+  },
+  receiveCurrentUser: function (current_user) {
+    console.log('apiactions ' + current_user.username );
+    AppDispatcher.dispatch({
+      actionType: "CURRENTUSER_RECEIVED",
+      current_user: current_user
     })
   },
   receiveOneComment: function (comment) {

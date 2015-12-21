@@ -5,5 +5,5 @@ json.array! @dishes do |dish|
   json.images dish.images
   json.comments dish.comments
   json.user_id dish.user_id
-  json.username dish.username
+  json.username dish.user.username
 end

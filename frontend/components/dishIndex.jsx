@@ -19,8 +19,10 @@ var DishIndex = React.createClass({
     this.dishListener.remove();
   },
   render: function () {
+
     return (
       <div>
+        <h2>Dishes offered:</h2>
         <ul>
           {
             this.state.dishes.map(function (dish, idx) {

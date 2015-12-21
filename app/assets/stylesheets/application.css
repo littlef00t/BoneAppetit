@@ -13,6 +13,40 @@
  *= require_tree .
  *= require_self
  */
- h1 {
-   color: #00ff00
+ #org {
+   color: #6633ff;
+   font-size: 28px;
+   margin: auto;
+   width: 60%;
+   padding: 10px;
+ }
+
+ #quote {
+   font-family: 'Parisienne', cursive;
+   font-size: 16px;
+   margin: auto;
+ }
+
+ .user_info {
+   position: absolute;
+   right: 0px;
+   padding: 10px;
+ }
+
+ .font {
+   font-family: 'Comic Sans MS', cursive, sans-serif;
+ }
+
+ .dish_details {
+   /*border-radius: 20%;
+   border: 2px solid #73AD21;
+   padding: 25px 50px 75px;*/
+   width: 250px;
+   height: 250px;
+   display: inline;
+ }
+
+ .dish_details:hover {
+   font-size: 150%;
+   cursor: pointer;
  }

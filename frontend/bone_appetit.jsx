@@ -19,10 +19,6 @@ var routes = (
   </Route>
 );
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   ReactDOM.render(<Index/>, document.getElementById('root')
-// );
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
   ReactDOM.render(<Router>{routes}</Router>, document.getElementById('root')

@@ -9,6 +9,16 @@ ApiUtil = {
       }
     })
   },
+  fetchCurrentUser: function () {
+    console.log('got in ajax');
+    $.ajax({
+      url: "session",
+      success: function (current_user) {
+        console.log("success " + current_user.username);
+        ApiActions.receiveCurrentUser(current_user);
+      }
+    })
+  },
   fetchDish: function (id) {
     $.ajax({
       url: "api/dishes/" + id,
@@ -25,6 +35,9 @@ ApiUtil = {
       success: function (dish) {
         ApiActions.receiveOneDish(dish);
         callback && callback(dish.id);
+      },
+      error: function () {
+        window.location = "session/new";
       }
     })
   },
@@ -35,6 +48,9 @@ ApiUtil = {
       success: function (dish) {
         ApiActions.deleteDish(dish);
         callback && callback();
+      },
+      error: function () {
+        window.location = "session/new";
       }
     })
   },
@@ -46,6 +62,9 @@ ApiUtil = {
       success: function (comment) {
         ApiActions.receiveOneComment(comment);
         callback && callback(comment.dish_id);
+      },
+      error: function () {
+        window.location = "session/new";
       }
     })
   },
@@ -56,6 +75,9 @@ ApiUtil = {
       success: function (comment) {
         ApiActions.deleteComment(comment);
         callback && callback(comment.dish_id);
+      },
+      error: function () {
+        window.location = "session/new";
       }
     })
   }

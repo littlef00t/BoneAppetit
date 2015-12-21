@@ -55,7 +55,7 @@
 	var Route = __webpack_require__(186).Route;
 	var IndexRoute = __webpack_require__(186).IndexRoute;
 	
-	var App = __webpack_require__(245);
+	var App = __webpack_require__(243);
 	
 	var routes = React.createElement(
 	  Route,
@@ -63,11 +63,6 @@
 	  React.createElement(IndexRoute, { component: DishIndex }),
 	  React.createElement(Route, { path: 'dishes/:dishId', component: DishDetail })
 	);
-	
-	// document.addEventListener("DOMContentLoaded", function () {
-	//   ReactDOM.render(<Index/>, document.getElementById('root')
-	// );
-	// });
 	
 	document.addEventListener("DOMContentLoaded", function () {
 	  ReactDOM.render(React.createElement(
@@ -19691,9 +19686,15 @@
 	    this.dishListener.remove();
 	  },
 	  render: function () {
+	
 	    return React.createElement(
 	      'div',
 	      null,
+	      React.createElement(
+	        'h2',
+	        null,
+	        'Dishes offered:'
+	      ),
 	      React.createElement(
 	        'ul',
 	        null,
@@ -19751,6 +19752,7 @@
 	};
 	
 	var removeDish = function (dish) {
+	  debugger;
 	  delete _dishes[dish.id];
 	  DishStore.__emitChange();
 	};
@@ -26502,6 +26504,16 @@
 	      }
 	    });
 	  },
+	  fetchCurrentUser: function () {
+	    console.log('got in ajax');
+	    $.ajax({
+	      url: "session",
+	      success: function (current_user) {
+	        console.log("success " + current_user.username);
+	        ApiActions.receiveCurrentUser(current_user);
+	      }
+	    });
+	  },
 	  fetchDish: function (id) {
 	    $.ajax({
 	      url: "api/dishes/" + id,
@@ -26518,6 +26530,9 @@
 	      success: function (dish) {
 	        ApiActions.receiveOneDish(dish);
 	        callback && callback(dish.id);
+	      },
+	      error: function () {
+	        window.location = "session/new";
 	      }
 	    });
 	  },
@@ -26528,6 +26543,9 @@
 	      success: function (dish) {
 	        ApiActions.deleteDish(dish);
 	        callback && callback();
+	      },
+	      error: function () {
+	        window.location = "session/new";
 	      }
 	    });
 	  },
@@ -26539,6 +26557,9 @@
 	      success: function (comment) {
 	        ApiActions.receiveOneComment(comment);
 	        callback && callback(comment.dish_id);
+	      },
+	      error: function () {
+	        window.location = "session/new";
 	      }
 	    });
 	  },
@@ -26549,6 +26570,9 @@
 	      success: function (comment) {
 	        ApiActions.deleteComment(comment);
 	        callback && callback(comment.dish_id);
+	      },
+	      error: function () {
+	        window.location = "session/new";
 	      }
 	    });
 	  }
@@ -26578,9 +26602,17 @@
 	    });
 	  },
 	  deleteDish: function (dish) {
+	    debugger;
 	    AppDispatcher.dispatch({
 	      actionType: DishConstants.REMOVE_DISH,
 	      dish: dish
+	    });
+	  },
+	  receiveCurrentUser: function (current_user) {
+	    console.log('apiactions ' + current_user.username);
+	    AppDispatcher.dispatch({
+	      actionType: "CURRENTUSER_RECEIVED",
+	      current_user: current_user
 	    });
 	  },
 	  receiveOneComment: function (comment) {
@@ -26627,40 +26659,39 @@
 	  showDetail: function () {
 	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
 	  },
-	  handleDelete: function (e) {
-	    e.preventDefault();
-	    ApiUtil.deleteDish(this.props.dish.id);
-	  },
 	  render: function () {
 	    var dish = this.props.dish;
 	    return React.createElement(
 	      'li',
 	      null,
 	      React.createElement(
-	        'p',
-	        { onClick: this.showDetail },
-	        'Dish: ',
-	        dish.name,
-	        React.createElement('br', null),
+	        'div',
+	        { className: 'dish_details', onClick: this.showDetail },
 	        React.createElement(
-	          'small',
+	          'p',
 	          null,
-	          ' posted by ',
-	          dish.username
+	          'Dish: ',
+	          dish.name,
+	          React.createElement('br', null),
+	          React.createElement(
+	            'small',
+	            null,
+	            ' posted by ',
+	            dish.username
+	          )
+	        ),
+	        React.createElement(
+	          'ul',
+	          null,
+	          dish.images.map(function (image) {
+	            return React.createElement(
+	              'div',
+	              { key: image.id },
+	              React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + ".png" })
+	            );
+	          })
 	        )
-	      ),
-	      React.createElement(
-	        'ul',
-	        null,
-	        dish.images.map(function (image) {
-	          return React.createElement(
-	            'div',
-	            { key: image.id },
-	            React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + ".png" })
-	          );
-	        })
-	      ),
-	      React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete' })
+	      )
 	    );
 	  }
 	});
@@ -31735,16 +31766,22 @@
 
 	var React = __webpack_require__(1);
 	var DishStore = __webpack_require__(160);
+	var CurrentUserStore = __webpack_require__(244);
 	var ApiUtil = __webpack_require__(182);
 	var ReactRouter = __webpack_require__(186);
-	var CommentForm = __webpack_require__(243);
-	var CommentIndexItem = __webpack_require__(244);
+	var CommentForm = __webpack_require__(245);
+	var CommentIndexItem = __webpack_require__(246);
+	var History = __webpack_require__(186).History;
 	
 	var DishDetail = React.createClass({
 	  displayName: 'DishDetail',
 	
+	  mixins: [History],
+	
 	  getStateFromStore: function () {
-	    return { dish: DishStore.find(parseInt(this.props.params.dishId)) };
+	    return { dish: DishStore.find(parseInt(this.props.params.dishId)),
+	      current_user: CurrentUserStore.find()
+	    };
 	  },
 	
 	  getInitialState: function () {
@@ -31760,15 +31797,35 @@
 	    this._onChange();
 	  },
 	  componentDidMount: function () {
+	    this.currentuserListener = CurrentUserStore.addListener(this._onChange);
+	    ApiUtil.fetchCurrentUser();
 	    this.dishListener = DishStore.addListener(this._onChange);
 	    ApiUtil.fetchDish(parseInt(this.props.params.dishId));
 	  },
 	  componentWillUnmount: function () {
 	    this.dishListener.remove();
 	  },
+	  handleDelete: function (e) {
+	    e.preventDefault();
+	    ApiUtil.deleteDish(this.state.dish.id, (function () {
+	      debugger;
+	      this.history.pushState(null, "dishes/", {});
+	    }).bind(this));
+	  },
 	  render: function () {
 	    var Link = ReactRouter.Link;
 	    var dish = this.state.dish;
+	    var username;
+	    debugger;
+	    if (this.state.current_user) {
+	      username = React.createElement(
+	        'h3',
+	        null,
+	        this.state.current_user.username
+	      );
+	    } else {
+	      username = React.createElement('h3', null);
+	    }
 	    return React.createElement(
 	      'div',
 	      null,
@@ -31795,10 +31852,13 @@
 	        'div',
 	        null,
 	        dish.images.map(function (image) {
-	          return React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + ".png" });
-	        })
+	          return React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" });
+	        }),
+	        React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete Dish' })
 	      ),
+	      React.createElement('br', null),
 	      React.createElement(CommentForm, { dish: dish }),
+	      React.createElement('br', null),
 	      React.createElement(
 	        'label',
 	        null,
@@ -31824,6 +31884,65 @@
 
 /***/ },
 /* 243 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var App = React.createClass({
+	  displayName: "App",
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h1",
+	        { id: "org" },
+	        "Hungry Heart"
+	      ),
+	      React.createElement(
+	        "p",
+	        { id: "quote" },
+	        "\"Pure love is a willingness to give without a thought of receiving anything in return.\" -- Peace Pilgrim"
+	      ),
+	      this.props.children
+	    );
+	  }
+	});
+	module.exports = App;
+
+/***/ },
+/* 244 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Store = __webpack_require__(161).Store;
+	var AppDispatcher = __webpack_require__(178);
+	
+	var CurrentUserStore = new Store(AppDispatcher);
+	
+	var current_user;
+	
+	CurrentUserStore.find = function () {
+	  console.log("store find " + current_user.username);
+	  return current_user;
+	};
+	
+	CurrentUserStore.__onDispatch = function (payload) {
+	  switch (payload.actionType) {
+	    case "CURRENTUSER_RECEIVED":
+	      // debugger;
+	      console.log("payload " + payload.current_user.username);
+	      current_user = payload.current_user;
+	      console.log('after pushing' + current_user);
+	      CurrentUserStore.__emitChange();
+	      break;
+	  }
+	};
+	
+	module.exports = CurrentUserStore;
+
+/***/ },
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -31882,7 +32001,7 @@
 	module.exports = CommentForm;
 
 /***/ },
-/* 244 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -31924,35 +32043,6 @@
 	});
 	
 	module.exports = CommentIndexItem;
-
-/***/ },
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(1);
-	
-	var App = React.createClass({
-	  displayName: 'App',
-	
-	  render: function () {
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(
-	        'h1',
-	        null,
-	        'Hungry Heart'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '"Pure love is a willingness to give without a thought of receiving anything in return." -- Peace Pilgrim'
-	      ),
-	      this.props.children
-	    );
-	  }
-	});
-	module.exports = App;
 
 /***/ }
 /******/ ]);
