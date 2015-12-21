@@ -1,4 +1,6 @@
 class Api::DishesController < ApplicationController
+  before_action :require_logged_in!, only: [:create, :destroy]
+
   def index
     @dishes = Dish.all
   end

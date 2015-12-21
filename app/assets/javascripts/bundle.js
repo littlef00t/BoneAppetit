@@ -48,14 +48,14 @@
 	var ReactDOM = __webpack_require__(158);
 	
 	var DishIndex = __webpack_require__(159);
-	var DishIndexItem = __webpack_require__(245);
+	var DishIndexItem = __webpack_require__(185);
 	var DishDetail = __webpack_require__(242);
 	
 	var Router = __webpack_require__(186).Router;
 	var Route = __webpack_require__(186).Route;
 	var IndexRoute = __webpack_require__(186).IndexRoute;
 	
-	var App = __webpack_require__(243);
+	var App = __webpack_require__(245);
 	
 	var routes = React.createElement(
 	  Route,
@@ -19671,7 +19671,7 @@
 	var React = __webpack_require__(1);
 	var DishStore = __webpack_require__(160);
 	var ApiUtil = __webpack_require__(182);
-	var DishIndexItem = __webpack_require__(245);
+	var DishIndexItem = __webpack_require__(185);
 	var DishForm = __webpack_require__(236);
 	
 	var DishIndex = React.createClass({
@@ -26612,7 +26612,55 @@
 	module.exports = CommentConstants;
 
 /***/ },
-/* 185 */,
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var History = __webpack_require__(186).History;
+	var ApiUtil = __webpack_require__(182);
+	
+	var DishIndexItem = React.createClass({
+	  displayName: 'DishIndexItem',
+	
+	  mixins: [History],
+	
+	  showDetail: function () {
+	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
+	  },
+	  handleDelete: function (e) {
+	    e.preventDefault();
+	    ApiUtil.deleteDish(this.props.dish.id);
+	  },
+	  render: function () {
+	    var dish = this.props.dish;
+	    return React.createElement(
+	      'li',
+	      null,
+	      React.createElement(
+	        'p',
+	        { onClick: this.showDetail },
+	        'Dish: ',
+	        dish.name
+	      ),
+	      React.createElement(
+	        'ul',
+	        null,
+	        dish.images.map(function (image) {
+	          return React.createElement(
+	            'div',
+	            { key: image.id },
+	            React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + ".png" })
+	          );
+	        })
+	      ),
+	      React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete' })
+	    );
+	  }
+	});
+	
+	module.exports = DishIndexItem;
+
+/***/ },
 /* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31682,8 +31730,8 @@
 	var DishStore = __webpack_require__(160);
 	var ApiUtil = __webpack_require__(182);
 	var ReactRouter = __webpack_require__(186);
-	var CommentForm = __webpack_require__(244);
-	var CommentIndexItem = __webpack_require__(247);
+	var CommentForm = __webpack_require__(243);
+	var CommentIndexItem = __webpack_require__(244);
 	
 	var DishDetail = React.createClass({
 	  displayName: 'DishDetail',
@@ -31765,35 +31813,6 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
-	
-	var App = React.createClass({
-	  displayName: 'App',
-	
-	  render: function () {
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(
-	        'h1',
-	        null,
-	        'Hungry Heart'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '"Pure love is a willingness to give without a thought of receiving anything in return." -- Peace Pilgrim'
-	      ),
-	      this.props.children
-	    );
-	  }
-	});
-	module.exports = App;
-
-/***/ },
-/* 244 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(1);
 	var History = __webpack_require__(186).History;
 	var LinkedStateMixin = __webpack_require__(237);
 	var ApiUtil = __webpack_require__(182);
@@ -31849,57 +31868,7 @@
 	module.exports = CommentForm;
 
 /***/ },
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(1);
-	var History = __webpack_require__(186).History;
-	var ApiUtil = __webpack_require__(182);
-	
-	var DishIndexItem = React.createClass({
-	  displayName: 'DishIndexItem',
-	
-	  mixins: [History],
-	
-	  showDetail: function () {
-	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
-	  },
-	  handleDelete: function (e) {
-	    e.preventDefault();
-	    ApiUtil.deleteDish(this.props.dish.id);
-	  },
-	  render: function () {
-	    var dish = this.props.dish;
-	    return React.createElement(
-	      'li',
-	      null,
-	      React.createElement(
-	        'p',
-	        { onClick: this.showDetail },
-	        'Dish: ',
-	        dish.name
-	      ),
-	      React.createElement(
-	        'ul',
-	        null,
-	        dish.images.map(function (image) {
-	          return React.createElement(
-	            'div',
-	            { key: image.id },
-	            React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + ".png" })
-	          );
-	        })
-	      ),
-	      React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete' })
-	    );
-	  }
-	});
-	
-	module.exports = DishIndexItem;
-
-/***/ },
-/* 246 */,
-/* 247 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -31932,6 +31901,35 @@
 	});
 	
 	module.exports = CommentIndexItem;
+
+/***/ },
+/* 245 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var App = React.createClass({
+	  displayName: 'App',
+	
+	  render: function () {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h1',
+	        null,
+	        'Hungry Heart'
+	      ),
+	      React.createElement(
+	        'p',
+	        null,
+	        '"Pure love is a willingness to give without a thought of receiving anything in return." -- Peace Pilgrim'
+	      ),
+	      this.props.children
+	    );
+	  }
+	});
+	module.exports = App;
 
 /***/ }
 /******/ ]);

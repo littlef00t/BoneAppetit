@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  # before_action :require_no_user!, only: [:new, :create]
+  before_action :require_no_user!, only: [:new, :create]
 
   def create
     user = User.find_by_credentials(
@@ -16,13 +16,13 @@ class SessionsController < ApplicationController
     end
   end
 
+  def show
+    @current_user = current_user
+  end
+
   def destroy
     sign_out
-    # redirect_to new_session_url
     redirect_to :root
   end
 
-  def new
-
-  end
 end
