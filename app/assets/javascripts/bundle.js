@@ -19669,24 +19669,38 @@
 	var ApiUtil = __webpack_require__(182);
 	var DishIndexItem = __webpack_require__(185);
 	var DishForm = __webpack_require__(236);
+	var CurrentUserStore = __webpack_require__(244);
 	
 	var DishIndex = React.createClass({
 	  displayName: 'DishIndex',
 	
 	  getInitialState: function () {
-	    return { dishes: DishStore.all() };
+	    return { dishes: DishStore.all(),
+	      current_user: CurrentUserStore.find()
+	    };
 	  },
 	  _onChange: function () {
-	    this.setState({ dishes: DishStore.all() });
+	    this.setState({ dishes: DishStore.all(),
+	      current_user: CurrentUserStore.find()
+	    });
 	  },
 	  componentDidMount: function () {
 	    this.dishListener = DishStore.addListener(this._onChange);
 	    ApiUtil.fetchDishes();
+	    this.currentuserListener = CurrentUserStore.addListener(this._onChange);
+	    ApiUtil.fetchCurrentUser();
 	  },
 	  componentWillUnmount: function () {
 	    this.dishListener.remove();
 	  },
 	  render: function () {
+	    var current_user = this.state.current_user;
+	    var dishForm;
+	    if (current_user) {
+	      dishForm = React.createElement(DishForm, null);
+	    } else {
+	      dishForm = React.createElement('div', null);
+	    }
 	
 	    return React.createElement(
 	      'div',
@@ -19707,7 +19721,7 @@
 	          );
 	        })
 	      ),
-	      React.createElement(DishForm, null)
+	      dishForm
 	    );
 	  }
 	});

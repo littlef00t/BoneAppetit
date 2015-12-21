@@ -31,6 +31,6 @@ class ApplicationController < ActionController::Base
   end
 
   def require_no_user!
-    redirect_to api_dishes_url if current_user
+    redirect_to root_url if current_user
   end
 end
