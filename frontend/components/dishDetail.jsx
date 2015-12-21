@@ -35,7 +35,10 @@ var DishDetail = React.createClass({
     return (
       <div>
         <h4>Dish: {dish.name}</h4>
-        <p>Description: {dish.description}</p>
+        <p>Description: {dish.description}
+          <br/>
+          <small>posted by {dish.username}</small>
+        </p>
         <div>
           {
             dish.images.map(function (image) {

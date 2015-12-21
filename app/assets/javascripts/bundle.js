@@ -26640,7 +26640,14 @@
 	        'p',
 	        { onClick: this.showDetail },
 	        'Dish: ',
-	        dish.name
+	        dish.name,
+	        React.createElement('br', null),
+	        React.createElement(
+	          'small',
+	          null,
+	          ' posted by ',
+	          dish.username
+	        )
 	      ),
 	      React.createElement(
 	        'ul',
@@ -31775,7 +31782,14 @@
 	        'p',
 	        null,
 	        'Description: ',
-	        dish.description
+	        dish.description,
+	        React.createElement('br', null),
+	        React.createElement(
+	          'small',
+	          null,
+	          'posted by ',
+	          dish.username
+	        )
 	      ),
 	      React.createElement(
 	        'div',
@@ -31893,7 +31907,16 @@
 	      React.createElement(
 	        'li',
 	        { key: comment.id },
-	        comment.body
+	        comment.body,
+	        ' ',
+	        React.createElement('br', null),
+	        ' ',
+	        React.createElement(
+	          'small',
+	          null,
+	          'Love from: ',
+	          comment.username
+	        )
 	      ),
 	      React.createElement('input', { type: 'button', comment: comment, onClick: this.handleDelete, value: 'Delete' })
 	    );

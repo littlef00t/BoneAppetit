@@ -16,6 +16,7 @@ class Api::DishesController < ApplicationController
     @dish = Dish.new(dish_params)
     image_params.each { |image_publicid| @dish.images.build(url: image_publicid) }
     @dish.user_id = current_user.id
+    @dish.username = current_user.username
     @dish.save!
     render :show
   end
