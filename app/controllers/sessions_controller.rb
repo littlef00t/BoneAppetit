@@ -17,12 +17,14 @@ class SessionsController < ApplicationController
   end
 
   def show
-    # if current_user
+    if current_user
       @current_user = current_user
-    #   render :show
-    # else
-    #   render json: {}
-    # end
+      render :show
+    else
+      @current_user = User.new(id: -1)
+      render :show
+    end
+
   end
 
   def destroy

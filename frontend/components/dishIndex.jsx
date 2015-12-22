@@ -30,7 +30,7 @@ var DishIndex = React.createClass({
   render: function () {
     var current_user = this.state.current_user;
     var dishForm;
-    if (current_user) {
+    if (current_user.id !== -1) {
       dishForm = <DishForm />
     } else {
       dishForm = <div></div>

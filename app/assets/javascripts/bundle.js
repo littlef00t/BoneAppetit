@@ -19697,7 +19697,7 @@
 	  render: function () {
 	    var current_user = this.state.current_user;
 	    var dishForm;
-	    if (current_user) {
+	    if (current_user.id !== -1) {
 	      dishForm = React.createElement(DishForm, null);
 	    } else {
 	      dishForm = React.createElement('div', null);
@@ -31781,7 +31781,7 @@
 	
 	var CurrentUserStore = new Store(AppDispatcher);
 	
-	var current_user;
+	var current_user = { id: -1 };
 	
 	CurrentUserStore.find = function () {
 	  return current_user;
@@ -31858,7 +31858,7 @@
 	
 	    var username;
 	    var commentForm;
-	    if (current_user) {
+	    if (current_user.id !== -1) {
 	      username = React.createElement(
 	        'h3',
 	        null,
@@ -31884,7 +31884,7 @@
 	    }
 	
 	    var deleteButton;
-	    if (current_user && current_user.id === this.state.dish.user_id) {
+	    if (current_user.id !== -1 && current_user.id === this.state.dish.user_id) {
 	      deleteButton = React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete Dish' });
 	    } else {
 	      deleteButton = React.createElement('div', null);

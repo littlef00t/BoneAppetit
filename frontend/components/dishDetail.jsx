@@ -51,7 +51,7 @@ var DishDetail = React.createClass({
 
     var username;
     var commentForm;
-    if (current_user) {
+    if (current_user.id !== -1) {
       username = <h3>Hi! {current_user.username}</h3>;
       commentForm = <CommentForm dish={dish}/>
     } else {
@@ -64,7 +64,7 @@ var DishDetail = React.createClass({
     }
 
     var deleteButton;
-    if (current_user && current_user.id === this.state.dish.user_id) {
+    if ((current_user.id !== -1) && (current_user.id === this.state.dish.user_id)) {
       deleteButton = <input type="button" dish={dish} onClick={this.handleDelete} value="Delete Dish"/>
 
     } else {

@@ -3,7 +3,7 @@ var AppDispatcher = require('../dispatcher/dispatcher');
 
 var CurrentUserStore = new Store(AppDispatcher);
 
-var current_user;
+var current_user = {id: -1};
 
 CurrentUserStore.find = function () {
   return current_user;
