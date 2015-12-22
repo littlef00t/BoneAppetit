@@ -7,7 +7,7 @@ class Api::ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
     if @image.save
-      render: show
+      render :show
     else
     end
   end
@@ -15,7 +15,7 @@ class Api::ImagesController < ApplicationController
   def destroy
     @image = Image.find(params[:id])
     @image.destroy
-    render: show
+    render :show
   end
 
   def image_params
