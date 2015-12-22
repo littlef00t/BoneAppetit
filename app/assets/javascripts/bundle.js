@@ -19692,6 +19692,7 @@
 	  },
 	  componentWillUnmount: function () {
 	    this.dishListener.remove();
+	    this.currentuserListener.remove();
 	  },
 	  render: function () {
 	    var current_user = this.state.current_user;
@@ -19716,8 +19717,8 @@
 	        this.state.dishes.map(function (dish, idx) {
 	          return React.createElement(
 	            'div',
-	            null,
-	            React.createElement(DishIndexItem, { key: dish.id, dish: dish })
+	            { key: dish.id },
+	            React.createElement(DishIndexItem, { dish: dish })
 	          );
 	        })
 	      ),
@@ -31815,6 +31816,7 @@
 	  },
 	  componentWillUnmount: function () {
 	    this.dishListener.remove();
+	    this.currentuserListener.remove();
 	  },
 	  handleDelete: function (e) {
 	    e.preventDefault();
@@ -31846,19 +31848,19 @@
 	      commentForm = React.createElement('div', null);
 	    }
 	
-	    var deleteButton;
-	    if (current_user && current_user.id === this.state.dish.user_id) {
-	      deleteButton = React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete Dish' });
-	    } else {
-	      deleteButton = React.createElement('div', null);
-	    }
-	
 	    if (!this.state.dish) {
 	      return React.createElement(
 	        'div',
 	        null,
 	        'Loading...'
 	      );
+	    }
+	
+	    var deleteButton;
+	    if (current_user && current_user.id === this.state.dish.user_id) {
+	      deleteButton = React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete Dish' });
+	    } else {
+	      deleteButton = React.createElement('div', null);
 	    }
 	
 	    return React.createElement(
@@ -31888,7 +31890,7 @@
 	        'div',
 	        null,
 	        dish.images.map(function (image) {
-	          return React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" });
+	          return React.createElement('img', { key: image.id, src: "http://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" });
 	        }),
 	        deleteButton
 	      ),
@@ -31904,7 +31906,8 @@
 	        'ul',
 	        null,
 	        dish.comments.map(function (comment) {
-	          return React.createElement(CommentIndexItem, { comment: comment, currentuser: current_user });
+	          return React.createElement(CommentIndexItem, { key: comment.id,
+	            comment: comment, currentuser: current_user });
 	        })
 	      ),
 	      React.createElement(

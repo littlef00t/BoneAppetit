@@ -25,6 +25,7 @@ var DishIndex = React.createClass({
   },
   componentWillUnmount: function () {
     this.dishListener.remove();
+    this.currentuserListener.remove();
   },
   render: function () {
     var current_user = this.state.current_user;
@@ -42,8 +43,8 @@ var DishIndex = React.createClass({
           {
             this.state.dishes.map(function (dish, idx) {
               return (
-                <div>
-                  <DishIndexItem key={dish.id} dish={dish} />
+                <div key={dish.id}>
+                  <DishIndexItem dish={dish} />
                 </div>
               )
             })

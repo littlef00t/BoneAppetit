@@ -10,5 +10,6 @@ json.comments do
     json.user_id comment.user_id
     json.body comment.body
     json.username comment.user.username
+    json.id comment.id
   end
 end

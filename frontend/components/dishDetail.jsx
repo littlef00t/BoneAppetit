@@ -36,6 +36,7 @@ var DishDetail = React.createClass({
   },
   componentWillUnmount: function () {
     this.dishListener.remove();
+    this.currentuserListener.remove();
   },
   handleDelete: function (e) {
     e.preventDefault();
@@ -58,6 +59,10 @@ var DishDetail = React.createClass({
       commentForm = <div></div>
     }
 
+    if (!this.state.dish) {
+      return (<div>Loading...</div>)
+    }
+
     var deleteButton;
     if (current_user && current_user.id === this.state.dish.user_id) {
       deleteButton = <input type="button" dish={dish} onClick={this.handleDelete} value="Delete Dish"/>
@@ -66,9 +71,6 @@ var DishDetail = React.createClass({
       deleteButton = <div></div>
     }
 
-    if (!this.state.dish) {
-      return (<div>Loading...</div>)
-    }
 
     return (
       <div>
@@ -82,7 +84,7 @@ var DishDetail = React.createClass({
           {
             dish.images.map(function (image) {
             return (
-              <img src={"http://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png"}/>
+              <img key={image.id} src={"http://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png"}/>
               )
             })
           }
@@ -96,7 +98,8 @@ var DishDetail = React.createClass({
           {
             dish.comments.map(function (comment) {
               return (
-                  <CommentIndexItem comment={comment} currentuser={current_user}/>
+                  <CommentIndexItem key={comment.id}
+                    comment={comment} currentuser={current_user}/>
               )
             })
           }
