@@ -53,7 +53,7 @@ var DishForm = React.createClass({
         </div>
         {
           this.state.image_publicids.map(function (public_id) {
-            return <img src={"http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png"}/>
+            return <img src={"https://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png"}/>
           })
         }
         <UploadButton addImage={this.addImage}/>

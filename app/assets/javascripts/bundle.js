@@ -31490,7 +31490,7 @@
 	        })
 	      ),
 	      this.state.image_publicids.map(function (public_id) {
-	        return React.createElement('img', { src: "http://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png" });
+	        return React.createElement('img', { src: "https://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png" });
 	      }),
 	      React.createElement(UploadButton, { addImage: this.addImage }),
 	      React.createElement(
@@ -31917,7 +31917,7 @@
 	        'div',
 	        null,
 	        dish.images.map(function (image) {
-	          return React.createElement('img', { key: image.id, src: "http://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" });
+	          return React.createElement('img', { key: image.id, src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" });
 	        }),
 	        deleteButton
 	      ),
