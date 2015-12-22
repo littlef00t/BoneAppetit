@@ -1,0 +1,7 @@
+CommentConstants = {
+  COMMENTS_RECEIVED: "COMMENTS_RECEIVED",
+  COMMENT_RECEIVED: "COMMENT_RECEIVED",
+  REMOVE_COMMENT: "REMOVE_COMMENT"
+}
+
+module.exports = CommentConstants;
