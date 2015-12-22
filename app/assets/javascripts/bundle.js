@@ -49,13 +49,13 @@
 	
 	var DishIndex = __webpack_require__(159);
 	var DishIndexItem = __webpack_require__(185);
-	var DishDetail = __webpack_require__(242);
+	var DishDetail = __webpack_require__(243);
 	
 	var Router = __webpack_require__(186).Router;
 	var Route = __webpack_require__(186).Route;
 	var IndexRoute = __webpack_require__(186).IndexRoute;
 	
-	var App = __webpack_require__(243);
+	var App = __webpack_require__(246);
 	
 	var routes = React.createElement(
 	  Route,
@@ -19669,7 +19669,7 @@
 	var ApiUtil = __webpack_require__(182);
 	var DishIndexItem = __webpack_require__(185);
 	var DishForm = __webpack_require__(236);
-	var CurrentUserStore = __webpack_require__(244);
+	var CurrentUserStore = __webpack_require__(242);
 	
 	var DishIndex = React.createClass({
 	  displayName: 'DishIndex',
@@ -31776,13 +31776,40 @@
 /* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var Store = __webpack_require__(161).Store;
+	var AppDispatcher = __webpack_require__(178);
+	
+	var CurrentUserStore = new Store(AppDispatcher);
+	
+	var current_user;
+	
+	CurrentUserStore.find = function () {
+	  return current_user;
+	};
+	
+	CurrentUserStore.__onDispatch = function (payload) {
+	  switch (payload.actionType) {
+	    case "CURRENTUSER_RECEIVED":
+	      // debugger;
+	      current_user = payload.current_user;
+	      CurrentUserStore.__emitChange();
+	      break;
+	  }
+	};
+	
+	module.exports = CurrentUserStore;
+
+/***/ },
+/* 243 */
+/***/ function(module, exports, __webpack_require__) {
+
 	var React = __webpack_require__(1);
 	var DishStore = __webpack_require__(160);
-	var CurrentUserStore = __webpack_require__(244);
+	var CurrentUserStore = __webpack_require__(242);
 	var ApiUtil = __webpack_require__(182);
 	var ReactRouter = __webpack_require__(186);
-	var CommentForm = __webpack_require__(245);
-	var CommentIndexItem = __webpack_require__(246);
+	var CommentForm = __webpack_require__(244);
+	var CommentIndexItem = __webpack_require__(245);
 	var History = __webpack_require__(186).History;
 	
 	var DishDetail = React.createClass({
@@ -31922,63 +31949,7 @@
 	module.exports = DishDetail;
 
 /***/ },
-/* 243 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(1);
-	
-	var App = React.createClass({
-	  displayName: "App",
-	
-	  render: function () {
-	    return React.createElement(
-	      "div",
-	      null,
-	      React.createElement(
-	        "h1",
-	        { id: "org" },
-	        "Hungry Heart"
-	      ),
-	      React.createElement(
-	        "p",
-	        { id: "quote" },
-	        "\"Pure love is a willingness to give without a thought of receiving anything in return.\" -- Peace Pilgrim"
-	      ),
-	      this.props.children
-	    );
-	  }
-	});
-	module.exports = App;
-
-/***/ },
 /* 244 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Store = __webpack_require__(161).Store;
-	var AppDispatcher = __webpack_require__(178);
-	
-	var CurrentUserStore = new Store(AppDispatcher);
-	
-	var current_user;
-	
-	CurrentUserStore.find = function () {
-	  return current_user;
-	};
-	
-	CurrentUserStore.__onDispatch = function (payload) {
-	  switch (payload.actionType) {
-	    case "CURRENTUSER_RECEIVED":
-	      // debugger;
-	      current_user = payload.current_user;
-	      CurrentUserStore.__emitChange();
-	      break;
-	  }
-	};
-	
-	module.exports = CurrentUserStore;
-
-/***/ },
-/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -32037,7 +32008,7 @@
 	module.exports = CommentForm;
 
 /***/ },
-/* 246 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -32086,6 +32057,40 @@
 	});
 	
 	module.exports = CommentIndexItem;
+
+/***/ },
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var App = React.createClass({
+	  displayName: "App",
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h1",
+	        { id: "org" },
+	        "Hungry Heart"
+	      ),
+	      React.createElement(
+	        "h5",
+	        null,
+	        "A place to share excess food to the hungry..."
+	      ),
+	      React.createElement(
+	        "p",
+	        { id: "quote" },
+	        "\"Pure love is a willingness to give without a thought of receiving anything in return.\" -- Peace Pilgrim"
+	      ),
+	      this.props.children
+	    );
+	  }
+	});
+	module.exports = App;
 
 /***/ }
 /******/ ]);
