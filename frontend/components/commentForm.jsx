@@ -34,7 +34,7 @@ var CommentForm = React.createClass({
             />
         </div>
 
-        <button>Add Love Note</button>
+        <button className="btn btn-warning">Add Love Note</button>
         <br />
       </form>
     );

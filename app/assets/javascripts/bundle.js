@@ -31763,7 +31763,7 @@
 	      { className: "upload-form" },
 	      React.createElement(
 	        "button",
-	        { onClick: this.upload },
+	        { className: "btn btn-success", onClick: this.upload },
 	        "Upload dish image!"
 	      )
 	    );
@@ -31998,7 +31998,7 @@
 	      ),
 	      React.createElement(
 	        'button',
-	        null,
+	        { className: 'btn btn-warning' },
 	        'Add Love Note'
 	      ),
 	      React.createElement('br', null)
