@@ -49,13 +49,13 @@
 	
 	var DishIndex = __webpack_require__(159);
 	var DishIndexItem = __webpack_require__(185);
-	var DishDetail = __webpack_require__(243);
+	var DishDetail = __webpack_require__(244);
 	
 	var Router = __webpack_require__(186).Router;
 	var Route = __webpack_require__(186).Route;
 	var IndexRoute = __webpack_require__(186).IndexRoute;
 	
-	var App = __webpack_require__(246);
+	var App = __webpack_require__(247);
 	
 	var routes = React.createElement(
 	  Route,
@@ -19670,6 +19670,7 @@
 	var DishIndexItem = __webpack_require__(185);
 	var DishForm = __webpack_require__(236);
 	var CurrentUserStore = __webpack_require__(242);
+	var AutoComplete = __webpack_require__(243);
 	
 	var DishIndex = React.createClass({
 	  displayName: 'DishIndex',
@@ -19711,17 +19712,7 @@
 	        null,
 	        'Dishes offered:'
 	      ),
-	      React.createElement(
-	        'ul',
-	        null,
-	        this.state.dishes.map(function (dish, idx) {
-	          return React.createElement(
-	            'div',
-	            { key: dish.id },
-	            React.createElement(DishIndexItem, { dish: dish })
-	          );
-	        })
-	      ),
+	      React.createElement(AutoComplete, { dishes: this.state.dishes }),
 	      dishForm
 	    );
 	  }
@@ -31804,12 +31795,95 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
+	var LinkedStateMixin = __webpack_require__(237);
+	var DishIndexItem = __webpack_require__(185);
+	
+	var AutoComplete = React.createClass({
+	  displayName: 'AutoComplete',
+	
+	  mixins: [LinkedStateMixin],
+	
+	  getInitialState: function () {
+	    return { inputVal: "" };
+	  },
+	  matches: function () {
+	    var matches = [];
+	    var dishNames = this.props.dishes.map(function (dish) {
+	      return dish.name;
+	    });
+	    if (this.state.inputVal.length === 0) {
+	      return dishNames;
+	    }
+	    dishNames.forEach((function (dish) {
+	      var sub = dish.slice(0, this.state.inputVal.length);
+	      if (sub.toLowerCase() === this.state.inputVal.toLowerCase()) {
+	        matches.push(dish);
+	      }
+	    }).bind(this));
+	    if (matches.length === 0) {
+	      matches.push("No matches");
+	    }
+	
+	    return matches;
+	  },
+	  fullDishes: function () {
+	    var matching = this.matches();
+	    var fullDishes = [];
+	    this.props.dishes.forEach(function (dish) {
+	      matching.forEach(function (match) {
+	        if (dish.name === match) {
+	          fullDishes.push(dish);
+	        }
+	      });
+	    });
+	    return fullDishes;
+	  },
+	  handleClick: function (e) {
+	    e.preventDefault();
+	    var dish = e.currentTarget.innerText;
+	    this.setState({ inputVal: dish });
+	  },
+	  render: function () {
+	    var fullDishes = this.fullDishes();
+	    var that = this;
+	
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement('input', { id: 'dish_searched', defaultValue: 'Search for a dish', valueLink: this.linkState('inputVal') }),
+	      React.createElement(
+	        'ul',
+	        null,
+	        fullDishes.map(function (dish, idx) {
+	          return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	              'li',
+	              { key: idx, onClick: that.handleClick },
+	              dish.name
+	            ),
+	            React.createElement(DishIndexItem, { dish: dish })
+	          );
+	        })
+	      ),
+	      React.createElement('ul', null)
+	    );
+	  }
+	});
+	module.exports = AutoComplete;
+
+/***/ },
+/* 244 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
 	var DishStore = __webpack_require__(160);
 	var CurrentUserStore = __webpack_require__(242);
 	var ApiUtil = __webpack_require__(182);
 	var ReactRouter = __webpack_require__(186);
-	var CommentForm = __webpack_require__(244);
-	var CommentIndexItem = __webpack_require__(245);
+	var CommentForm = __webpack_require__(245);
+	var CommentIndexItem = __webpack_require__(246);
 	var History = __webpack_require__(186).History;
 	
 	var DishDetail = React.createClass({
@@ -31949,7 +32023,7 @@
 	module.exports = DishDetail;
 
 /***/ },
-/* 244 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -32008,7 +32082,7 @@
 	module.exports = CommentForm;
 
 /***/ },
-/* 245 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -32059,7 +32133,7 @@
 	module.exports = CommentIndexItem;
 
 /***/ },
-/* 246 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);

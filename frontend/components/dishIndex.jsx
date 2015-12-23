@@ -4,6 +4,9 @@ var ApiUtil = require('../util/api_util');
 var DishIndexItem = require('./DishIndexItem');
 var DishForm = require('./dishForm');
 var CurrentUserStore = require('../stores/current_user');
+var AutoComplete = require('./AutoComplete');
+
+
 
 
 var DishIndex = React.createClass({
@@ -36,20 +39,11 @@ var DishIndex = React.createClass({
       dishForm = <div></div>
     }
 
+
     return (
       <div>
         <h2>Dishes offered:</h2>
-        <ul>
-          {
-            this.state.dishes.map(function (dish, idx) {
-              return (
-                <div key={dish.id}>
-                  <DishIndexItem dish={dish} />
-                </div>
-              )
-            })
-          }
-        </ul>
+        <AutoComplete dishes={this.state.dishes} />
         {dishForm}
       </div>
     );
