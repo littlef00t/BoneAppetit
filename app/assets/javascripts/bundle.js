@@ -26675,7 +26675,7 @@
 	    var dish = this.props.dish;
 	    return React.createElement(
 	      'li',
-	      null,
+	      { className: 'dish-index-item' },
 	      React.createElement(
 	        'div',
 	        { className: 'dish_details', onClick: this.showDetail },
@@ -31489,8 +31489,8 @@
 	          valueLink: this.linkState('description')
 	        })
 	      ),
-	      this.state.image_publicids.map(function (public_id) {
-	        return React.createElement('img', { src: "https://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png" });
+	      this.state.image_publicids.map(function (public_id, idx) {
+	        return React.createElement('img', { key: idx, src: "https://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png" });
 	      }),
 	      React.createElement(UploadButton, { addImage: this.addImage }),
 	      React.createElement(

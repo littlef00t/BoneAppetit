@@ -11,7 +11,7 @@ var DishIndexItem = React.createClass({
   render: function () {
     var dish = this.props.dish;
     return (
-      <li>
+      <li className="dish-index-item">
         <div className="dish_details" onClick={this.showDetail}>
           <p>Dish: {dish.name}
             <br/>
