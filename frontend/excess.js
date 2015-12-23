@@ -15,3 +15,9 @@
 //   </ul>
 //   {dishForm}
 // </div>
+
+// AutoComplete
+// <div key={idx}>
+//   <li onClick={that.handleClick}>{dish.name}</li>
+//   <DishIndexItem dish={dish}/>
+// </div>

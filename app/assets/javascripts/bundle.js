@@ -26669,7 +26669,7 @@
 	      { className: 'dish-index-item' },
 	      React.createElement(
 	        'div',
-	        { className: 'dish_details', onClick: this.showDetail },
+	        { className: 'dish-details', onClick: this.showDetail },
 	        React.createElement(
 	          'p',
 	          null,
@@ -31850,19 +31850,14 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement('input', { id: 'dish_searched', defaultValue: 'Search for a dish', valueLink: this.linkState('inputVal') }),
+	      React.createElement('input', { id: 'dish-searched', placeholder: 'Search for a dish', valueLink: this.linkState('inputVal') }),
 	      React.createElement(
 	        'ul',
-	        null,
+	        { className: 'matched-items' },
 	        fullDishes.map(function (dish, idx) {
 	          return React.createElement(
 	            'div',
-	            null,
-	            React.createElement(
-	              'li',
-	              { key: idx, onClick: that.handleClick },
-	              dish.name
-	            ),
+	            { key: idx },
 	            React.createElement(DishIndexItem, { dish: dish })
 	          );
 	        })

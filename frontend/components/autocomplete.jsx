@@ -52,13 +52,12 @@ var AutoComplete = React.createClass({
 
     return (
       <div>
-        <input id='dish_searched' defaultValue="Search for a dish" valueLink={this.linkState('inputVal')} />
-        <ul>
+        <input id='dish-searched' placeholder="Search for a dish" valueLink={this.linkState('inputVal')} />
+        <ul className="matched-items">
           {
             fullDishes.map(function (dish, idx) {
               return (
-                <div>
-                  <li key={idx} onClick={that.handleClick}>{dish.name}</li>
+                <div key={idx}>
                   <DishIndexItem dish={dish}/>
                 </div>
               )

@@ -37,11 +37,15 @@
    padding: 10px;
  }
 
- .font {
-   font-family: 'Comic Sans MS', cursive, sans-serif;
- }
+.matched-items {
+  display: block;
+}
 
- .dish_details {
+ // .font {
+ //   font-family: 'Comic Sans MS', cursive, sans-serif;
+ // }
+
+ .dish-details {
    /*border-radius: 20%;
    border: 2px solid #73AD21;
    padding: 25px 50px 75px;*/
@@ -50,8 +54,7 @@
    display: inline;
  }
 
- .dish_details:hover {
-   font-size: 150%;
+ .dish-details:hover {
    cursor: pointer;
  }
 

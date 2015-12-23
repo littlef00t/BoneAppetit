@@ -12,7 +12,7 @@ var DishIndexItem = React.createClass({
     var dish = this.props.dish;
     return (
       <li className="dish-index-item">
-        <div className="dish_details" onClick={this.showDetail}>
+        <div className="dish-details" onClick={this.showDetail}>
           <p>Dish: {dish.name}
             <br/>
             <small> posted by {dish.username}</small>
