@@ -1,28 +1,30 @@
-<h1>Sign In</h1>
+<div class="container">
+  <h1>Please Sign In</h1>
 
-<%= render "shared/errors" %>
+  <%= render "shared/errors" %>
 
-<form action="<%= session_url %>" method="post">
-  <input
-    type="hidden"
-    name="authenticity_token"
-    value="<%= form_authenticity_token %>">
+  <form action="<%= session_url %>" method="post">
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
 
-  <label for="user_username">Username</label>
-  <input type="text" name="user[username]" id="user_username">
+    <label for="user_username">Username</label>
+    <input type="text" name="user[username]" id="user_username">
+    <br>
+
+    <label for="user_password">Password</label>
+    <input type="password" name="user[password]" id="user_password">
+    <br>
+
+
+    <input type="submit">
+  </form>
+
+  <br>
   <br>
 
-  <label for="user_password">Password</label>
-  <input type="password" name="user[password]" id="user_password">
-  <br>
+  <%= render "shared/demo_user" %>
 
-
-  <input type="submit">
-</form>
-
-<br>
-<br>
-
-<%= render "shared/demo_user" %>
-
-<%= link_to "Return to Home Page", root_url %>
+  <%= link_to "Return to Home Page", root_url %>
+</div>
