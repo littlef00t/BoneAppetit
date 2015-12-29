@@ -18,8 +18,7 @@ Hungry Heart allows users to:
 - [ ] Able to upload images with dish
 Bonus?
 - [ ] Rate the dish by clicking ('tried it and loved it')
-- [ ] Comment on other puppy users' dishes
-- [ ] See dishes by highest ratings
+- [ ] Comment on other users' dishes
 
 ## Design Docs
 * [View Wireframes][view]
