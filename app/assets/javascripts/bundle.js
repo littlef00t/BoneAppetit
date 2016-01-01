@@ -31496,7 +31496,8 @@
 	          { className: 'row input-field col s6' },
 	          React.createElement('input', { type: 'text',
 	            id: 'dish_name',
-	            valueLink: this.linkState('name')
+	            valueLink: this.linkState('name'),
+	            placeholder: 'Describe your dish in 1-2 words'
 	          }),
 	          React.createElement(
 	            'label',
@@ -32247,8 +32248,26 @@
 	
 	    return React.createElement(
 	      'div',
-	      null,
-	      React.createElement('input', { id: 'dish-searched', placeholder: 'Search for a dish', valueLink: this.linkState('inputVal') }),
+	      { className: 'center-align' },
+	      React.createElement(
+	        'div',
+	        { className: 'row' },
+	        React.createElement(
+	          'div',
+	          { className: 'input-field col s12' },
+	          React.createElement(
+	            'i',
+	            { className: 'material-icons prefix' },
+	            'search'
+	          ),
+	          React.createElement('input', { id: 'dish-searched', type: 'text', valueLink: this.linkState('inputVal') }),
+	          React.createElement(
+	            'label',
+	            { className: 'active', htmlFor: 'dish-searched' },
+	            'Search for a dish'
+	          )
+	        )
+	      ),
 	      React.createElement(
 	        'ul',
 	        { className: 'matched-items' },

@@ -42,6 +42,7 @@ var DishForm = React.createClass({
             <input type='text'
               id='dish_name'
               valueLink={this.linkState('name')}
+              placeholder="Describe your dish in 1-2 words"
               />
             <label className="active" htmlFor='dish_name'>Dish</label>
           </div>
