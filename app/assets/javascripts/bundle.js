@@ -26701,7 +26701,7 @@
 	        ),
 	        React.createElement(
 	          'p',
-	          { id: 'comment-click', onClick: this.showDetail },
+	          { onClick: this.showDetail },
 	          'View or add comments'
 	        )
 	      ),
@@ -31484,9 +31484,9 @@
 	      'div',
 	      { className: 'row' },
 	      React.createElement(
-	        'p',
+	        'h5',
 	        null,
-	        'Share a dish here!'
+	        'Share your dish here!'
 	      ),
 	      React.createElement(
 	        'form',
@@ -31793,7 +31793,7 @@
 	      { className: "upload-form" },
 	      React.createElement(
 	        "button",
-	        { className: "btn btn-success", onClick: this.upload },
+	        { className: "btn btn-minor", onClick: this.upload },
 	        "Upload dish image!"
 	      )
 	    );

@@ -17,9 +17,21 @@
  *= require_self
  */
 
+
  body {
    background-color: #dddddd;
  }
+
+ .signing {
+   margin: 1em 1.5em 1em 1.5em;
+ }
+
+
+
+.btn.btn-minor {
+  background-color: #9590A8;
+}
+
 
  .everything-but-nav {
    margin: 1em 1.5em 1em 1.5em;

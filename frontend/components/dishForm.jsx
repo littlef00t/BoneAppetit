@@ -36,7 +36,7 @@ var DishForm = React.createClass({
   render: function () {
     return (
       <div className="row">
-        <p>Share a dish here!</p>
+        <h5>Share your dish here!</h5>
         <form className="col s12" onSubmit={this.createDish}>
           <div className="row input-field col s6">
             <input type='text'

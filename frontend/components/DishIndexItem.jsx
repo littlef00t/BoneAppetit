@@ -23,11 +23,11 @@ var DishIndexItem = React.createClass({
                 }
               )
             }
-          </ul>
+            </ul>
         </div>
         <div className="card-content">
           <span className="card-title activator grey-text text-darken-4">{dish.name}<i className="material-icons right">more_vert</i></span>
-          <p id="comment-click" onClick={this.showDetail}>View or add comments</p>
+          <p onClick={this.showDetail}>View or add comments</p>
         </div>
         <div className="card-reveal">
           <span className="card-title grey-text text-darken-4">Description<i className="material-icons right">close</i></span>
