@@ -35,32 +35,36 @@ var DishForm = React.createClass({
 
   render: function () {
     return (
-      <form onSubmit={this.createDish}>
-        <div>
-          <label htmlFor='dish_name'>Dish</label>
-          <input type='text'
-            id='dish_name'
-            valueLink={this.linkState('name')}
-            />
-        </div>
+      <div className="row">
+        <p>Share a dish here!</p>
+        <form className="col s12" onSubmit={this.createDish}>
+          <div className="row input-field col s6">
+            <input type='text'
+              id='dish_name'
+              valueLink={this.linkState('name')}
+              />
+            <label className="active" htmlFor='dish_name'>Dish</label>
+          </div>
 
-        <div>
-          <label htmlFor='dish_description'>Description</label>
-          <input type='text'
-            id='dish_description'
-            valueLink={this.linkState('description')}
-            />
-        </div>
-        {
-          this.state.image_publicids.map(function (public_id, idx) {
-            return <img key={idx} src={"https://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png"}/>
-          })
-        }
-        <UploadButton addImage={this.addImage}/>
+          <div className="row input-field col s6">
+            <input type='text'
+              id='dish_description'
+              valueLink={this.linkState('description')}
+              />
+            <label className="active" htmlFor='dish_description'>Description</label>
+          </div>
+          {
+            this.state.image_publicids.map(function (public_id, idx) {
+              return <img key={idx} src={"https://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png"}/>
+            })
+          }
+          <UploadButton addImage={this.addImage}/>
+          <br></br>
 
-        <button>Add Dish</button>
-        <br />
-      </form>
+          <button className="btn-large waves-effect waves-light">Add Dish</button>
+          <br />
+        </form>
+      </div>
     );
   }
 })

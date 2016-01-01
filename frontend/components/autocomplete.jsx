@@ -57,9 +57,9 @@ var AutoComplete = React.createClass({
           {
             fullDishes.map(function (dish, idx) {
               return (
-                <div key={idx}>
+                <li key={idx}>
                   <DishIndexItem dish={dish}/>
-                </div>
+                </li>
               )
             })
           }

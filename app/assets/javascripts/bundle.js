@@ -19708,12 +19708,16 @@
 	      'div',
 	      null,
 	      React.createElement(
+	        'div',
+	        null,
+	        dishForm
+	      ),
+	      React.createElement(
 	        'h2',
 	        null,
 	        'Dishes offered:'
 	      ),
-	      React.createElement(AutoComplete, { dishes: this.state.dishes }),
-	      dishForm
+	      React.createElement(AutoComplete, { dishes: this.state.dishes })
 	    );
 	  }
 	});
@@ -26665,24 +26669,11 @@
 	  render: function () {
 	    var dish = this.props.dish;
 	    return React.createElement(
-	      'li',
-	      { className: 'dish-index-item' },
+	      'div',
+	      { className: 'card' },
 	      React.createElement(
 	        'div',
-	        { className: 'dish-details', onClick: this.showDetail },
-	        React.createElement(
-	          'p',
-	          null,
-	          'Dish: ',
-	          dish.name,
-	          React.createElement('br', null),
-	          React.createElement(
-	            'small',
-	            null,
-	            ' posted by ',
-	            dish.username
-	          )
-	        ),
+	        { className: 'card-image waves-effect waves-block waves-light' },
 	        React.createElement(
 	          'ul',
 	          null,
@@ -26690,9 +26681,47 @@
 	            return React.createElement(
 	              'div',
 	              { key: image.id },
-	              React.createElement('img', { src: "https://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + image.url + ".png" })
+	              React.createElement('img', { className: 'activator', src: "http://res.cloudinary.com/littlef00t/image/upload/w_100,h_100/" + image.url + ".png" })
 	            );
 	          })
+	        )
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'card-content' },
+	        React.createElement(
+	          'span',
+	          { className: 'card-title activator grey-text text-darken-4' },
+	          dish.name,
+	          React.createElement(
+	            'i',
+	            { className: 'material-icons right' },
+	            'more_vert'
+	          )
+	        ),
+	        React.createElement(
+	          'p',
+	          { onClick: this.showDetail },
+	          'View or add comments'
+	        )
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'card-reveal' },
+	        React.createElement(
+	          'span',
+	          { className: 'card-title grey-text text-darken-4' },
+	          'Description',
+	          React.createElement(
+	            'i',
+	            { className: 'material-icons right' },
+	            'close'
+	          )
+	        ),
+	        React.createElement(
+	          'p',
+	          null,
+	          dish.description
 	        )
 	      )
 	    );
@@ -31452,44 +31481,54 @@
 	
 	  render: function () {
 	    return React.createElement(
-	      'form',
-	      { onSubmit: this.createDish },
+	      'div',
+	      { className: 'row' },
 	      React.createElement(
-	        'div',
+	        'p',
 	        null,
+	        'Share a dish here!'
+	      ),
+	      React.createElement(
+	        'form',
+	        { className: 'col s12', onSubmit: this.createDish },
 	        React.createElement(
-	          'label',
-	          { htmlFor: 'dish_name' },
-	          'Dish'
+	          'div',
+	          { className: 'row input-field col s6' },
+	          React.createElement('input', { type: 'text',
+	            id: 'dish_name',
+	            valueLink: this.linkState('name')
+	          }),
+	          React.createElement(
+	            'label',
+	            { className: 'active', htmlFor: 'dish_name' },
+	            'Dish'
+	          )
 	        ),
-	        React.createElement('input', { type: 'text',
-	          id: 'dish_name',
-	          valueLink: this.linkState('name')
-	        })
-	      ),
-	      React.createElement(
-	        'div',
-	        null,
 	        React.createElement(
-	          'label',
-	          { htmlFor: 'dish_description' },
-	          'Description'
+	          'div',
+	          { className: 'row input-field col s6' },
+	          React.createElement('input', { type: 'text',
+	            id: 'dish_description',
+	            valueLink: this.linkState('description')
+	          }),
+	          React.createElement(
+	            'label',
+	            { className: 'active', htmlFor: 'dish_description' },
+	            'Description'
+	          )
 	        ),
-	        React.createElement('input', { type: 'text',
-	          id: 'dish_description',
-	          valueLink: this.linkState('description')
-	        })
-	      ),
-	      this.state.image_publicids.map(function (public_id, idx) {
-	        return React.createElement('img', { key: idx, src: "https://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png" });
-	      }),
-	      React.createElement(UploadButton, { addImage: this.addImage }),
-	      React.createElement(
-	        'button',
-	        null,
-	        'Add Dish'
-	      ),
-	      React.createElement('br', null)
+	        this.state.image_publicids.map(function (public_id, idx) {
+	          return React.createElement('img', { key: idx, src: "https://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png" });
+	        }),
+	        React.createElement(UploadButton, { addImage: this.addImage }),
+	        React.createElement('br', null),
+	        React.createElement(
+	          'button',
+	          { className: 'btn-large waves-effect waves-light' },
+	          'Add Dish'
+	        ),
+	        React.createElement('br', null)
+	      )
 	    );
 	  }
 	});
@@ -32211,7 +32250,7 @@
 	        { className: 'matched-items' },
 	        fullDishes.map(function (dish, idx) {
 	          return React.createElement(
-	            'div',
+	            'li',
 	            { key: idx },
 	            React.createElement(DishIndexItem, { dish: dish })
 	          );
