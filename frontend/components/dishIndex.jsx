@@ -41,7 +41,7 @@ var DishIndex = React.createClass({
 
 
     return (
-      <div>
+      <div className="everything-but-nav">
         <div>{dishForm}</div>
         <h2>Dishes offered:</h2>
         <AutoComplete dishes={this.state.dishes} />

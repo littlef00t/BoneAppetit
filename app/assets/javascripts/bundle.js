@@ -19706,7 +19706,7 @@
 	
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'everything-but-nav' },
 	      React.createElement(
 	        'div',
 	        null,
@@ -26701,7 +26701,7 @@
 	        ),
 	        React.createElement(
 	          'p',
-	          { onClick: this.showDetail },
+	          { id: 'comment-click', onClick: this.showDetail },
 	          'View or add comments'
 	        )
 	      ),
@@ -32165,7 +32165,7 @@
 	        React.createElement(
 	          'div',
 	          { className: 'center-align' },
-	          React.createElement('img', { className: 'responsive-img', src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_150/lz3cctkmjh5dvaxwalol.png" }),
+	          React.createElement('img', { className: 'responsive-img logo', src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_150/lz3cctkmjh5dvaxwalol.png" }),
 	          React.createElement(
 	            'h5',
 	            null,

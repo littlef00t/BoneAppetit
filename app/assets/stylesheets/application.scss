@@ -17,9 +17,18 @@
  *= require_self
  */
 
- .everything-but-nav {
+ body {
    background-color: #dddddd;
  }
+
+ .everything-but-nav {
+   margin: 1em 1.5em 1em 1.5em;
+ }
+
+ .brand-logo {
+   margin-left: 0.65em;
+ }
+
 
  .dish-form {
     display: block;
@@ -28,8 +37,12 @@
   .card {
     width: 300px;
     height: 400px;
-    float: left;
-    margin: 20px;
+    float:left;
+    margin: 1em 1em 1.5em 4em;
+  }
+
+  .container {
+    padding-left: 3em;
   }
 
  .nav-wrapper {
@@ -39,6 +52,10 @@
 
  .btn {
    background-color: #4b5043;
+ }
+
+ .logo {
+   padding-top: 0.3125em;
  }
 
 
@@ -81,6 +98,12 @@
     height: 250px;
     display: inline;
   }
+
+  .card-content p:hover {
+    color: #8ddbe0;
+    cursor: pointer;
+  }
+
 
   .dish-details:hover {
     cursor: pointer;
