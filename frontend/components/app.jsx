@@ -38,12 +38,14 @@ var App = React.createClass({
             {currentUser}
           </div>
         </nav>
-        <div>
-          <h1>Hungry Heart</h1>
-          <h5>A place to share excess food to the hungry...</h5>
-          <p id="quote">"Pure love is a willingness to give without a thought of receiving anything in return." -- Peace Pilgrim</p>
+        <div className="everything-but-nav">
+          <div className="center-align">
+            <img className="responsive-img" src={"https://res.cloudinary.com/littlef00t/image/upload/w_300,h_150/lz3cctkmjh5dvaxwalol.png"} />
+            <h5>A place to share excess food to the hungry...</h5>
+            <p id="quote">"Pure love is a willingness to give without a thought of receiving anything in return." -- Peace Pilgrim</p>
+          </div>
+          <div>{this.props.children}</div>
         </div>
-        {this.props.children}
       </div>
     )
   }

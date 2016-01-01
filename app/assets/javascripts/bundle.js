@@ -26681,7 +26681,7 @@
 	            return React.createElement(
 	              'div',
 	              { key: image.id },
-	              React.createElement('img', { className: 'activator', src: "https://res.cloudinary.com/littlef00t/image/upload/w_100,h_100/" + image.url + ".png" })
+	              React.createElement('img', { className: 'activator responsive-img', src: "https://res.cloudinary.com/littlef00t/image/upload/w_100,h_100/" + image.url + ".png" })
 	            );
 	          })
 	        )
@@ -32161,24 +32161,28 @@
 	      ),
 	      React.createElement(
 	        'div',
-	        null,
+	        { className: 'everything-but-nav' },
 	        React.createElement(
-	          'h1',
-	          null,
-	          'Hungry Heart'
+	          'div',
+	          { className: 'center-align' },
+	          React.createElement('img', { className: 'responsive-img', src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_150/lz3cctkmjh5dvaxwalol.png" }),
+	          React.createElement(
+	            'h5',
+	            null,
+	            'A place to share excess food to the hungry...'
+	          ),
+	          React.createElement(
+	            'p',
+	            { id: 'quote' },
+	            '"Pure love is a willingness to give without a thought of receiving anything in return." -- Peace Pilgrim'
+	          )
 	        ),
 	        React.createElement(
-	          'h5',
+	          'div',
 	          null,
-	          'A place to share excess food to the hungry...'
-	        ),
-	        React.createElement(
-	          'p',
-	          { id: 'quote' },
-	          '"Pure love is a willingness to give without a thought of receiving anything in return." -- Peace Pilgrim'
+	          this.props.children
 	        )
-	      ),
-	      this.props.children
+	      )
 	    );
 	  }
 	});

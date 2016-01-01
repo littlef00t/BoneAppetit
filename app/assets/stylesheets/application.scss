@@ -17,6 +17,10 @@
  *= require_self
  */
 
+ .everything-but-nav {
+   background-color: #dddddd;
+ }
+
  .dish-form {
     display: block;
   }
@@ -29,8 +33,12 @@
   }
 
  .nav-wrapper {
-   background-color: #9932cc;
+   background-color: #9bc4bc;
    margin: 0px;
+ }
+
+ .btn {
+   background-color: #4b5043;
  }
 
 
