@@ -51,7 +51,7 @@ var AutoComplete = React.createClass({
 
 
     return (
-      <div className="center-align">
+      <div>
         <div className="row">
           <div className="input-field col s12">
             <i className="material-icons prefix">search</i>

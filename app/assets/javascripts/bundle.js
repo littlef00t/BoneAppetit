@@ -32248,7 +32248,7 @@
 	
 	    return React.createElement(
 	      'div',
-	      { className: 'center-align' },
+	      null,
 	      React.createElement(
 	        'div',
 	        { className: 'row' },
