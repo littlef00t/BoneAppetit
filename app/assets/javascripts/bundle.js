@@ -32132,28 +32132,89 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
+	var ApiUtil = __webpack_require__(182);
+	var CurrentUserStore = __webpack_require__(242);
 	
 	var App = React.createClass({
-	  displayName: "App",
+	  displayName: 'App',
 	
+	  getInitialState: function () {
+	    return { current_user: CurrentUserStore.find() };
+	  },
+	  _onChange: function () {
+	    this.setState({ current_user: CurrentUserStore.find() });
+	  },
+	  componentDidMount: function () {
+	    this.currentuserListener = CurrentUserStore.addListener(this._onChange);
+	    ApiUtil.fetchCurrentUser();
+	  },
+	  componentWillUnmount: function () {
+	    this.currentuserListener.remove();
+	  },
 	  render: function () {
+	    var current_user = this.state.current_user;
+	    var currentUser;
+	    if (current_user.id == -1) {
+	      currentUser = React.createElement(
+	        'ul',
+	        { id: 'nav-mobile', className: 'right' },
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            'a',
+	            { href: 'session/new' },
+	            'Sign In'
+	          )
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            'a',
+	            { href: 'users/new' },
+	            'Sign Up'
+	          )
+	        )
+	      );
+	    } else {
+	      React.createElement('div', null);
+	    }
 	    return React.createElement(
-	      "div",
+	      'div',
 	      null,
 	      React.createElement(
-	        "h1",
-	        { id: "org" },
-	        "Hungry Heart"
-	      ),
-	      React.createElement(
-	        "h5",
+	        'nav',
 	        null,
-	        "A place to share excess food to the hungry..."
+	        React.createElement(
+	          'div',
+	          { className: 'nav-wrapper' },
+	          React.createElement(
+	            'a',
+	            { href: '#', className: 'brand-logo left' },
+	            'Hungry Heart'
+	          ),
+	          currentUser
+	        )
 	      ),
 	      React.createElement(
-	        "p",
-	        { id: "quote" },
-	        "\"Pure love is a willingness to give without a thought of receiving anything in return.\" -- Peace Pilgrim"
+	        'div',
+	        null,
+	        React.createElement(
+	          'h1',
+	          null,
+	          'Hungry Heart'
+	        ),
+	        React.createElement(
+	          'h5',
+	          null,
+	          'A place to share excess food to the hungry...'
+	        ),
+	        React.createElement(
+	          'p',
+	          { id: 'quote' },
+	          '"Pure love is a willingness to give without a thought of receiving anything in return." -- Peace Pilgrim'
+	        )
 	      ),
 	      this.props.children
 	    );
