@@ -37,6 +37,7 @@ var DishForm = React.createClass({
     return (
       <div className="row">
         <h5>Share your dish here!</h5>
+        <p className="green-color">(Dish image required)</p>
         <form className="col s12" onSubmit={this.createDish}>
           <div className="row input-field col s6">
             <input type='text'

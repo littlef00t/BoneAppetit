@@ -26538,7 +26538,8 @@
 	        ApiActions.receiveOneDish(dish);
 	        callback && callback(dish.id);
 	      },
-	      error: function () {
+	      error: function (a, b, msg) {
+	        alert("dish image required :)");
 	        window.location = "session/new";
 	      }
 	    });
@@ -31485,6 +31486,11 @@
 	        'h5',
 	        null,
 	        'Share your dish here!'
+	      ),
+	      React.createElement(
+	        'p',
+	        { className: 'green-color' },
+	        '(Dish image required)'
 	      ),
 	      React.createElement(
 	        'form',
