@@ -17,7 +17,7 @@ var DishIndexItem = React.createClass({
             {dish.images.map(function (image) {
                   return (
                     <div key={image.id}>
-                      <img className="activator" src={"http://res.cloudinary.com/littlef00t/image/upload/w_100,h_100/" + image.url + ".png"}/>
+                      <img className="activator" src={"https://res.cloudinary.com/littlef00t/image/upload/w_100,h_100/" + image.url + ".png"}/>
                     </div>
                   );
                 }
