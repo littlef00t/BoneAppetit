@@ -4,7 +4,7 @@ var ApiUtil = require('../util/api_util');
 var DishIndexItem = require('./DishIndexItem');
 var DishForm = require('./dishForm');
 var CurrentUserStore = require('../stores/current_user');
-var AutoComplete = require('./AutoComplete');
+var AutoComplete = require('./autocomplete');
 
 
 
