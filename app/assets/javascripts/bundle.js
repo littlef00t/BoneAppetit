@@ -32178,7 +32178,7 @@
 	        ),
 	        React.createElement(
 	          'div',
-	          null,
+	          { currentUser: current_user },
 	          this.props.children
 	        )
 	      )

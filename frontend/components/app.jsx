@@ -44,7 +44,7 @@ var App = React.createClass({
             <h5>A place to share excess food to the hungry...</h5>
             <p id="quote">"Pure love is a willingness to give without a thought of receiving anything in return." -- Peace Pilgrim</p>
           </div>
-          <div>{this.props.children}</div>
+          <div currentUser={current_user}>{this.props.children}</div>
         </div>
       </div>
     )
