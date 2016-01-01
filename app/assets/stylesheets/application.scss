@@ -45,8 +45,18 @@ background-color: #9590A8;
 .card {
   width: 300px;
   height: 400px;
-  float:left;
+  float: left;
   margin: 1em 1em 1.5em 4em;
+  border-color: #E5FFDE;
+  border-radius: 1em;
+}
+
+.card-image {
+  border-radius: 1em;
+}
+
+.card-reveal {
+  border-radius: 1em;
 }
 
 .container {
@@ -64,14 +74,6 @@ background-color: #9590A8;
 
 .logo {
  padding-top: 0.3125em;
-}
-
-#org {
-  color: #6633ff;
-  font-size: 28px;
-  margin: auto;
-  width: 60%;
-  padding: 10px;
 }
 
 #quote {
