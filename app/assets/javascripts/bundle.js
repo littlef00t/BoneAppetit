@@ -26681,7 +26681,7 @@
 	            return React.createElement(
 	              'div',
 	              { key: image.id },
-	              React.createElement('img', { className: 'activator responsive-img', src: "https://res.cloudinary.com/littlef00t/image/upload/w_100,h_100/" + image.url + ".png" })
+	              React.createElement('img', { className: 'activator responsive-img', src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" })
 	            );
 	          })
 	        )
