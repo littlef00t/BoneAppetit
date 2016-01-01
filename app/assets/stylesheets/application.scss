@@ -22,10 +22,6 @@ body {
  background-color: #dddddd;
 }
 
-.signing {
- margin: 1em 1.5em 1em 1.5em;
-}
-
 .btn.btn-minor {
 background-color: #9590A8;
 }
@@ -61,6 +57,7 @@ background-color: #9590A8;
 
 .container {
   padding-left: 3em;
+  padding-right: 3em;
 }
 
 .nav-wrapper {
@@ -94,18 +91,8 @@ background-color: #9590A8;
  display: block;
 }
 
-.dish-details {
-  width: 250px;
-  height: 250px;
-  display: inline;
-}
-
 .card-content p:hover {
   color: #8ddbe0;
-  cursor: pointer;
-}
-
-.dish-details:hover {
   cursor: pointer;
 }
 

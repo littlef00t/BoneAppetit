@@ -1,46 +1,48 @@
-<%= javascript_include_tag 'application' %>
-<!--above tag works but errors in console-->
-  <h1 class="center-align">Please Sign In</h1>
+<div class="container center-align">
+  <%= javascript_include_tag 'application' %>
+  <!--above tag works but errors in console-->
+    <h1>Please Sign In</h1>
 
-  <%= render "shared/errors" %>
+    <%= render "shared/errors" %>
 
 
-<body>
-<div class="row">
-  <form class="col s12" action="<%= session_url %>" method="post">
-    <div class="row">
-      <input
-        type="hidden"
-        name="authenticity_token"
-        value="<%= form_authenticity_token %>">
+  <body>
+  <div class="row">
+    <form class="col s12" action="<%= session_url %>" method="post">
+      <div class="row">
+        <input
+          type="hidden"
+          name="authenticity_token"
+          value="<%= form_authenticity_token %>">
 
-      <div class="input-field col s6">
-        <i class="material-icons prefix">perm_identity</i>
-        <input type="text" name="user[username]" id="user_username">
-        <label for="user_username" class="active">Username</label>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">perm_identity</i>
+          <input type="text" name="user[username]" id="user_username">
+          <label for="user_username" class="active">Username</label>
+        </div>
+
+        <div class="input-field col s6">
+          <i class="material-icons prefix">lock</i>
+          <input id="password" type="password" class="validate" name="user[password]">
+          <label for="password" class="active">Password</label>
+        </div>
+      </div>
+      <br>
+      <div class="submit-field col s5 offset-s1">
+          <button class="btn-large waves-effect waves-light" type="submit" name="action">Log In<i class="mdi-action-lock-open right"></i>
+          </button>
       </div>
 
-      <div class="input-field col s6">
-        <i class="material-icons prefix">lock</i>
-        <input id="password" type="password" class="validate" name="user[password]">
-        <label for="password" class="active">Password</label>
-      </div>
-    </div>
+    </form>
+  </div>
+
     <br>
-    <div class="submit-field col s5 offset-s1">
-        <button class="btn-large valign primary waves-effect waves-light" type="submit" name="action">Log In<i class="mdi-action-lock-open right"></i>
-        </button>
-    </div>
+    <br>
 
-  </form>
+
+    <%= render "shared/demo_user" %>
+    <br>
+    <%= link_to "Not a member? Sign up here!", new_user_url %>
+    <br>
+    <%= link_to "Return to Home Page", root_url %>
 </div>
-
-  <br>
-  <br>
-
-
-  <%= render "shared/demo_user" %>
-  <br>
-  <%= link_to "Not a member? Sign up here!", new_user_url %>
-  <br>
-  <%= link_to "Return to Home Page", root_url %>
