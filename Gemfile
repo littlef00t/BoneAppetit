@@ -36,6 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'annotate'
 gem 'bcrypt'
+gem 'materialize-sass'
 gem 'bootstrap-sass'
 
 
