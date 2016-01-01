@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
+//= require materialize-sprockets
 //= require bundle.js

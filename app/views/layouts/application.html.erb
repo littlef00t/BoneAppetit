@@ -3,6 +3,7 @@
 <head>
   <title>Hungry Heart</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://widget.cloudinary.com/global/all.js"></script>
   <script type="text/javascript">
   window.CLOUDINARY_OPTIONS = {
@@ -17,10 +18,7 @@
 <div class='user-info'>
   <% if current_user %>
     <%= "Signed in as " + current_user.username %>
-    <%=  button_to "Sign Out", session_url, method: :delete, :class => 'btn btn-small', :bsSize => "small" %>
-  <% else %>
-    <%= link_to "Sign In", new_session_url %>
-    <%= link_to "Sign Up", new_user_url %>
+    <%=  button_to "Sign Out", session_url, method: :delete, class: 'btn waves-effect waves-light' %>
   <% end %>
 </div>
 

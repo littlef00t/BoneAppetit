@@ -1,40 +1,44 @@
-<div class="container">
+<%= javascript_include_tag 'application' %>
+<!--above tag works but errors in console-->
   <h1>Sign Up Here!</h1>
 
   <%= render "shared/errors" %>
 
-  <form action="<%= users_url %>" method="post">
-    <input
-      type="hidden"
-      name="authenticity_token"
-      value="<%= form_authenticity_token %>">
+<body>
+<div class="row">
+  <form class="col s12" action="<%= session_url %>" method="post">
+    <div class="row">
+      <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
 
-    <label for="user_username">Username</label>
-    <input type="text"
-           class="form-control"
-           name="user[username]"
-           id="user_username"
-           value="<%= @user.username %>">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">perm_identity</i>
+        <input type="text" name="user[username]" id="user_username" value="<%= @user.username %>">
+        <label for="user_username" class="active">Username</label>
+      </div>
+
+      <div class="input-field col s6">
+        <i class="material-icons prefix">lock</i>
+        <input id="password" type="password" class="validate" name="user[password]" value="<%= @user.password %>">
+        <label for="password" class="active">Password</label>
+      </div>
+    </div>
     <br>
+    <div class="submit-field col s5 offset-s1">
+        <button class="btn primary waves-effect waves-light" type="submit" name="action">Sign Up</button>
+    </div>
 
-    <label for="user_password">Password</label>
-    <input type="password"
-           name="user[password]"
-           id="user_password"
-           value="<%= @user.password %>">
-    <br>
-
-    <input type="submit">
   </form>
+</div>
 
   <br>
   <br>
-
-  <%= link_to "Already a member? Sign In here!", new_session_url %>
 
 
   <%= render "shared/demo_user" %>
-
-
+  <br>
+  <%= link_to "Already a member? Sign in here!", new_session_url %>
+  <br>
   <%= link_to "Return to Home Page", root_url %>
-</div>
