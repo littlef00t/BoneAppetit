@@ -65,7 +65,7 @@ var DishDetail = React.createClass({
 
     var deleteButton;
     if ((current_user.id !== -1) && (current_user.id === this.state.dish.user_id)) {
-      deleteButton = <input type="button" dish={dish} onClick={this.handleDelete} value="Delete Dish"/>
+      deleteButton = <div><input type="button" className="btn btn-minor" dish={dish} onClick={this.handleDelete} value="Delete Dish"/></div>
 
     } else {
       deleteButton = <div></div>
@@ -73,12 +73,12 @@ var DishDetail = React.createClass({
 
 
     return (
-      <div>
+      <div className="center-align">
         {username}
         <h4>Dish: {dish.name}</h4>
         <p>Description: {dish.description}
           <br/>
-          <small>posted by {dish.username}</small>
+          <small className="purple-color">posted by {dish.username}</small>
         </p>
         <div>
           {
@@ -93,7 +93,7 @@ var DishDetail = React.createClass({
         <br/>
         {commentForm}
         <br/>
-        <label>Some Love</label>
+        <p className="green-color bold">LOVE NOTES</p>
         <ul>
           {
             dish.comments.map(function (comment) {

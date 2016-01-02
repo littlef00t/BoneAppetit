@@ -16,6 +16,11 @@
  *= require_tree .
  *= require_self
  */
+ 
+ // .errors {
+ //   z-index: 1;
+ //   color: #00ffff;
+ // }
 
 
 body {
@@ -40,6 +45,21 @@ background-color: #9590A8;
 
 .green-color {
   color: #9BC4BC;
+}
+
+.purple-color {
+  color: #9590A8;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.tiny {
+  height: 28px;
+  width: 100px;
+  text-align: center;
+  margin: auto;
 }
 
 .card {

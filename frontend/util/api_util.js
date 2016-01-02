@@ -35,7 +35,7 @@ ApiUtil = {
         callback && callback(dish.id);
       },
       error: function (a, b, msg) {
-        alert("dish image required :)");
+        alert("dish, description, and dish image required");
         window.location = "session/new";
       }
     })

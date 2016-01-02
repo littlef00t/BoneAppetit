@@ -15,13 +15,13 @@ var CommentIndexItem = React.createClass({
     var current_user = this.props.currentuser;
     var deleteButton;
     if (current_user && current_user.id === comment.user_id) {
-      deleteButton = <input type="button" comment={comment} onClick={this.handleDelete} value="Delete"/>
+      deleteButton = <input type="button" className="btn btn-minor" comment={comment} onClick={this.handleDelete} value="Delete"/>
     } else {
       deleteButton = <div></div>
     }
     return (
       <div>
-        <li key={comment.id}>{comment.body} <br/> <small>Love from: {comment.username}</small></li>
+        <li key={comment.id}>{comment.body} <br/> <small className="purple-color">Love from: {comment.username}</small></li>
         {deleteButton}
       </div>
     )

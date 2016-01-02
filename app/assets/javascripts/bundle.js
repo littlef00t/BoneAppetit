@@ -26539,7 +26539,7 @@
 	        callback && callback(dish.id);
 	      },
 	      error: function (a, b, msg) {
-	        alert("dish image required :)");
+	        alert("dish, description, and dish image required");
 	        window.location = "session/new";
 	      }
 	    });
@@ -31795,7 +31795,7 @@
 	  render: function () {
 	    return React.createElement(
 	      "div",
-	      { className: "upload-form" },
+	      null,
 	      React.createElement(
 	        "button",
 	        { className: "btn btn-minor", onClick: this.upload },
@@ -31921,14 +31921,18 @@
 	
 	    var deleteButton;
 	    if (current_user.id !== -1 && current_user.id === this.state.dish.user_id) {
-	      deleteButton = React.createElement('input', { type: 'button', dish: dish, onClick: this.handleDelete, value: 'Delete Dish' });
+	      deleteButton = React.createElement(
+	        'div',
+	        null,
+	        React.createElement('input', { type: 'button', className: 'btn btn-minor', dish: dish, onClick: this.handleDelete, value: 'Delete Dish' })
+	      );
 	    } else {
 	      deleteButton = React.createElement('div', null);
 	    }
 	
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'center-align' },
 	      username,
 	      React.createElement(
 	        'h4',
@@ -31944,7 +31948,7 @@
 	        React.createElement('br', null),
 	        React.createElement(
 	          'small',
-	          null,
+	          { className: 'purple-color' },
 	          'posted by ',
 	          dish.username
 	        )
@@ -31961,9 +31965,9 @@
 	      commentForm,
 	      React.createElement('br', null),
 	      React.createElement(
-	        'label',
-	        null,
-	        'Some Love'
+	        'p',
+	        { className: 'green-color bold' },
+	        'LOVE NOTES'
 	      ),
 	      React.createElement(
 	        'ul',
@@ -32017,27 +32021,37 @@
 	
 	  render: function () {
 	    return React.createElement(
-	      'form',
-	      { onSubmit: this.createComment },
+	      'div',
+	      { className: 'row container' },
 	      React.createElement(
-	        'div',
-	        null,
+	        'form',
+	        { className: 'col s12', onSubmit: this.createComment },
 	        React.createElement(
-	          'label',
-	          { htmlFor: 'comment_body' },
-	          'Love note'
+	          'div',
+	          { className: 'input-field' },
+	          React.createElement(
+	            'i',
+	            { className: 'material-icons prefix' },
+	            'comment'
+	          ),
+	          React.createElement('input', { type: 'text',
+	            id: 'comment-body',
+	            valueLink: this.linkState('body')
+	          }),
+	          React.createElement(
+	            'label',
+	            { htmlFor: 'comment-body', className: 'active' },
+	            'Share some love'
+	          )
 	        ),
-	        React.createElement('input', { type: 'text',
-	          id: 'comment_body',
-	          valueLink: this.linkState('body')
-	        })
-	      ),
-	      React.createElement(
-	        'button',
-	        { className: 'btn btn-warning' },
-	        'Add Love Note'
-	      ),
-	      React.createElement('br', null)
+	        React.createElement('br', null),
+	        React.createElement(
+	          'button',
+	          { className: 'btn waves-effect waves-light' },
+	          'Add Love Note'
+	        ),
+	        React.createElement('br', null)
+	      )
 	    );
 	  }
 	});
@@ -32066,7 +32080,7 @@
 	    var current_user = this.props.currentuser;
 	    var deleteButton;
 	    if (current_user && current_user.id === comment.user_id) {
-	      deleteButton = React.createElement('input', { type: 'button', comment: comment, onClick: this.handleDelete, value: 'Delete' });
+	      deleteButton = React.createElement('input', { type: 'button', className: 'btn btn-minor', comment: comment, onClick: this.handleDelete, value: 'Delete' });
 	    } else {
 	      deleteButton = React.createElement('div', null);
 	    }
@@ -32082,7 +32096,7 @@
 	        ' ',
 	        React.createElement(
 	          'small',
-	          null,
+	          { className: 'purple-color' },
 	          'Love from: ',
 	          comment.username
 	        )

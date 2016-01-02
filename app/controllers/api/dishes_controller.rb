@@ -18,7 +18,7 @@ class Api::DishesController < ApplicationController
     if @dish.save!
       render :show
     else
-      flash.now[:errors] = @dish.errors.full_messages
+      flash[:errors] = @dish.errors.full_messages
     end
   end
 

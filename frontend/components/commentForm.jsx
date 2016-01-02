@@ -25,18 +25,21 @@ var CommentForm = React.createClass({
 
   render: function () {
     return (
-      <form onSubmit={this.createComment}>
-        <div>
-          <label htmlFor='comment_body'>Love note</label>
-          <input type='text'
-            id='comment_body'
-            valueLink={this.linkState('body')}
-            />
-        </div>
-
-        <button className="btn btn-warning">Add Love Note</button>
-        <br />
-      </form>
+      <div className="row container">
+        <form className="col s12" onSubmit={this.createComment}>
+          <div className="input-field">
+            <i className="material-icons prefix">comment</i>
+            <input type='text'
+              id='comment-body'
+              valueLink={this.linkState('body')}
+              />
+            <label htmlFor='comment-body' className="active">Share some love</label>
+          </div>
+          <br></br>
+          <button className="btn waves-effect waves-light">Add Love Note</button>
+          <br />
+        </form>
+      </div>
     );
   }
 })
