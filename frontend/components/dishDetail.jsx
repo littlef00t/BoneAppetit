@@ -49,13 +49,10 @@ var DishDetail = React.createClass({
     var dish = this.state.dish;
     var current_user = this.state.current_user;
 
-    var username;
     var commentForm;
     if (current_user.id !== -1) {
-      username = <h3>Hi! {current_user.username}</h3>;
       commentForm = <CommentForm dish={dish}/>
     } else {
-      username = <h3>Hi guest!</h3>;
       commentForm = <div></div>
     }
 
@@ -74,7 +71,6 @@ var DishDetail = React.createClass({
 
     return (
       <div className="center-align">
-        {username}
         <h4>Dish: {dish.name}</h4>
         <p>Description: {dish.description}
           <br/>

@@ -25,7 +25,7 @@ var CommentForm = React.createClass({
 
   render: function () {
     return (
-      <div className="row container">
+      <div className="row container-big">
         <form className="col s12" onSubmit={this.createComment}>
           <div className="input-field">
             <i className="material-icons prefix">comment</i>

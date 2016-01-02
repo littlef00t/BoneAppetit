@@ -31892,22 +31892,10 @@
 	    var dish = this.state.dish;
 	    var current_user = this.state.current_user;
 	
-	    var username;
 	    var commentForm;
 	    if (current_user.id !== -1) {
-	      username = React.createElement(
-	        'h3',
-	        null,
-	        'Hi! ',
-	        current_user.username
-	      );
 	      commentForm = React.createElement(CommentForm, { dish: dish });
 	    } else {
-	      username = React.createElement(
-	        'h3',
-	        null,
-	        'Hi guest!'
-	      );
 	      commentForm = React.createElement('div', null);
 	    }
 	
@@ -31933,7 +31921,6 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'center-align' },
-	      username,
 	      React.createElement(
 	        'h4',
 	        null,
@@ -32022,7 +32009,7 @@
 	  render: function () {
 	    return React.createElement(
 	      'div',
-	      { className: 'row container' },
+	      { className: 'row container-big' },
 	      React.createElement(
 	        'form',
 	        { className: 'col s12', onSubmit: this.createComment },
