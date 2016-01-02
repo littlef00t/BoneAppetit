@@ -32009,7 +32009,7 @@
 	  render: function () {
 	    return React.createElement(
 	      'div',
-	      { className: 'row container-big' },
+	      { className: 'row container' },
 	      React.createElement(
 	        'form',
 	        { className: 'col s12', onSubmit: this.createComment },
