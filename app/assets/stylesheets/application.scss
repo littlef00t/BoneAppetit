@@ -16,12 +16,16 @@
  *= require_tree .
  *= require_self
  */
- 
+
  // .errors {
  //   z-index: 1;
  //   color: #00ffff;
  // }
 
+.white-border {
+  border:1px solid #021a40;
+  padding:1px;
+}
 
 body {
  background-color: #dddddd;

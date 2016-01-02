@@ -84,7 +84,7 @@ var DishDetail = React.createClass({
           {
             dish.images.map(function (image) {
             return (
-              <img key={image.id} src={"https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png"}/>
+              <img className="white-border" key={image.id} src={"https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png"}/>
               )
             })
           }

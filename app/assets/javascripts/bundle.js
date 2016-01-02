@@ -31957,7 +31957,7 @@
 	        'div',
 	        null,
 	        dish.images.map(function (image) {
-	          return React.createElement('img', { key: image.id, src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" });
+	          return React.createElement('img', { className: 'white-border', key: image.id, src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" });
 	        }),
 	        deleteButton
 	      ),
