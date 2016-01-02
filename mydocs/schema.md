@@ -4,7 +4,6 @@
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-title       | string    | not null
 url         | string    | not null
 dish_id     | integer   | not null, foreign key (references users), indexed
 
@@ -12,15 +11,23 @@ dish_id     | integer   | not null, foreign key (references users), indexed
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-dish_name   | string    | not null
+name        | string    | not null
 description | string    | not null
-puppy_id    | integer   | not null, foreign key (references users), indexed
+user_id     | integer   | not null, foreign key (references users), indexed
 
 
 ## users
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
-username        | string    | not null, indexed, unique
+username        | string    | not null, unique
 password_digest | string    | not null
-session_token   | string    | not null, indexed, unique
+session_token   | string    | not null, unique
+
+## comments
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+body        | string    | not null
+user_id     | integer   | not null, foreign key (references users), indexed
+dish_id     | integer   | not null, foreign key (references users), indexed
