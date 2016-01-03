@@ -47,7 +47,7 @@ Phase 3 allows the upload of images with the Dish. I will be using Cloudinary to
 
 ### Phase 4: Comments (1 day)
 
-I will be adding a new Comment Store and views for Comment `IndexItem` and `Form`. At the end of Phase 4,Comments can be created, read, and destroyed in the browser.
+I will be adding a new Comment Store and views for Comment `IndexItem` and `Form`. At the end of Phase 4,Comments can be created, read, and destroyed in the browser. I will also implement JSON API for dishes.
 
 [Details][phase-four]
 
