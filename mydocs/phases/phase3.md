@@ -5,7 +5,7 @@
 * Dish (require image_publicids)
 
 ### Controllers
-* Images (index, create, destroyy)
+* Images (index, create, destroy)
 
 ### Views
 

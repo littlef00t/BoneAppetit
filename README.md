@@ -1,6 +1,6 @@
-# Bone Appetit
+# Hungry Heart
 
-[heroku]: https://young-chamber-3073.herokuapp.com
+[heroku]: www.hungryheart.xyz
 
 ## Minimum Viable Product
 
@@ -13,8 +13,6 @@ Hungry Heart allows users to:
 - [X] Able to upload images with dish
 
 ## Design Docs
-* [View Wireframes][view]
-* [DB schema][schema]
 
 [view]: ./mydocs/views.md
 [schema]: ./mydocs/schema.md
