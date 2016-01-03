@@ -39,22 +39,24 @@ Dishes can be created, read, (updated as bonus?) and destroyed in the browser.
 
 [Details][phase-two]
 
-### Phase 3: Images (and styling of Dishes?)(1 day)
+### Phase 3: Images (and styling)(1 day)
 
 Phase 3 allows the upload of images with the Dish. I will be using Cloudinary to store photos. I will also start adding styling using CSS.
 
 [Details][phase-three]
 
-### Phase 4: Comments (1 day)
+### Phase 4: Comments (1-2 days)
 
 I will be adding a new Comment Store and views for Comment `IndexItem` and `Form`. At the end of Phase 4,Comments can be created, read, and destroyed in the browser. I will also implement JSON API for dishes.
+I will be adding styling using Materialize.
+
 
 [Details][phase-four]
 
 
 ### Bonus:
 I will be adding styling using Materialize.
-I will be implementing a map so users can search for food near their area.
+I will be implementing a search where the dishes will update to show only the dishes that begin with the letters in the search form.
 Users can update their dishes.
 
 

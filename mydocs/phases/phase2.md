@@ -20,20 +20,18 @@
 
 ### Actions
 * ApiActions.receiveAllDishes -> triggered by ApiUtil
-* ApiActions.receiveSingleDish
+* ApiActions.receiveOneDish
 * ApiActions.deleteDish
-* DishActions.fetchAllDishes -> triggers ApiUtil
-* DishActions.fetchSingleDish
+* DishActions.fetchDishes -> triggers ApiUtil
+* DishActions.fetchDish
 * DishActions.createDish
-* DishActions.editDish
 * DishActions.destroyDish
 
 ### ApiUtil
-* ApiUtil.fetchAllDishes
-* ApiUtil.fetchSingleDish
+* ApiUtil.fetchDishes
+* ApiUtil.fetchDish
 * ApiUtil.createDish
-* ApiUtil.editDish?
-* ApiUtil.destroyDish
+* ApiUtil.deleteDish
 
 ## Gems/Libraries
 * Flux Dispatcher (npm)

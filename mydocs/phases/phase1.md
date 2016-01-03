@@ -3,11 +3,11 @@
 ## Rails
 ### Models
 * User
-* Image
+* Dish
 
 ### Controllers
 * UsersController (create, new)
-* SessionsController (create, new, destroy)
+* SessionsController (create, new, destroy, show(to capture current_user))
 * Api::DishesController (create, destroy, index, show, update?)
 
 ### Views
@@ -22,8 +22,10 @@
 ### Stores
 
 ### Actions
+ApiActions.receiveCurrentUser
 
 ### ApiUtil
+ApiUtil.fetchCurrentUser
 
 ## Gems/Libraries
 * BCrypt (Gem)
