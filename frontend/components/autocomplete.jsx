@@ -48,17 +48,11 @@ var AutoComplete = React.createClass({
   render: function () {
     var fullDishes = this.fullDishes();
     var that = this;
-
-
-    return (
-      <div>
-        <div className="row">
-          <div className="input-field col s12">
-            <i className="material-icons prefix">search</i>
-            <input id='dish-searched' type="text" valueLink={this.linkState('inputVal')} />
-            <label className="active" htmlFor="dish-searched">Search for a dish</label>
-          </div>
-        </div>
+    var matchingDishes;
+    if (fullDishes.length === 0) {
+      matchingDishes = <div>Sorry, no matches</div>
+    } else {
+      matchingDishes = (
         <ul className="matched-items">
           {
             fullDishes.map(function (dish, idx) {
@@ -70,9 +64,19 @@ var AutoComplete = React.createClass({
             })
           }
         </ul>
-        <ul>
+      )
+    }
 
-        </ul>
+    return (
+      <div>
+        <div className="row">
+          <div className="input-field col s12">
+            <i className="material-icons prefix">search</i>
+            <input id='dish-searched' type="text" valueLink={this.linkState('inputVal')} />
+            <label className="active" htmlFor="dish-searched">Search for a dish</label>
+          </div>
+        </div>
+        {matchingDishes}
       </div>
     )
   }

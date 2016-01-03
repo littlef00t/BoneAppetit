@@ -31890,6 +31890,26 @@
 	  render: function () {
 	    var fullDishes = this.fullDishes();
 	    var that = this;
+	    var matchingDishes;
+	    if (fullDishes.length === 0) {
+	      matchingDishes = React.createElement(
+	        'div',
+	        null,
+	        'Sorry, no matches'
+	      );
+	    } else {
+	      matchingDishes = React.createElement(
+	        'ul',
+	        { className: 'matched-items' },
+	        fullDishes.map(function (dish, idx) {
+	          return React.createElement(
+	            'li',
+	            { key: idx },
+	            React.createElement(DishIndexItem, { dish: dish })
+	          );
+	        })
+	      );
+	    }
 	
 	    return React.createElement(
 	      'div',
@@ -31913,18 +31933,7 @@
 	          )
 	        )
 	      ),
-	      React.createElement(
-	        'ul',
-	        { className: 'matched-items' },
-	        fullDishes.map(function (dish, idx) {
-	          return React.createElement(
-	            'li',
-	            { key: idx },
-	            React.createElement(DishIndexItem, { dish: dish })
-	          );
-	        })
-	      ),
-	      React.createElement('ul', null)
+	      matchingDishes
 	    );
 	  }
 	});
