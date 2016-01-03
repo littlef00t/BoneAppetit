@@ -1,31 +1,23 @@
 # Bone Appetit
 
-[Heroku link][heroku] **NB:** This should be a link to your production site
-
-[heroku]: http://www.herokuapp.com
+[heroku]: https://young-chamber-3073.herokuapp.com
 
 ## Minimum Viable Product
 
-Filling the empty/Hungry Heart is a web application inspired by Foodspotting build on Ruby on Rials and React.js. Hungry Heart allows users who want to share food or surplus of food with those who are in need/hungry. In filling another's empty stomach, you fill your own heart.
+Hungry Heart is a web application inspired by Foodspotting built on Ruby on Rails and React.js. Hungry Heart allows users who want to share food or surplus of food with those who are in need/hungry. In filling another's empty stomach, you fill your own heart.
 Hungry Heart allows users to:
 
-
-<!-- This is a Markdown checklist. Use it to keep track of your progress! -->
-
-- [ ] Create an account
-- [ ] Log in / Log out
-- [ ] CRUD dishes
-- [ ] Able to upload images with dish
-Bonus?
-- [ ] Rate the dish by clicking ('tried it and loved it')
-- [ ] Comment on other users' dishes
+- [X] Create an account
+- [X] Log in / Log out
+- [X] CRD dishes and comments (only user of dish and comments can manipulate own dish/comments)
+- [X] Able to upload images with dish
 
 ## Design Docs
 * [View Wireframes][view]
 * [DB schema][schema]
 
-[view]: ./docs/views.md
-[schema]: ./docs/schema.md
+[view]: ./mydocs/views.md
+[schema]: ./mydocs/schema.md
 
 ## Implementation Timeline
 
@@ -43,7 +35,7 @@ structure for the main application. After the basic Flux architecture has been
 set up, a Dish store will be implemented and a set of actions corresponding to
 the needed CRUD functionality created.  Once this is done, I will create React
 views for the Dish `Index`, `IndexItem` and `Form`.  At the end of Phase 2,
-Images can be created, read, (updated as bonus?) and destroyed in the browser.
+Dishes can be created, read, (updated as bonus?) and destroyed in the browser.
 
 [Details][phase-two]
 
@@ -55,19 +47,18 @@ Phase 3 allows the upload of images with the Dish. I will be using Cloudinary to
 
 ### Phase 4: Comments (1 day)
 
-I will be adding a new Comment Store and component.
+I will be adding a new Comment Store and views for Comment `IndexItem` and `Form`. At the end of Phase 4,Comments can be created, read, and destroyed in the browser.
 
 [Details][phase-four]
 
 
 ### Bonus:
+I will be adding styling using Materialize.
 I will be implementing a map so users can search for food near their area.
 Users can update their dishes.
-You can just render page by refreshing, not going back to home page.
 
 
-[phase-one]: ./docs/phases/phase1.md
-[phase-two]: ./docs/phases/phase2.md
-[phase-three]: ./docs/phases/phase3.md
-[phase-four]: ./docs/phases/phase4.md
-[phase-five]: ./docs/phases/phase5.md
+[phase-one]: ./mydocs/phases/phase1.md
+[phase-two]: ./mydocs/phases/phase2.md
+[phase-three]: ./mydocs/phases/phase3.md
+[phase-four]: ./mydocs/phases/phase4.md
