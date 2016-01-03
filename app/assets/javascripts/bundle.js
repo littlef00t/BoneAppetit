@@ -31882,11 +31882,12 @@
 	    });
 	    return fullDishes;
 	  },
-	  handleClick: function (e) {
-	    e.preventDefault();
-	    var dish = e.currentTarget.innerText;
-	    this.setState({ inputVal: dish });
-	  },
+	  //This will be fine tuned
+	  // handleClick: function (e) {
+	  //   e.preventDefault();
+	  //   var dish = e.currentTarget.innerText;
+	  //   this.setState({ inputVal: dish })
+	  // },
 	  render: function () {
 	    var fullDishes = this.fullDishes();
 	    var that = this;
