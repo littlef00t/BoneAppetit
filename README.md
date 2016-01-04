@@ -8,7 +8,7 @@ View it live at http://hungryheart.xyz
 
 * Search for dishes by dish name (only matching dishes with what is typed will populate)
 * See each dish and its description
-A member can also:
+* A member can also:
   * Upload an image with the dish and its description
   * Comment on own dish and others' dishes
 
