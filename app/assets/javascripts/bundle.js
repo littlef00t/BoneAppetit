@@ -31523,7 +31523,7 @@
 	          )
 	        ),
 	        this.state.image_publicids.map(function (public_id, idx) {
-	          return React.createElement('img', { key: idx, src: "https://res.cloudinary.com/littlef00t/image/upload/w_200,h_200/" + public_id + ".png" });
+	          return React.createElement('img', { key: idx, src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + public_id + ".png" });
 	        }),
 	        React.createElement(UploadButton, { addImage: this.addImage }),
 	        React.createElement('br', null),
