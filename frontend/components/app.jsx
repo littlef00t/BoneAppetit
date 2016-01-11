@@ -20,7 +20,7 @@ var App = React.createClass({
   render: function () {
     var current_user = this.state.current_user;
     var currentUser;
-    if (current_user.id == -1) {
+    if (current_user.id === -1) {
       currentUser = (
         <ul id="nav-mobile" className="right">
           <li><a href="session/new">Sign In</a></li>

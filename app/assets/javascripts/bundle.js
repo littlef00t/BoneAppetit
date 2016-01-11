@@ -32223,7 +32223,7 @@
 	  render: function () {
 	    var current_user = this.state.current_user;
 	    var currentUser;
-	    if (current_user.id == -1) {
+	    if (current_user.id === -1) {
 	      currentUser = React.createElement(
 	        'ul',
 	        { id: 'nav-mobile', className: 'right' },

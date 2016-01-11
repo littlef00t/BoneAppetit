@@ -27,6 +27,13 @@
   padding:1px;
 }
 
+// #signed-in-as {
+//   position: absolute;
+//   right: 0px;
+//   padding: 20px;
+//   // color: #9590A8;
+// }
+
 body {
  background-color: #dddddd;
  padding-bottom: 3em;
@@ -92,6 +99,7 @@ background-color: #9590A8;
 .nav-wrapper {
  background-color: #9bc4bc;
  margin: 0px;
+ position: fixed;
 }
 
 footer {
@@ -119,6 +127,7 @@ footer {
   top: 0px;
   padding: 10px;
   z-index: 1;
+  color: white;
 }
 
 .matched-items {
