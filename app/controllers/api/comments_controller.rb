@@ -24,7 +24,9 @@ class Api::CommentsController < ApplicationController
   end
 
   def update
-
+    @comment = Comment.find(params[:id])
+    @comment.update_attributes(comment_params)
+    render :show
   end
 
   def comment_params
