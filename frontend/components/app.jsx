@@ -32,12 +32,14 @@ var App = React.createClass({
     }
     return (
       <div>
-        <nav>
-          <div className="nav-wrapper">
-            <a href="#" className="brand-logo left">Hungry Heart</a>
-            {currentUser}
-          </div>
-        </nav>
+        <div className="navbar-fixed">
+          <nav>
+            <div className="nav-wrapper">
+              <a href="#" className="brand-logo left">Hungry Heart</a>
+              {currentUser}
+            </div>
+          </nav>
+        </div>
         <div className="everything-but-nav">
           <div className="center-align">
             <img className="responsive-img logo" src={"https://res.cloudinary.com/littlef00t/image/upload/w_300,h_150/lz3cctkmjh5dvaxwalol.png"} />

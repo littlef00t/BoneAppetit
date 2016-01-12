@@ -19717,7 +19717,7 @@
 	        null,
 	        'Dishes offered:'
 	      ),
-	      React.createElement(AutoComplete, { dishes: this.state.dishes })
+	      React.createElement(AutoComplete, { currentUser: this.state.current_user, dishes: this.state.dishes })
 	    );
 	  }
 	});
@@ -26668,6 +26668,24 @@
 	  },
 	  render: function () {
 	    var dish = this.props.dish;
+	    var pickupDetails;
+	    if (this.props.currentUser.id !== -1) {
+	      pickupDetails = React.createElement(
+	        'p',
+	        { onClick: this.showDetail },
+	        'View PickUp Details'
+	      );
+	    } else {
+	      pickupDetails = React.createElement(
+	        'p',
+	        null,
+	        React.createElement(
+	          'a',
+	          { href: 'session/new' },
+	          'Sign in to view pickup details'
+	        )
+	      );
+	    }
 	    return React.createElement(
 	      'div',
 	      { className: 'card' },
@@ -26699,11 +26717,7 @@
 	            'more_vert'
 	          )
 	        ),
-	        React.createElement(
-	          'p',
-	          { onClick: this.showDetail },
-	          'View or add comments'
-	        )
+	        pickupDetails
 	      ),
 	      React.createElement(
 	        'div',
@@ -31918,6 +31932,7 @@
 	  //   this.setState({ inputVal: dish })
 	  // },
 	  render: function () {
+	    var currentUser = this.props.currentUser;
 	    var fullDishes = this.fullDishes();
 	    var that = this;
 	    var matchingDishes;
@@ -31935,7 +31950,7 @@
 	          return React.createElement(
 	            'li',
 	            { key: idx },
-	            React.createElement(DishIndexItem, { dish: dish })
+	            React.createElement(DishIndexItem, { currentUser: currentUser, dish: dish })
 	          );
 	        })
 	      );
@@ -32292,17 +32307,21 @@
 	      'div',
 	      null,
 	      React.createElement(
-	        'nav',
-	        null,
+	        'div',
+	        { className: 'navbar-fixed' },
 	        React.createElement(
-	          'div',
-	          { className: 'nav-wrapper' },
+	          'nav',
+	          null,
 	          React.createElement(
-	            'a',
-	            { href: '#', className: 'brand-logo left' },
-	            'Hungry Heart'
-	          ),
-	          currentUser
+	            'div',
+	            { className: 'nav-wrapper' },
+	            React.createElement(
+	              'a',
+	              { href: '#', className: 'brand-logo left' },
+	              'Hungry Heart'
+	            ),
+	            currentUser
+	          )
 	        )
 	      ),
 	      React.createElement(

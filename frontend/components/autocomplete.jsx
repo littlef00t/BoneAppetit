@@ -40,13 +40,14 @@ var AutoComplete = React.createClass({
     })
     return fullDishes;
   },
-  //This will be fine tuned 
+  //This will be fine tuned
   // handleClick: function (e) {
   //   e.preventDefault();
   //   var dish = e.currentTarget.innerText;
   //   this.setState({ inputVal: dish })
   // },
   render: function () {
+    var currentUser = this.props.currentUser;
     var fullDishes = this.fullDishes();
     var that = this;
     var matchingDishes;
@@ -59,7 +60,7 @@ var AutoComplete = React.createClass({
             fullDishes.map(function (dish, idx) {
               return (
                 <li key={idx}>
-                  <DishIndexItem dish={dish}/>
+                  <DishIndexItem currentUser={currentUser} dish={dish}/>
                 </li>
               )
             })
