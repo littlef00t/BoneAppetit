@@ -72,10 +72,10 @@ var DishDetail = React.createClass({
     return (
       <div className="center-align">
         <h4>Dish: {dish.name}</h4>
-        <p>Description: {dish.description}
+          <h5>Pickup Location: {dish.location}</h5>
+          <h5>Pickup Date and Time: {dish.pickup_time}</h5>
           <br/>
           <small className="purple-color">posted by {dish.username}</small>
-        </p>
         <div>
           {
             dish.images.map(function (image) {

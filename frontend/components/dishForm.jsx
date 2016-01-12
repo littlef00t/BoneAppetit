@@ -11,6 +11,8 @@ var DishForm = React.createClass({
       id: '',
       name: '',
       description: '',
+      location: '',
+      pickup_time: '',
       image_publicids: []
     };
   },
@@ -28,6 +30,8 @@ var DishForm = React.createClass({
     this.setState({
       name: '',
       description: '',
+      location: '',
+      pickup_time: '',
       id: '',
       image_publicids: []
     });
@@ -37,7 +41,8 @@ var DishForm = React.createClass({
     return (
       <div className="row">
         <h5>Share your dish here!</h5>
-        <p className="green-color">(Dish image required)</p>
+        <p className="green-color">(All fields required including dish image)</p>
+
         <form className="col s12" onSubmit={this.createDish}>
           <div className="row input-field col s6">
             <input type='text'
@@ -55,6 +60,25 @@ var DishForm = React.createClass({
               />
             <label className="active" htmlFor='dish_description'>Description</label>
           </div>
+
+          <div className="row input-field col s6">
+            <input type='text'
+              id='dish_location'
+              valueLink={this.linkState('location')}
+              placeholder="Where can someone pick up this dish"
+              />
+            <label className="active" htmlFor='dish_location'>Pick Up Location</label>
+          </div>
+
+          <div className="row input-field col s6">
+            <input type='text'
+              id='dish_pickup_time'
+              valueLink={this.linkState('pickup_time')}
+              placeholder="What day and time can someone pick up this dish"
+              />
+            <label className="active" htmlFor='dish_pickup_time'>Pick Up Time</label>
+          </div>
+
           {
             this.state.image_publicids.map(function (public_id, idx) {
               return <img key={idx} src={"https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + public_id + ".png"}/>

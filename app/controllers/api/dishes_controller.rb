@@ -30,7 +30,7 @@ class Api::DishesController < ApplicationController
 
   private
   def dish_params
-    params.require(:dish).permit(:name, :description)
+    params.require(:dish).permit(:name, :description, :location, :pickup_time)
   end
 
   def image_params

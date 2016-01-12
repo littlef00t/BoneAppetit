@@ -31456,6 +31456,8 @@
 	      id: '',
 	      name: '',
 	      description: '',
+	      location: '',
+	      pickup_time: '',
 	      image_publicids: []
 	    };
 	  },
@@ -31473,6 +31475,8 @@
 	    this.setState({
 	      name: '',
 	      description: '',
+	      location: '',
+	      pickup_time: '',
 	      id: '',
 	      image_publicids: []
 	    });
@@ -31490,7 +31494,7 @@
 	      React.createElement(
 	        'p',
 	        { className: 'green-color' },
-	        '(Dish image required)'
+	        '(All fields required including dish image)'
 	      ),
 	      React.createElement(
 	        'form',
@@ -31520,6 +31524,34 @@
 	            'label',
 	            { className: 'active', htmlFor: 'dish_description' },
 	            'Description'
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'row input-field col s6' },
+	          React.createElement('input', { type: 'text',
+	            id: 'dish_location',
+	            valueLink: this.linkState('location'),
+	            placeholder: 'Where can someone pick up this dish'
+	          }),
+	          React.createElement(
+	            'label',
+	            { className: 'active', htmlFor: 'dish_location' },
+	            'Pick Up Location'
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'row input-field col s6' },
+	          React.createElement('input', { type: 'text',
+	            id: 'dish_pickup_time',
+	            valueLink: this.linkState('pickup_time'),
+	            placeholder: 'What day and time can someone pick up this dish'
+	          }),
+	          React.createElement(
+	            'label',
+	            { className: 'active', htmlFor: 'dish_pickup_time' },
+	            'Pick Up Time'
 	          )
 	        ),
 	        this.state.image_publicids.map(function (public_id, idx) {
@@ -32029,17 +32061,23 @@
 	        dish.name
 	      ),
 	      React.createElement(
-	        'p',
+	        'h5',
 	        null,
-	        'Description: ',
-	        dish.description,
-	        React.createElement('br', null),
-	        React.createElement(
-	          'small',
-	          { className: 'purple-color' },
-	          'posted by ',
-	          dish.username
-	        )
+	        'Pickup Location: ',
+	        dish.location
+	      ),
+	      React.createElement(
+	        'h5',
+	        null,
+	        'Pickup Date and Time: ',
+	        dish.pickup_time
+	      ),
+	      React.createElement('br', null),
+	      React.createElement(
+	        'small',
+	        { className: 'purple-color' },
+	        'posted by ',
+	        dish.username
 	      ),
 	      React.createElement(
 	        'div',
