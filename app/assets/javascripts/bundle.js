@@ -26663,6 +26663,7 @@
 	  mixins: [History],
 	
 	  showDetail: function () {
+	    scrollTo(0, 0);
 	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
 	  },
 	  render: function () {
