@@ -94,8 +94,10 @@ var DishDetail = React.createClass({
           {
             dish.comments.map(function (comment) {
               return (
-                  <CommentIndexItem key={comment.id}
-                    comment={comment} currentuser={current_user}/>
+                <div key={comment.id}>
+                  <CommentIndexItem comment={comment} currentuser={current_user}/>
+                  <p>----------------------------------------------</p>
+                </div>
               )
             })
           }

@@ -9,6 +9,14 @@ ApiUtil = {
       }
     })
   },
+  fetchDish: function (id) {
+    $.ajax({
+      url: "api/dishes/" + id,
+      success: function (dish) {
+        ApiActions.receiveOneDish(dish);
+      }
+    })
+  },
   fetchCurrentUser: function () {
     $.ajax({
       url: "session",
@@ -17,11 +25,12 @@ ApiUtil = {
       }
     })
   },
-  fetchDish: function (id) {
+  signOutUser: function () {
     $.ajax({
-      url: "api/dishes/" + id,
-      success: function (dish) {
-        ApiActions.receiveOneDish(dish);
+      url: "session",
+      type: "DELETE",
+      success: function () {
+        window.location= "/";
       }
     })
   },
@@ -35,7 +44,7 @@ ApiUtil = {
         callback && callback(dish.id);
       },
       error: function (a, b, msg) {
-        alert("dish, description, and dish image required");
+        alert("all fields required");
         window.location = "session/new";
       }
     })

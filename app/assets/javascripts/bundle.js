@@ -26513,6 +26513,14 @@
 	      }
 	    });
 	  },
+	  fetchDish: function (id) {
+	    $.ajax({
+	      url: "api/dishes/" + id,
+	      success: function (dish) {
+	        ApiActions.receiveOneDish(dish);
+	      }
+	    });
+	  },
 	  fetchCurrentUser: function () {
 	    $.ajax({
 	      url: "session",
@@ -26521,11 +26529,12 @@
 	      }
 	    });
 	  },
-	  fetchDish: function (id) {
+	  signOutUser: function () {
 	    $.ajax({
-	      url: "api/dishes/" + id,
-	      success: function (dish) {
-	        ApiActions.receiveOneDish(dish);
+	      url: "session",
+	      type: "DELETE",
+	      success: function () {
+	        window.location = "/";
 	      }
 	    });
 	  },
@@ -26539,7 +26548,7 @@
 	        callback && callback(dish.id);
 	      },
 	      error: function (a, b, msg) {
-	        alert("dish, description, and dish image required");
+	        alert("all fields required");
 	        window.location = "session/new";
 	      }
 	    });
@@ -32115,8 +32124,16 @@
 	        'ul',
 	        null,
 	        dish.comments.map(function (comment) {
-	          return React.createElement(CommentIndexItem, { key: comment.id,
-	            comment: comment, currentuser: current_user });
+	          return React.createElement(
+	            'div',
+	            { key: comment.id },
+	            React.createElement(CommentIndexItem, { comment: comment, currentuser: current_user }),
+	            React.createElement(
+	              'p',
+	              null,
+	              '----------------------------------------------'
+	            )
+	          );
 	        })
 	      ),
 	      React.createElement(
@@ -32274,6 +32291,9 @@
 	  componentWillUnmount: function () {
 	    this.currentuserListener.remove();
 	  },
+	  signOut: function () {
+	    ApiUtil.signOutUser();
+	  },
 	  render: function () {
 	    var current_user = this.state.current_user;
 	    var currentUser;
@@ -32301,7 +32321,19 @@
 	        )
 	      );
 	    } else {
-	      React.createElement('div', null);
+	      currentUser = React.createElement(
+	        'ul',
+	        { id: 'nav-mobile', className: 'right' },
+	        React.createElement(
+	          'li',
+	          { onClick: this.signOut },
+	          React.createElement(
+	            'a',
+	            { href: '#' },
+	            'Sign Out'
+	          )
+	        )
+	      );
 	    }
 	    return React.createElement(
 	      'div',
@@ -32330,7 +32362,7 @@
 	        React.createElement(
 	          'div',
 	          { className: 'center-align' },
-	          React.createElement('img', { className: 'responsive-img logo', src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_150/lz3cctkmjh5dvaxwalol.png" }),
+	          React.createElement('img', { className: 'responsive-img logo', src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_150/ledyr29e6h1xqz9ozkiy.png" }),
 	          React.createElement(
 	            'h5',
 	            null,

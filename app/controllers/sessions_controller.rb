@@ -31,7 +31,7 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    redirect_to :root
+    render json: {}
   end
 
 end

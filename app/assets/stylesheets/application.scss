@@ -34,13 +34,17 @@
 //   // color: #9590A8;
 // }
 
+btn-floating {
+  z-index: 5;
+}
+
 body {
- background-color: #dddddd;
+ background-color: #F5FDC6;
  padding-bottom: 3em;
 }
 
 .btn.btn-minor {
-background-color: #9590A8;
+background-color: #D8B4A0;
 }
 
 .everything-but-nav {
@@ -56,11 +60,11 @@ background-color: #9590A8;
 }
 
 .green-color {
-  color: #9BC4BC;
+  color: #D81E5B;
 }
 
 .purple-color {
-  color: #9590A8;
+  color: #9EB9E0;
 }
 
 .bold {
@@ -97,18 +101,13 @@ background-color: #9590A8;
 }
 
 .nav-wrapper {
- background-color: #9bc4bc;
+ background-color: #07A0C3;
  margin: 0px;
  position: fixed;
 }
 
-footer {
-  background-color: #9bc4bc;
-  margin-bottom: 0px;
-}
-
 .btn {
- background-color: #4b5043;
+ background-color: #0A2463;
 }
 
 .logo {
@@ -119,14 +118,14 @@ footer {
   font-family: 'Parisienne', cursive;
   font-size: 16px;
   margin: auto;
+  color: #086788;
 }
 
 .user-info {
   position: absolute;
   right: 0px;
-  top: 0px;
+  top: 1em;
   padding: 10px;
-  z-index: 1;
   color: white;
 }
 
@@ -135,7 +134,7 @@ footer {
 }
 
 .card-content p:hover {
-  color: #8ddbe0;
+  color: #D8B4A0;
   cursor: pointer;
 }
 
