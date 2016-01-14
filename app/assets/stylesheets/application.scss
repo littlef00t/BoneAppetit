@@ -27,12 +27,9 @@
   padding:1px;
 }
 
-// #signed-in-as {
-//   position: absolute;
-//   right: 0px;
-//   padding: 20px;
-//   // color: #9590A8;
-// }
+#greeting {
+  color: #FCBA04;
+}
 
 btn-floating {
   z-index: 5;
@@ -119,14 +116,6 @@ background-color: #D8B4A0;
   font-size: 16px;
   margin: auto;
   color: #086788;
-}
-
-.user-info {
-  position: absolute;
-  right: 0px;
-  top: 1em;
-  padding: 10px;
-  color: white;
 }
 
 .matched-items {

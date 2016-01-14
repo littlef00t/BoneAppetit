@@ -19696,7 +19696,27 @@
 	    this.currentuserListener.remove();
 	  },
 	  render: function () {
+	    var greetings = ["You look lovely today,", "Nice to have you here,", "Your smile is contagious,", "You're a smart cookie,", "You are appreciated,", "You are enough,", "You should be proud of yourself,", "You've got all the right moves,", "I bet you sweat glitter,", "You are inspiring,", "You are a great example to others,", "You are like a breath of fresh air,", "You are loved,", "You are someone's reason to smile,", "You are a gift to those around you,", "You're truly special,"];
+	    var randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
 	    var current_user = this.state.current_user;
+	    var greeting;
+	    if (current_user.id !== -1) {
+	      greeting = React.createElement(
+	        'h3',
+	        { id: 'greeting' },
+	        randomGreeting,
+	        ' ',
+	        current_user.username,
+	        '!'
+	      );
+	    } else {
+	      greeting = React.createElement(
+	        'h3',
+	        { id: 'greeting' },
+	        randomGreeting,
+	        ' guest!'
+	      );
+	    }
 	    var dishForm;
 	    if (current_user.id !== -1) {
 	      dishForm = React.createElement(DishForm, null);
@@ -19707,13 +19727,14 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'everything-but-nav' },
+	      greeting,
 	      React.createElement(
 	        'div',
 	        null,
 	        dishForm
 	      ),
 	      React.createElement(
-	        'h2',
+	        'h4',
 	        null,
 	        'Dishes offered:'
 	      ),

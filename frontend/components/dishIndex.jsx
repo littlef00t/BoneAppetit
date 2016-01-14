@@ -6,9 +6,6 @@ var DishForm = require('./dishForm');
 var CurrentUserStore = require('../stores/current_user');
 var AutoComplete = require('./autocomplete');
 
-
-
-
 var DishIndex = React.createClass({
   getInitialState: function () {
     return { dishes: DishStore.all(),
@@ -31,7 +28,32 @@ var DishIndex = React.createClass({
     this.currentuserListener.remove();
   },
   render: function () {
+    var greetings = [
+      "You look lovely today,",
+      "Nice to have you here,",
+      "Your smile is contagious,",
+      "You're a smart cookie,",
+      "You are appreciated,",
+      "You are enough,",
+      "You should be proud of yourself,",
+      "You've got all the right moves,",
+      "I bet you sweat glitter,",
+      "You are inspiring,",
+      "You are a great example to others,",
+      "You are like a breath of fresh air,",
+      "You are loved,",
+      "You are someone's reason to smile,",
+      "You are a gift to those around you,",
+      "You're truly special,"
+    ];
+    var randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
     var current_user = this.state.current_user;
+    var greeting;
+    if (current_user.id !== -1) {
+      greeting = <h3 id="greeting">{randomGreeting} {current_user.username}!</h3>
+    } else {
+      greeting = <h3 id="greeting">{randomGreeting} guest!</h3>
+    }
     var dishForm;
     if (current_user.id !== -1) {
       dishForm = <DishForm />
@@ -39,11 +61,11 @@ var DishIndex = React.createClass({
       dishForm = <div></div>
     }
 
-
     return (
       <div className="everything-but-nav">
+        {greeting}
         <div>{dishForm}</div>
-        <h2>Dishes offered:</h2>
+        <h4>Dishes offered:</h4>
         <AutoComplete currentUser={this.state.current_user} dishes={this.state.dishes} />
       </div>
     );
