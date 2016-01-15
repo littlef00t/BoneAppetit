@@ -26692,7 +26692,7 @@
 	  mixins: [History],
 	
 	  showDetail: function () {
-	    scrollTo(0, 0);
+	    scrollTo(0, 800);
 	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
 	  },
 	  render: function () {
@@ -32114,7 +32114,15 @@
 	
 	    return React.createElement(
 	      'div',
-	      { className: 'center-align' },
+	      { className: 'center-align padding-top' },
+	      React.createElement(
+	        'div',
+	        null,
+	        dish.images.map(function (image) {
+	          return React.createElement('img', { className: 'white-border', key: image.id, src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" });
+	        }),
+	        deleteButton
+	      ),
 	      React.createElement(
 	        'h4',
 	        null,
@@ -32133,20 +32141,11 @@
 	        'Pickup Date and Time: ',
 	        dish.pickup_time
 	      ),
-	      React.createElement('br', null),
 	      React.createElement(
 	        'small',
 	        { className: 'purple-color' },
 	        'posted by ',
 	        dish.username
-	      ),
-	      React.createElement(
-	        'div',
-	        null,
-	        dish.images.map(function (image) {
-	          return React.createElement('img', { className: 'white-border', key: image.id, src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" });
-	        }),
-	        deleteButton
 	      ),
 	      React.createElement('br', null),
 	      commentForm,

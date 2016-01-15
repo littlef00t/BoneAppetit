@@ -70,22 +70,21 @@ var DishDetail = React.createClass({
 
 
     return (
-      <div className="center-align">
-        <h4>Dish: {dish.name}</h4>
-          <h5>Pickup Location: {dish.location}</h5>
-          <h5>Pickup Date and Time: {dish.pickup_time}</h5>
-          <br/>
-          <small className="purple-color">posted by {dish.username}</small>
+      <div className="center-align padding-top">
         <div>
           {
             dish.images.map(function (image) {
-            return (
-              <img className="white-border" key={image.id} src={"https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png"}/>
+              return (
+                <img className="white-border" key={image.id} src={"https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png"}/>
               )
             })
           }
           {deleteButton}
         </div>
+        <h4>Dish: {dish.name}</h4>
+          <h5>Pickup Location: {dish.location}</h5>
+          <h5>Pickup Date and Time: {dish.pickup_time}</h5>
+          <small className="purple-color">posted by {dish.username}</small>
         <br/>
         {commentForm}
         <br/>
