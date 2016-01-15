@@ -19680,21 +19680,25 @@
 	      current_user: CurrentUserStore.find()
 	    };
 	  },
+	
 	  _onChange: function () {
 	    this.setState({ dishes: DishStore.all(),
 	      current_user: CurrentUserStore.find()
 	    });
 	  },
+	
 	  componentDidMount: function () {
 	    this.dishListener = DishStore.addListener(this._onChange);
 	    ApiUtil.fetchDishes();
 	    this.currentuserListener = CurrentUserStore.addListener(this._onChange);
 	    ApiUtil.fetchCurrentUser();
 	  },
+	
 	  componentWillUnmount: function () {
 	    this.dishListener.remove();
 	    this.currentuserListener.remove();
 	  },
+	
 	  render: function () {
 	    var greetings = ["You look lovely today,", "Nice to have you here,", "Your smile is contagious,", "You're a smart cookie,", "You are appreciated,", "You are enough,", "You should be proud of yourself,", "You've got all the right moves,", "I bet you sweat glitter,", "You are inspiring,", "You are a great example to others,", "You are like a breath of fresh air,", "You are loved,", "You are someone's reason to smile,", "You are a gift to those around you,", "You're truly special,"];
 	    var randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
@@ -31939,6 +31943,7 @@
 	  getInitialState: function () {
 	    return { inputVal: "" };
 	  },
+	
 	  matches: function () {
 	    var matches = [];
 	    var dishNames = this.props.dishes.map(function (dish) {
@@ -31959,6 +31964,7 @@
 	
 	    return matches;
 	  },
+	
 	  fullDishes: function () {
 	    var matching = this.matches();
 	    var fullDishes = [];
@@ -32028,6 +32034,7 @@
 	    );
 	  }
 	});
+	
 	module.exports = AutoComplete;
 
 /***/ },

@@ -12,21 +12,25 @@ var DishIndex = React.createClass({
               current_user: CurrentUserStore.find()
      };
   },
+
   _onChange: function () {
     this.setState({ dishes: DishStore.all(),
                     current_user: CurrentUserStore.find()
     });
   },
+
   componentDidMount: function () {
     this.dishListener = DishStore.addListener(this._onChange);
     ApiUtil.fetchDishes();
     this.currentuserListener = CurrentUserStore.addListener(this._onChange);
     ApiUtil.fetchCurrentUser();
   },
+
   componentWillUnmount: function () {
     this.dishListener.remove();
     this.currentuserListener.remove();
   },
+
   render: function () {
     var greetings = [
       "You look lovely today,",
@@ -60,7 +64,6 @@ var DishIndex = React.createClass({
     } else {
       dishForm = <div></div>
     }
-
 
     return (
       <div className="padding-top">

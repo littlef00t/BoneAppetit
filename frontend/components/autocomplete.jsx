@@ -8,6 +8,7 @@ var AutoComplete = React.createClass({
   getInitialState: function () {
     return { inputVal: "" };
   },
+
   matches: function () {
     var matches = [];
     var dishNames = this.props.dishes.map(function (dish) {
@@ -28,6 +29,7 @@ var AutoComplete = React.createClass({
 
     return matches;
   },
+
   fullDishes: function () {
     var matching = this.matches();
     var fullDishes = [];
@@ -83,4 +85,5 @@ var AutoComplete = React.createClass({
     )
   }
 })
+
 module.exports = AutoComplete;
