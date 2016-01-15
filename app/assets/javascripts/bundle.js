@@ -32398,7 +32398,7 @@
 	      ),
 	      React.createElement(
 	        'div',
-	        { className: 'parallax-container' },
+	        { className: 'parallax-container beg' },
 	        React.createElement('div', { className: 'parallax' })
 	      ),
 	      React.createElement(

@@ -47,7 +47,7 @@ var App = React.createClass({
             </div>
           </nav>
         </div>
-        <div className="parallax-container">
+        <div className="parallax-container beg">
           <div className="parallax"></div>
         </div>
 
