@@ -64,10 +64,7 @@ var DishIndex = React.createClass({
 
     return (
       <div className="padding-top">
-        <div>{dishForm}</div>
-        <div className="parallax-container">
-          <div className="parallax"></div>
-        </div>
+        {dishForm}
         <h3 className="center-align padding-top"><strong>Dishes Offered</strong></h3>
         <AutoComplete currentUser={this.state.current_user} dishes={this.state.dishes} />
       </div>

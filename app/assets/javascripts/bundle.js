@@ -19727,16 +19727,7 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'padding-top' },
-	      React.createElement(
-	        'div',
-	        null,
-	        dishForm
-	      ),
-	      React.createElement(
-	        'div',
-	        { className: 'parallax-container' },
-	        React.createElement('div', { className: 'parallax' })
-	      ),
+	      dishForm,
 	      React.createElement(
 	        'h3',
 	        { className: 'center-align padding-top' },
@@ -31538,93 +31529,102 @@
 	  render: function () {
 	    return React.createElement(
 	      'div',
-	      { className: 'center-align row padding-top padding-bottom padding-sides' },
+	      null,
 	      React.createElement(
-	        'h3',
-	        null,
+	        'div',
+	        { className: 'center-align row padding-top padding-bottom padding-sides' },
 	        React.createElement(
-	          'strong',
+	          'h3',
 	          null,
-	          'Share your dish here!'
+	          React.createElement(
+	            'strong',
+	            null,
+	            'Share your dish here!'
+	          )
+	        ),
+	        React.createElement(
+	          'p',
+	          { className: 'purple-color' },
+	          '*All fields required including dish image'
+	        ),
+	        React.createElement('br', null),
+	        React.createElement('br', null),
+	        React.createElement(
+	          'form',
+	          { className: 'col s12', onSubmit: this.createDish },
+	          React.createElement(
+	            'div',
+	            { className: 'row input-field col s6' },
+	            React.createElement('input', { type: 'text',
+	              id: 'dish_name',
+	              valueLink: this.linkState('name'),
+	              placeholder: 'Describe your dish in 1-2 words'
+	            }),
+	            React.createElement(
+	              'label',
+	              { className: 'active', htmlFor: 'dish_name' },
+	              'Dish'
+	            )
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: 'row input-field col s6' },
+	            React.createElement('input', { type: 'text',
+	              id: 'dish_description',
+	              valueLink: this.linkState('description')
+	            }),
+	            React.createElement(
+	              'label',
+	              { className: 'active', htmlFor: 'dish_description' },
+	              'Description'
+	            )
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: 'row input-field col s6' },
+	            React.createElement('input', { type: 'text',
+	              id: 'dish_location',
+	              valueLink: this.linkState('location'),
+	              placeholder: 'Where can someone pick up this dish'
+	            }),
+	            React.createElement(
+	              'label',
+	              { className: 'active', htmlFor: 'dish_location' },
+	              'Pick Up Location'
+	            )
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: 'row input-field col s6' },
+	            React.createElement('input', { type: 'text',
+	              id: 'dish_pickup_time',
+	              valueLink: this.linkState('pickup_time'),
+	              placeholder: 'What day and time can someone pick up this dish'
+	            }),
+	            React.createElement(
+	              'label',
+	              { className: 'active', htmlFor: 'dish_pickup_time' },
+	              'Pick Up Time'
+	            )
+	          ),
+	          this.state.image_publicids.map(function (public_id, idx) {
+	            return React.createElement('img', { key: idx, src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + public_id + ".png" });
+	          }),
+	          React.createElement(UploadButton, { addImage: this.addImage }),
+	          React.createElement('br', null),
+	          React.createElement('br', null),
+	          React.createElement(
+	            'button',
+	            { className: 'btn-large waves-effect waves-light' },
+	            'Add Dish'
+	          ),
+	          React.createElement('br', null)
 	        )
 	      ),
 	      React.createElement(
-	        'p',
-	        { className: 'purple-color' },
-	        '*All fields required including dish image'
-	      ),
-	      React.createElement('br', null),
-	      React.createElement('br', null),
-	      React.createElement(
-	        'form',
-	        { className: 'col s12', onSubmit: this.createDish },
-	        React.createElement(
-	          'div',
-	          { className: 'row input-field col s6' },
-	          React.createElement('input', { type: 'text',
-	            id: 'dish_name',
-	            valueLink: this.linkState('name'),
-	            placeholder: 'Describe your dish in 1-2 words'
-	          }),
-	          React.createElement(
-	            'label',
-	            { className: 'active', htmlFor: 'dish_name' },
-	            'Dish'
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'row input-field col s6' },
-	          React.createElement('input', { type: 'text',
-	            id: 'dish_description',
-	            valueLink: this.linkState('description')
-	          }),
-	          React.createElement(
-	            'label',
-	            { className: 'active', htmlFor: 'dish_description' },
-	            'Description'
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'row input-field col s6' },
-	          React.createElement('input', { type: 'text',
-	            id: 'dish_location',
-	            valueLink: this.linkState('location'),
-	            placeholder: 'Where can someone pick up this dish'
-	          }),
-	          React.createElement(
-	            'label',
-	            { className: 'active', htmlFor: 'dish_location' },
-	            'Pick Up Location'
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'row input-field col s6' },
-	          React.createElement('input', { type: 'text',
-	            id: 'dish_pickup_time',
-	            valueLink: this.linkState('pickup_time'),
-	            placeholder: 'What day and time can someone pick up this dish'
-	          }),
-	          React.createElement(
-	            'label',
-	            { className: 'active', htmlFor: 'dish_pickup_time' },
-	            'Pick Up Time'
-	          )
-	        ),
-	        this.state.image_publicids.map(function (public_id, idx) {
-	          return React.createElement('img', { key: idx, src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + public_id + ".png" });
-	        }),
-	        React.createElement(UploadButton, { addImage: this.addImage }),
-	        React.createElement('br', null),
-	        React.createElement('br', null),
-	        React.createElement(
-	          'button',
-	          { className: 'btn-large waves-effect waves-light' },
-	          'Add Dish'
-	        ),
-	        React.createElement('br', null)
+	        'div',
+	        { className: 'parallax-container' },
+	        React.createElement('div', { className: 'parallax' })
 	      )
 	    );
 	  }
