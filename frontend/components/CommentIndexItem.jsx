@@ -21,7 +21,7 @@ var CommentIndexItem = React.createClass({
     }
     return (
       <div>
-        <li key={comment.id}>{comment.body} <br/> <small className="purple-color">Love from: {comment.username}</small></li>
+        <li key={comment.id}>{comment.body} <br/> <small className="light-purple">Love from: {comment.username}</small></li>
         {deleteButton}
       </div>
     )

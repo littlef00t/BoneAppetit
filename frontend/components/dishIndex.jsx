@@ -50,9 +50,9 @@ var DishIndex = React.createClass({
     var current_user = this.state.current_user;
     var greeting;
     if (current_user.id !== -1) {
-      greeting = <h3 id="greeting">{randomGreeting} {current_user.username}!</h3>
+      greeting = <h3 id="greeting" className="center-align">{randomGreeting} {current_user.username}!</h3>
     } else {
-      greeting = <h3 id="greeting">{randomGreeting} guest!</h3>
+      greeting = <h3 id="greeting" className="center-align">{randomGreeting} guest!</h3>
     }
     var dishForm;
     if (current_user.id !== -1) {
@@ -61,11 +61,14 @@ var DishIndex = React.createClass({
       dishForm = <div></div>
     }
 
+
     return (
-      <div className="everything-but-nav">
-        {greeting}
+      <div className="padding-top">
         <div>{dishForm}</div>
-        <h4>Dishes offered:</h4>
+        <div className="parallax-container">
+          <div className="parallax"></div>
+        </div>
+        <h3 className="center-align padding-top"><strong>Dishes Offered</strong></h3>
         <AutoComplete currentUser={this.state.current_user} dishes={this.state.dishes} />
       </div>
     );

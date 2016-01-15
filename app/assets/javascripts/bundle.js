@@ -19703,7 +19703,7 @@
 	    if (current_user.id !== -1) {
 	      greeting = React.createElement(
 	        'h3',
-	        { id: 'greeting' },
+	        { id: 'greeting', className: 'center-align' },
 	        randomGreeting,
 	        ' ',
 	        current_user.username,
@@ -19712,7 +19712,7 @@
 	    } else {
 	      greeting = React.createElement(
 	        'h3',
-	        { id: 'greeting' },
+	        { id: 'greeting', className: 'center-align' },
 	        randomGreeting,
 	        ' guest!'
 	      );
@@ -19726,17 +19726,25 @@
 	
 	    return React.createElement(
 	      'div',
-	      { className: 'everything-but-nav' },
-	      greeting,
+	      { className: 'padding-top' },
 	      React.createElement(
 	        'div',
 	        null,
 	        dishForm
 	      ),
 	      React.createElement(
-	        'h4',
-	        null,
-	        'Dishes offered:'
+	        'div',
+	        { className: 'parallax-container' },
+	        React.createElement('div', { className: 'parallax' })
+	      ),
+	      React.createElement(
+	        'h3',
+	        { className: 'center-align padding-top' },
+	        React.createElement(
+	          'strong',
+	          null,
+	          'Dishes Offered'
+	        )
 	      ),
 	      React.createElement(AutoComplete, { currentUser: this.state.current_user, dishes: this.state.dishes })
 	    );
@@ -31530,17 +31538,23 @@
 	  render: function () {
 	    return React.createElement(
 	      'div',
-	      { className: 'row' },
+	      { className: 'center-align row padding-top padding-bottom padding-sides' },
 	      React.createElement(
-	        'h5',
+	        'h3',
 	        null,
-	        'Share your dish here!'
+	        React.createElement(
+	          'strong',
+	          null,
+	          'Share your dish here!'
+	        )
 	      ),
 	      React.createElement(
 	        'p',
-	        { className: 'green-color' },
-	        '(All fields required including dish image)'
+	        { className: 'purple-color' },
+	        '*All fields required including dish image'
 	      ),
+	      React.createElement('br', null),
+	      React.createElement('br', null),
 	      React.createElement(
 	        'form',
 	        { className: 'col s12', onSubmit: this.createDish },
@@ -31603,6 +31617,7 @@
 	          return React.createElement('img', { key: idx, src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + public_id + ".png" });
 	        }),
 	        React.createElement(UploadButton, { addImage: this.addImage }),
+	        React.createElement('br', null),
 	        React.createElement('br', null),
 	        React.createElement(
 	          'button',
@@ -31988,7 +32003,7 @@
 	
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'padding-bottom padding-sides' },
 	      React.createElement(
 	        'div',
 	        { className: 'row' },
@@ -32138,8 +32153,12 @@
 	      React.createElement('br', null),
 	      React.createElement(
 	        'p',
-	        { className: 'green-color bold' },
-	        'LOVE NOTES'
+	        { className: 'purple-color' },
+	        React.createElement(
+	          'strong',
+	          null,
+	          'LOVE NOTES'
+	        )
 	      ),
 	      React.createElement(
 	        'ul',
@@ -32276,7 +32295,7 @@
 	        ' ',
 	        React.createElement(
 	          'small',
-	          { className: 'purple-color' },
+	          { className: 'light-purple' },
 	          'Love from: ',
 	          comment.username
 	        )
@@ -32379,16 +32398,23 @@
 	      ),
 	      React.createElement(
 	        'div',
-	        { className: 'everything-but-nav' },
+	        { className: 'parallax-container' },
+	        React.createElement('div', { className: 'parallax' })
+	      ),
+	      React.createElement(
+	        'div',
+	        null,
 	        React.createElement(
 	          'div',
-	          { className: 'center-align' },
+	          { className: 'center-align header' },
 	          React.createElement('img', { className: 'responsive-img logo', src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_150/ledyr29e6h1xqz9ozkiy.png" }),
 	          React.createElement(
-	            'h5',
+	            'h6',
 	            null,
-	            'A place to share excess food to the hungry...'
+	            'SHARE EXCESS FOOD    |    FIND FREE FOOD    |    MAKE A DIFFERENCE'
 	          ),
+	          React.createElement('br', null),
+	          React.createElement('br', null),
 	          React.createElement(
 	            'p',
 	            { id: 'quote' },
@@ -32397,7 +32423,12 @@
 	        ),
 	        React.createElement(
 	          'div',
-	          { currentUser: current_user },
+	          { className: 'parallax-container' },
+	          React.createElement('div', { className: 'parallax' })
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'everything-but-nav' },
 	          this.props.children
 	        )
 	      )

@@ -17,35 +17,48 @@
  *= require_self
  */
 
- // .errors {
- //   z-index: 1;
- //   color: #00ffff;
- // }
+.header {
+  margin: 30px;
+  border: 1px solid black;
+  //  opacity: 0.6;
+  //  filter: alpha(opacity=60);
+  padding-top: 50px;
+  padding-bottom: 50px;
+ }
+
+.parallax {
+  background-image: url("http://res.cloudinary.com/littlef00t/image/upload/v1452818278/vehparbptqqjkv3qj9fr.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  opacity: 0.8;
+}
 
 .white-border {
   border:1px solid #021a40;
   padding:1px;
 }
 
-#greeting {
-  color: #FCBA04;
-}
-
-btn-floating {
-  z-index: 5;
-}
-
 body {
- background-color: #F5FDC6;
  padding-bottom: 3em;
+ background-color: #F7ECE1;
 }
 
 .btn.btn-minor {
 background-color: #D8B4A0;
 }
 
-.everything-but-nav {
- margin: 1em 1.5em 1em 1.5em;
+.padding-top {
+ padding-top: 20px;
+}
+
+.padding-bottom {
+  padding-bottom: 20px;
+}
+
+.padding-sides {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .brand-logo {
@@ -56,12 +69,16 @@ background-color: #D8B4A0;
   display: block;
 }
 
-.green-color {
-  color: #D81E5B;
+.purple-color {
+  color: #725AC1;
 }
 
-.purple-color {
-  color: #9EB9E0;
+.parallax-container {
+      height: 150px;
+}
+
+.light-purple {
+  color: #8D86C9;
 }
 
 .bold {
@@ -98,13 +115,13 @@ background-color: #D8B4A0;
 }
 
 .nav-wrapper {
- background-color: #07A0C3;
+ background-color: #9BE1A2;
  margin: 0px;
  position: fixed;
 }
 
 .btn {
- background-color: #0A2463;
+ background-color: #8B9EBF;
 }
 
 .logo {
@@ -123,7 +140,7 @@ background-color: #D8B4A0;
 }
 
 .card-content p:hover {
-  color: #D8B4A0;
+  color: #8D86C9;
   cursor: pointer;
 }
 

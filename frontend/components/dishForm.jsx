@@ -39,9 +39,11 @@ var DishForm = React.createClass({
 
   render: function () {
     return (
-      <div className="row">
-        <h5>Share your dish here!</h5>
-        <p className="green-color">(All fields required including dish image)</p>
+      <div className="center-align row padding-top padding-bottom padding-sides">
+        <h3><strong>Share your dish here!</strong></h3>
+        <p className="purple-color">*All fields required including dish image</p>
+        <br/>
+        <br/>
 
         <form className="col s12" onSubmit={this.createDish}>
           <div className="row input-field col s6">
@@ -85,11 +87,13 @@ var DishForm = React.createClass({
             })
           }
           <UploadButton addImage={this.addImage}/>
-          <br></br>
+          <br/>
+          <br/>
 
           <button className="btn-large waves-effect waves-light">Add Dish</button>
           <br />
         </form>
+
       </div>
     );
   }

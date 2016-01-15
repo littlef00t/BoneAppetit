@@ -70,7 +70,7 @@ var AutoComplete = React.createClass({
     }
 
     return (
-      <div>
+      <div className="padding-bottom padding-sides">
         <div className="row">
           <div className="input-field col s12">
             <i className="material-icons prefix">search</i>

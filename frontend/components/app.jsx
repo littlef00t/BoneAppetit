@@ -47,13 +47,23 @@ var App = React.createClass({
             </div>
           </nav>
         </div>
-        <div className="everything-but-nav">
-          <div className="center-align">
+        <div className="parallax-container">
+          <div className="parallax"></div>
+        </div>
+
+
+        <div>
+          <div className="center-align header">
             <img className="responsive-img logo" src={"https://res.cloudinary.com/littlef00t/image/upload/w_300,h_150/ledyr29e6h1xqz9ozkiy.png"} />
-            <h5>A place to share excess food to the hungry...</h5>
+            <h6>SHARE EXCESS FOOD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;FIND FREE FOOD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;MAKE A DIFFERENCE</h6>
+            <br/>
+            <br/>
             <p id="quote">"Pure love is a willingness to give without a thought of receiving anything in return." -- Peace Pilgrim</p>
           </div>
-          <div currentUser={current_user}>{this.props.children}</div>
+          <div className="parallax-container">
+            <div className="parallax"></div>
+          </div>
+          <div className="everything-but-nav">{this.props.children}</div>
         </div>
       </div>
     )

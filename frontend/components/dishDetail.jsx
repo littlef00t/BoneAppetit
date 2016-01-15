@@ -89,7 +89,7 @@ var DishDetail = React.createClass({
         <br/>
         {commentForm}
         <br/>
-        <p className="green-color bold">LOVE NOTES</p>
+        <p className="purple-color"><strong>LOVE NOTES</strong></p>
         <ul>
           {
             dish.comments.map(function (comment) {
