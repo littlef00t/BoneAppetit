@@ -24,6 +24,7 @@ var DishForm = React.createClass({
   createDish: function (e) {
     e.preventDefault();
     var dish = this.state;
+    scrollTo(0, 500);
     ApiUtil.createDish(dish, function (id) {
       this.history.pushState(null, "dishes/" + id, {});
     }.bind(this));
