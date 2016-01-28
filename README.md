@@ -1,6 +1,6 @@
 # Hungry Heart
 
-Hungry Heart is a web application built with Ruby on Rails, PostgreSQL, React, Materialize and jQuery, and is modeled on foodspotting's feel and functionality.
+Hungry Heart is a web application built with Ruby on Rails, PostgreSQL, React, Materialize and jQuery.
 
 View it live at http://hungryheart.xyz
 
