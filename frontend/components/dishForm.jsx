@@ -45,6 +45,8 @@ var DishForm = React.createClass({
     return (
       <div>
         <Element name="dishform-anchor" className="element"></Element>
+        <br/>
+        <br/>
         <div className="center-align row padding-top padding-bottom padding-sides">
           <h3><strong>Share your dish here!</strong></h3>
           <p className="purple-color">*All fields required including dish image</p>

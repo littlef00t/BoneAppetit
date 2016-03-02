@@ -31548,6 +31548,8 @@
 	      'div',
 	      null,
 	      React.createElement(Element, { name: 'dishform-anchor', className: 'element' }),
+	      React.createElement('br', null),
+	      React.createElement('br', null),
 	      React.createElement(
 	        'div',
 	        { className: 'center-align row padding-top padding-bottom padding-sides' },
