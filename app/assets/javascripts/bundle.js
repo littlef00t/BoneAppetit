@@ -32373,15 +32373,6 @@
 	  signOut: function () {
 	    ApiUtil.signOutUser();
 	  },
-	  scrollToDishSearch: function () {
-	    var dishSearchLocation = document.getElementById('dishsearch-anchor');
-	    dishSearchLocation.scrollIntoView();
-	  },
-	  scrollToDishForm: function () {
-	    var dishFormLocation = document.getElementById('dishform-anchor');
-	    dishFormLocation.scrollIntoView();
-	    debugger;
-	  },
 	  render: function () {
 	    var current_user = this.state.current_user;
 	    var currentUser;
