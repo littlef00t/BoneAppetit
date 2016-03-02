@@ -2,6 +2,11 @@ var React = require('react');
 var ApiUtil = require('../util/api_util');
 var CurrentUserStore = require('../stores/current_user');
 
+var Scroll  = require('react-scroll');
+
+var Link    = Scroll.Link;
+var Element = Scroll.Element;
+var Events  = Scroll.Events;
 
 var App = React.createClass({
   getInitialState: function () {
@@ -13,12 +18,30 @@ var App = React.createClass({
   componentDidMount: function () {
     this.currentuserListener = CurrentUserStore.addListener(this._onChange);
     ApiUtil.fetchCurrentUser();
+    Events.scrollEvent.register('begin', function(to, element) {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register('end', function(to, element) {
+      console.log("end", arguments);
+    });
   },
   componentWillUnmount: function () {
     this.currentuserListener.remove();
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
   },
   signOut: function () {
     ApiUtil.signOutUser();
+  },
+  scrollToDishSearch: function() {
+    var dishSearchLocation = document.getElementById('dishsearch-anchor');
+    dishSearchLocation.scrollIntoView();
+  },
+  scrollToDishForm: function() {
+    var dishFormLocation = document.getElementById('dishform-anchor');
+    dishFormLocation.scrollIntoView();
+    debugger;
   },
   render: function () {
     var current_user = this.state.current_user;
@@ -26,6 +49,7 @@ var App = React.createClass({
     if (current_user.id === -1) {
       currentUser = (
         <ul id="nav-mobile" className="right">
+          <li><Link activeClass="active" className="dishsearch-anchor" to="dishsearch-anchor" spy={true} smooth={true} duration={500}>Search for a Dish</Link></li>
           <li><a href="session/new">Sign In</a></li>
           <li><a href="users/new">Sign Up</a></li>
         </ul>
@@ -33,7 +57,9 @@ var App = React.createClass({
     } else {
       currentUser = (
         <ul id="nav-mobile" className="right">
-          <li onClick={this.signOut}><a href="#">Sign Out</a></li>
+          <li><Link activeClass="active" className="dishform-anchor" to="dishform-anchor" spy={true} smooth={true} duration={500} >Share a Dish</Link></li>
+          <li><Link activeClass="active" className="dishsearch-anchor" to="dishsearch-anchor" spy={true} smooth={true} duration={500}>Search for a Dish</Link></li>
+          <li><a onClick={this.signOut}>Sign Out</a></li>
         </ul>
       )
     }

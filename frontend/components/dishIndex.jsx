@@ -6,6 +6,9 @@ var DishForm = require('./dishForm');
 var CurrentUserStore = require('../stores/current_user');
 var AutoComplete = require('./autocomplete');
 
+var Scroll    = require('react-scroll');
+var Element = Scroll.Element;
+
 var DishIndex = React.createClass({
   getInitialState: function () {
     return { dishes: DishStore.all(),
@@ -15,7 +18,7 @@ var DishIndex = React.createClass({
 
   _onChange: function () {
     this.setState({ dishes: DishStore.all(),
-                    current_user: CurrentUserStore.find()
+              current_user: CurrentUserStore.find()
     });
   },
 
@@ -30,6 +33,8 @@ var DishIndex = React.createClass({
     this.dishListener.remove();
     this.currentuserListener.remove();
   },
+
+
 
   render: function () {
     var greetings = [
@@ -67,7 +72,9 @@ var DishIndex = React.createClass({
 
     return (
       <div className="padding-top">
-        {dishForm}
+        <div>{dishForm}</div>
+        <Element name="dishsearch-anchor" className="element"></Element>
+        <br></br>
         <h3 className="center-align padding-top"><strong>Dishes Offered</strong></h3>
         <AutoComplete currentUser={this.state.current_user} dishes={this.state.dishes} />
       </div>

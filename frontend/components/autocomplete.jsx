@@ -2,6 +2,7 @@ var React = require('react');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var DishIndexItem = require('./DishIndexItem');
 
+
 var AutoComplete = React.createClass({
   mixins: [LinkedStateMixin],
 
