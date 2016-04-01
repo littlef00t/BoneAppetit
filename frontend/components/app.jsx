@@ -45,6 +45,12 @@ var App = React.createClass({
           <li><a href="users/new">Sign Up</a></li>
         </ul>
       )
+    } else if (this.props.children.type.displayName === 'DishDetail') {
+      currentUser = (
+        <ul id="nav-mobile" className="right">
+          <li><a onClick={this.signOut}>Sign Out</a></li>
+        </ul>
+      )
     } else {
       currentUser = (
         <ul id="nav-mobile" className="right">

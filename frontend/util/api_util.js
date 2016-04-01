@@ -43,7 +43,10 @@ ApiUtil = {
         ApiActions.receiveOneDish(dish);
         callback && callback(dish.id);
       },
-      error: function (a, b, msg) {
+      error: function (req, status, err) {
+        console.log(req);
+        console.log(status);
+        console.log(err);
         alert("all fields required");
         window.location = "session/new";
       }
