@@ -36,8 +36,9 @@ var App = React.createClass({
   },
   render: function () {
     var current_user = this.state.current_user;
+    var displayName = this.props.children.type.displayName;
     var currentUser;
-    if (current_user.id === -1) {
+    if (current_user.id === -1 && displayName === 'DishIndex') {
       currentUser = (
         <ul id="nav-mobile" className="right">
           <li><Link activeClass="active" className="dishsearch-anchor" to="dishsearch-anchor" spy={true} smooth={true} duration={500}>Search for a Dish</Link></li>
@@ -45,7 +46,14 @@ var App = React.createClass({
           <li><a href="users/new">Sign Up</a></li>
         </ul>
       )
-    } else if (this.props.children.type.displayName === 'DishDetail') {
+    } else if (current_user.id === -1 && displayName === 'DishDetail') {
+      currentUser = (
+        <ul id="nav-mobile" className="right">
+          <li><a href="session/new">Sign In</a></li>
+          <li><a href="users/new">Sign Up</a></li>
+        </ul>
+      )
+    } else if (displayName === 'DishDetail') {
       currentUser = (
         <ul id="nav-mobile" className="right">
           <li><a onClick={this.signOut}>Sign Out</a></li>

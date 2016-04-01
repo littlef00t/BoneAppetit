@@ -11,12 +11,8 @@ var DishIndexItem = React.createClass({
   },
   render: function () {
     var dish = this.props.dish;
-    var pickupDetails;
-    if (this.props.currentUser.id !== -1) {
-      pickupDetails = <p onClick={this.showDetail}>View PickUp Details</p>
-    } else {
-      pickupDetails = <p><a href="session/new">Sign in to view pickup details</a></p>
-    }
+    var pickupDetails = <p onClick={this.showDetail}>View PickUp Details</p>
+
     return (
       <div className="card">
         <div className="card-image waves-effect waves-block waves-light">

@@ -26713,24 +26713,12 @@
 	  },
 	  render: function () {
 	    var dish = this.props.dish;
-	    var pickupDetails;
-	    if (this.props.currentUser.id !== -1) {
-	      pickupDetails = React.createElement(
-	        'p',
-	        { onClick: this.showDetail },
-	        'View PickUp Details'
-	      );
-	    } else {
-	      pickupDetails = React.createElement(
-	        'p',
-	        null,
-	        React.createElement(
-	          'a',
-	          { href: 'session/new' },
-	          'Sign in to view pickup details'
-	        )
-	      );
-	    }
+	    var pickupDetails = React.createElement(
+	      'p',
+	      { onClick: this.showDetail },
+	      'View PickUp Details'
+	    );
+	
 	    return React.createElement(
 	      'div',
 	      { className: 'card' },
@@ -32898,8 +32886,9 @@
 	  },
 	  render: function () {
 	    var current_user = this.state.current_user;
+	    var displayName = this.props.children.type.displayName;
 	    var currentUser;
-	    if (current_user.id === -1) {
+	    if (current_user.id === -1 && displayName === 'DishIndex') {
 	      currentUser = React.createElement(
 	        'ul',
 	        { id: 'nav-mobile', className: 'right' },
@@ -32931,7 +32920,30 @@
 	          )
 	        )
 	      );
-	    } else if (this.props.children.type.displayName === 'DishDetail') {
+	    } else if (current_user.id === -1 && displayName === 'DishDetail') {
+	      currentUser = React.createElement(
+	        'ul',
+	        { id: 'nav-mobile', className: 'right' },
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            'a',
+	            { href: 'session/new' },
+	            'Sign In'
+	          )
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            'a',
+	            { href: 'users/new' },
+	            'Sign Up'
+	          )
+	        )
+	      );
+	    } else if (displayName === 'DishDetail') {
 	      currentUser = React.createElement(
 	        'ul',
 	        { id: 'nav-mobile', className: 'right' },
