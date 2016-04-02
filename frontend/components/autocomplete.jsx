@@ -77,7 +77,7 @@ var AutoComplete = React.createClass({
           <div className="input-field col s12">
             <i className="material-icons prefix">search</i>
             <input id='dish-searched' type="text" valueLink={this.linkState('inputVal')} />
-            <label id="search-tour" className="active" htmlFor="dish-searched">Search for a dish</label>
+            <label className="active" htmlFor="dish-searched">Search for a dish</label>
           </div>
         </div>
         {matchingDishes}
