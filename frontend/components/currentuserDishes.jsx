@@ -12,7 +12,7 @@ var CurrentuserDishes = React.createClass({
     console.log(this.props.current_user);
   },
   showDetail: function () {
-    scrollTo(0, 1000);
+    scrollTo(0, 975);
     this.history.pushState(null, 'dishes/' + this.props.dish.id, {})
   },
   render: function(){
@@ -40,8 +40,10 @@ var CurrentuserDishes = React.createClass({
     return(
       <div className="padding-bottom padding-sides">
         <h3 className="center-align">My Dishes</h3>
-        <div>
-          {myDishes}
+        <div className="row">
+          <div className="input-field col s12">
+            {myDishes}
+          </div>
         </div>
       </div>
     );

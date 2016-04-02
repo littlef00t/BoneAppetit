@@ -31,7 +31,7 @@ var App = React.createClass({
     });
   },
   showMyDishes: function () {
-    scrollTo(0, 1000);
+    scrollTo(0, 975);
     this.history.pushState(null, 'mydishes/', {})
   },
   componentWillUnmount: function () {

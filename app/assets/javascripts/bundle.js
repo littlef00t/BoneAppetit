@@ -26703,7 +26703,7 @@
 	  mixins: [History],
 	
 	  showDetail: function () {
-	    scrollTo(0, 1000);
+	    scrollTo(0, 975);
 	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
 	  },
 	  render: function () {
@@ -32873,7 +32873,7 @@
 	    });
 	  },
 	  showMyDishes: function () {
-	    scrollTo(0, 1000);
+	    scrollTo(0, 975);
 	    this.history.pushState(null, 'mydishes/', {});
 	  },
 	  componentWillUnmount: function () {
@@ -33104,7 +33104,7 @@
 	    console.log(this.props.current_user);
 	  },
 	  showDetail: function () {
-	    scrollTo(0, 1000);
+	    scrollTo(0, 975);
 	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
 	  },
 	  render: function () {
@@ -33145,8 +33145,12 @@
 	      ),
 	      React.createElement(
 	        'div',
-	        null,
-	        myDishes
+	        { className: 'row' },
+	        React.createElement(
+	          'div',
+	          { className: 'input-field col s12' },
+	          myDishes
+	        )
 	      )
 	    );
 	  }
