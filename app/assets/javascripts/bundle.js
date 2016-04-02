@@ -33036,7 +33036,7 @@
 	            { className: 'nav-wrapper' },
 	            React.createElement(
 	              'a',
-	              { href: '#', className: 'brand-logo left' },
+	              { href: '#', className: 'brand-logo left', id: 'tour' },
 	              'Hungry Heart'
 	            ),
 	            currentUser

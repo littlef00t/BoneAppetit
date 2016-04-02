@@ -89,7 +89,7 @@ var App = React.createClass({
         <div className="navbar-fixed">
           <nav>
             <div className="nav-wrapper">
-              <a href="#" className="brand-logo left">Hungry Heart</a>
+              <a href="#" className="brand-logo left" id="tour">Hungry Heart</a>
               {currentUser}
             </div>
           </nav>
