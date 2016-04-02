@@ -49,16 +49,16 @@ var App = React.createClass({
     if (current_user.id === -1 && displayName === 'DishIndex') {
       currentUser = (
         <ul id="nav-mobile" className="right">
-          <li><Link activeClass="active" className="dishsearch-anchor" to="dishsearch-anchor" spy={true} smooth={true} duration={500}>Search for a Dish</Link></li>
+          <li id="search-tour"><Link activeClass="active" className="dishsearch-anchor" to="dishsearch-anchor" spy={true} smooth={true} duration={500}>Search for a Dish</Link></li>
           <li><a href="session/new">Sign In</a></li>
-          <li><a href="users/new">Sign Up</a></li>
+          <li id="signup-tour"><a href="users/new">Sign Up</a></li>
         </ul>
       )
     } else if (current_user.id === -1 && displayName === 'DishDetail') {
       currentUser = (
         <ul id="nav-mobile" className="right">
           <li><a href="session/new">Sign In</a></li>
-          <li><a href="users/new">Sign Up</a></li>
+          <li id="signup-tour"><a href="users/new">Sign Up</a></li>
         </ul>
       )
     } else if (displayName === 'DishDetail') {
@@ -79,7 +79,7 @@ var App = React.createClass({
         <ul id="nav-mobile" className="right">
           <li><a onClick={this.showMyDishes}>My Dishes</a></li>
           <li><Link activeClass="active" className="dishform-anchor" to="dishform-anchor" spy={true} smooth={true} duration={500} >Share a Dish</Link></li>
-          <li><Link activeClass="active" className="dishsearch-anchor" to="dishsearch-anchor" spy={true} smooth={true} duration={500}>Search for a Dish</Link></li>
+          <li id="search-tour"><Link activeClass="active" className="dishsearch-anchor" to="dishsearch-anchor" spy={true} smooth={true} duration={500}>Search for a Dish</Link></li>
           <li><a onClick={this.signOut}>Sign Out</a></li>
         </ul>
       )

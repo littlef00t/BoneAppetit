@@ -32894,7 +32894,7 @@
 	        { id: 'nav-mobile', className: 'right' },
 	        React.createElement(
 	          'li',
-	          null,
+	          { id: 'search-tour' },
 	          React.createElement(
 	            Link,
 	            { activeClass: 'active', className: 'dishsearch-anchor', to: 'dishsearch-anchor', spy: true, smooth: true, duration: 500 },
@@ -32912,7 +32912,7 @@
 	        ),
 	        React.createElement(
 	          'li',
-	          null,
+	          { id: 'signup-tour' },
 	          React.createElement(
 	            'a',
 	            { href: 'users/new' },
@@ -32935,7 +32935,7 @@
 	        ),
 	        React.createElement(
 	          'li',
-	          null,
+	          { id: 'signup-tour' },
 	          React.createElement(
 	            'a',
 	            { href: 'users/new' },
@@ -33004,7 +33004,7 @@
 	        ),
 	        React.createElement(
 	          'li',
-	          null,
+	          { id: 'search-tour' },
 	          React.createElement(
 	            Link,
 	            { activeClass: 'active', className: 'dishsearch-anchor', to: 'dishsearch-anchor', spy: true, smooth: true, duration: 500 },
