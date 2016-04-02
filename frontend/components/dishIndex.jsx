@@ -11,13 +11,13 @@ var Element = Scroll.Element;
 
 var DishIndex = React.createClass({
   getInitialState: function () {
-    return { dishes: DishStore.all(),
+    return { dishes: DishStore.all()
               // current_user: this.props.current_user
      };
   },
 
   _onChange: function () {
-    this.setState({ dishes: DishStore.all(),
+    this.setState({ dishes: DishStore.all()
               // current_user: this.props.current_user
               // current_user: CurrentUserStore.find()
     });
@@ -26,7 +26,7 @@ var DishIndex = React.createClass({
   componentDidMount: function () {
     this.dishListener = DishStore.addListener(this._onChange);
     ApiUtil.fetchDishes();
-    console.log(this.props.current_user);
+    // console.log(this.props.current_user);
     // this.currentuserListener = CurrentUserStore.addListener(this._onChange);
     // ApiUtil.fetchCurrentUser();
   },

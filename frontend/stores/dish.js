@@ -18,6 +18,16 @@ DishStore.find = function (id) {
   return _dishes[id];
 }
 
+DishStore.findDishes = function (user_id) {
+  var mydishes = [];
+  for (var id in _dishes) {
+    if (_dishes[id].user_id === user_id){
+      mydishes.push(_dishes[id]);
+    }
+  }
+  return mydishes;
+}
+
 var resetDishes = function (dishes) {
   _dishes = {};
   dishes.forEach(function (dish) {

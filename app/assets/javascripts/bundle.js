@@ -19682,21 +19682,21 @@
 	
 	  getInitialState: function () {
 	    return { dishes: DishStore.all()
+	      // current_user: this.props.current_user
 	    };
 	  },
 	
-	  // current_user: this.props.current_user
 	  _onChange: function () {
 	    this.setState({ dishes: DishStore.all()
+	      // current_user: this.props.current_user
+	      // current_user: CurrentUserStore.find()
 	    });
 	  },
 	
-	  // current_user: this.props.current_user
-	  // current_user: CurrentUserStore.find()
 	  componentDidMount: function () {
 	    this.dishListener = DishStore.addListener(this._onChange);
 	    ApiUtil.fetchDishes();
-	    console.log(this.props.current_user);
+	    // console.log(this.props.current_user);
 	    // this.currentuserListener = CurrentUserStore.addListener(this._onChange);
 	    // ApiUtil.fetchCurrentUser();
 	  },
@@ -19764,6 +19764,16 @@
 	
 	DishStore.find = function (id) {
 	  return _dishes[id];
+	};
+	
+	DishStore.findDishes = function (user_id) {
+	  var mydishes = [];
+	  for (var id in _dishes) {
+	    if (_dishes[id].user_id === user_id) {
+	      mydishes.push(_dishes[id]);
+	    }
+	  }
+	  return mydishes;
 	};
 	
 	var resetDishes = function (dishes) {
@@ -33081,10 +33091,15 @@
 	var React = __webpack_require__(1);
 	var ApiUtil = __webpack_require__(182);
 	var DishIndexItem = __webpack_require__(185);
+	var DishStore = __webpack_require__(160);
 	
 	var CurrentuserDishes = React.createClass({
 	  displayName: 'CurrentuserDishes',
 	
+	  getInitialState: function () {
+	    return { dishes: DishStore.findDishes(this.props.current_user.id)
+	    };
+	  },
 	  componentDidMount: function () {
 	    console.log(this.props.current_user);
 	  },
@@ -33093,16 +33108,36 @@
 	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
 	  },
 	  render: function () {
-	    var dish;
+	    var dishes = this.state.dishes;
+	    var myDishes;
 	    var pickupDetails = React.createElement(
 	      'p',
 	      { onClick: this.showDetail },
 	      'View PickUp Details'
 	    );
+	    if (dishes.length === 0) {
+	      myDishes = React.createElement(
+	        'div',
+	        null,
+	        'You have not shared any dishes.'
+	      );
+	    } else {
+	      myDishes = React.createElement(
+	        'ul',
+	        { className: 'matched-items' },
+	        dishes.map(function (dish, idx) {
+	          return React.createElement(
+	            'li',
+	            { key: idx },
+	            React.createElement(DishIndexItem, { dish: dish })
+	          );
+	        })
+	      );
+	    }
 	
 	    return React.createElement(
 	      'div',
-	      { className: 'card' },
+	      { className: 'padding-bottom padding-sides' },
 	      React.createElement(
 	        'h3',
 	        { className: 'center-align' },
@@ -33110,52 +33145,8 @@
 	      ),
 	      React.createElement(
 	        'div',
-	        { className: 'card-image waves-effect waves-block waves-light' },
-	        React.createElement(
-	          'ul',
-	          null,
-	          dish.images.map(function (image) {
-	            return React.createElement(
-	              'div',
-	              { key: image.id },
-	              React.createElement('img', { className: 'activator responsive-img', src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" })
-	            );
-	          })
-	        )
-	      ),
-	      React.createElement(
-	        'div',
-	        { className: 'card-content' },
-	        React.createElement(
-	          'span',
-	          { className: 'card-title activator grey-text text-darken-4' },
-	          dish.name,
-	          React.createElement(
-	            'i',
-	            { className: 'material-icons right' },
-	            'more_vert'
-	          )
-	        ),
-	        pickupDetails
-	      ),
-	      React.createElement(
-	        'div',
-	        { className: 'card-reveal' },
-	        React.createElement(
-	          'span',
-	          { className: 'card-title grey-text text-darken-4' },
-	          'Description',
-	          React.createElement(
-	            'i',
-	            { className: 'material-icons right' },
-	            'close'
-	          )
-	        ),
-	        React.createElement(
-	          'p',
-	          null,
-	          dish.description
-	        )
+	        null,
+	        myDishes
 	      )
 	    );
 	  }

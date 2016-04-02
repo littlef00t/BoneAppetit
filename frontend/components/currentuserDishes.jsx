@@ -1,8 +1,13 @@
 var React = require('react');
 var ApiUtil = require('../util/api_util');
 var DishIndexItem = require('./DishIndexItem');
+var DishStore = require('../stores/dish');
 
 var CurrentuserDishes = React.createClass({
+  getInitialState: function(){
+    return { dishes: DishStore.findDishes(this.props.current_user.id)
+    };
+  },
   componentDidMount: function(){
     console.log(this.props.current_user);
   },
@@ -11,32 +16,32 @@ var CurrentuserDishes = React.createClass({
     this.history.pushState(null, 'dishes/' + this.props.dish.id, {})
   },
   render: function(){
-    var dish;
+    var dishes = this.state.dishes;
+    var myDishes;
     var pickupDetails = <p onClick={this.showDetail}>View PickUp Details</p>
+      if (dishes.length === 0) {
+        myDishes = <div>You have not shared any dishes.</div>
+      } else {
+        myDishes = (
+          <ul className="matched-items">
+            {
+              dishes.map(function (dish, idx) {
+                return (
+                  <li key={idx}>
+                    <DishIndexItem dish={dish}/>
+                  </li>
+                )
+              })
+            }
+          </ul>
+        )
+      }
 
     return(
-      <div className="card">
+      <div className="padding-bottom padding-sides">
         <h3 className="center-align">My Dishes</h3>
-        <div className="card-image waves-effect waves-block waves-light">
-          <ul>
-            {dish.images.map(function (image) {
-                  return (
-                    <div key={image.id}>
-                      <img className="activator responsive-img" src={"https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png"}/>
-                    </div>
-                  );
-                }
-              )
-            }
-            </ul>
-        </div>
-        <div className="card-content">
-          <span className="card-title activator grey-text text-darken-4">{dish.name}<i className="material-icons right">more_vert</i></span>
-          {pickupDetails}
-        </div>
-        <div className="card-reveal">
-          <span className="card-title grey-text text-darken-4">Description<i className="material-icons right">close</i></span>
-          <p>{dish.description}</p>
+        <div>
+          {myDishes}
         </div>
       </div>
     );
