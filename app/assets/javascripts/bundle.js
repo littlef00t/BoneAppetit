@@ -26710,7 +26710,7 @@
 	    var dish = this.props.dish;
 	    var pickupDetails = React.createElement(
 	      'p',
-	      { onClick: this.showDetail },
+	      { id: 'pickup-tour', onClick: this.showDetail },
 	      'View PickUp Details'
 	    );
 	
@@ -32546,7 +32546,7 @@
 	          React.createElement('input', { id: 'dish-searched', type: 'text', valueLink: this.linkState('inputVal') }),
 	          React.createElement(
 	            'label',
-	            { className: 'active', htmlFor: 'dish-searched' },
+	            { id: 'search-tour', className: 'active', htmlFor: 'dish-searched' },
 	            'Search for a dish'
 	          )
 	        )
@@ -32894,7 +32894,7 @@
 	        { id: 'nav-mobile', className: 'right' },
 	        React.createElement(
 	          'li',
-	          { id: 'search-tour' },
+	          null,
 	          React.createElement(
 	            Link,
 	            { activeClass: 'active', className: 'dishsearch-anchor', to: 'dishsearch-anchor', spy: true, smooth: true, duration: 500 },
@@ -33004,7 +33004,7 @@
 	        ),
 	        React.createElement(
 	          'li',
-	          { id: 'search-tour' },
+	          null,
 	          React.createElement(
 	            Link,
 	            { activeClass: 'active', className: 'dishsearch-anchor', to: 'dishsearch-anchor', spy: true, smooth: true, duration: 500 },

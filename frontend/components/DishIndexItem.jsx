@@ -11,7 +11,7 @@ var DishIndexItem = React.createClass({
   },
   render: function () {
     var dish = this.props.dish;
-    var pickupDetails = <p onClick={this.showDetail}>View PickUp Details</p>
+    var pickupDetails = <p id="pickup-tour" onClick={this.showDetail}>View PickUp Details</p>
 
     return (
       <div className="card">
