@@ -2,6 +2,8 @@ var React = require('react');
 var ApiUtil = require('../util/api_util');
 var CurrentUserStore = require('../stores/current_user');
 
+var History = require('react-router').History;
+
 var Scroll  = require('react-scroll');
 
 var Link    = Scroll.Link;
@@ -9,6 +11,8 @@ var Element = Scroll.Element;
 var Events  = Scroll.Events;
 
 var App = React.createClass({
+  mixins: [History],
+
   getInitialState: function () {
     return { current_user: CurrentUserStore.find() };
   },
@@ -25,6 +29,10 @@ var App = React.createClass({
     Events.scrollEvent.register('end', function(to, element) {
       console.log("end", arguments);
     });
+  },
+  showMyDishes: function () {
+    scrollTo(0, 1000);
+    this.history.pushState(null, 'mydishes/', {})
   },
   componentWillUnmount: function () {
     this.currentuserListener.remove();
@@ -56,12 +64,20 @@ var App = React.createClass({
     } else if (displayName === 'DishDetail') {
       currentUser = (
         <ul id="nav-mobile" className="right">
+          <li><a onClick={this.showMyDishes}>My Dishes</a></li>
+          <li><a onClick={this.signOut}>Sign Out</a></li>
+        </ul>
+      )
+    } else if (displayName === 'CurrentuserDishes') {
+      currentUser = (
+        <ul id="nav-mobile" className="right">
           <li><a onClick={this.signOut}>Sign Out</a></li>
         </ul>
       )
     } else {
       currentUser = (
         <ul id="nav-mobile" className="right">
+          <li><a onClick={this.showMyDishes}>My Dishes</a></li>
           <li><Link activeClass="active" className="dishform-anchor" to="dishform-anchor" spy={true} smooth={true} duration={500} >Share a Dish</Link></li>
           <li><Link activeClass="active" className="dishsearch-anchor" to="dishsearch-anchor" spy={true} smooth={true} duration={500}>Search for a Dish</Link></li>
           <li><a onClick={this.signOut}>Sign Out</a></li>
@@ -94,7 +110,10 @@ var App = React.createClass({
           <div className="parallax-container">
             <div className="parallax"></div>
           </div>
-          <div className="everything-but-nav">{this.props.children}</div>
+          <div className="everything-but-nav">
+            {React.cloneElement(this.props.children,
+            { current_user: this.state.current_user})}
+          </div>
         </div>
       </div>
     )

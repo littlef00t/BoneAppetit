@@ -50,6 +50,7 @@
 	var DishIndex = __webpack_require__(159);
 	var DishIndexItem = __webpack_require__(185);
 	var DishDetail = __webpack_require__(255);
+	var CurrentuserDishes = __webpack_require__(259);
 	
 	var Router = __webpack_require__(186).Router;
 	var Route = __webpack_require__(186).Route;
@@ -62,7 +63,8 @@
 	  { path: '/', component: App },
 	  React.createElement(IndexRoute, { component: DishIndex }),
 	  React.createElement(Route, { path: 'dishes', component: DishIndex }),
-	  React.createElement(Route, { path: 'dishes/:dishId', component: DishDetail })
+	  React.createElement(Route, { path: 'dishes/:dishId', component: DishDetail }),
+	  React.createElement(Route, { path: 'mydishes', component: CurrentuserDishes })
 	);
 	
 	document.addEventListener("DOMContentLoaded", function () {
@@ -19679,51 +19681,34 @@
 	  displayName: 'DishIndex',
 	
 	  getInitialState: function () {
-	    return { dishes: DishStore.all(),
-	      current_user: CurrentUserStore.find()
+	    return { dishes: DishStore.all()
 	    };
 	  },
 	
+	  // current_user: this.props.current_user
 	  _onChange: function () {
-	    this.setState({ dishes: DishStore.all(),
-	      current_user: CurrentUserStore.find()
+	    this.setState({ dishes: DishStore.all()
 	    });
 	  },
 	
+	  // current_user: this.props.current_user
+	  // current_user: CurrentUserStore.find()
 	  componentDidMount: function () {
 	    this.dishListener = DishStore.addListener(this._onChange);
 	    ApiUtil.fetchDishes();
-	    this.currentuserListener = CurrentUserStore.addListener(this._onChange);
-	    ApiUtil.fetchCurrentUser();
+	    console.log(this.props.current_user);
+	    // this.currentuserListener = CurrentUserStore.addListener(this._onChange);
+	    // ApiUtil.fetchCurrentUser();
 	  },
 	
 	  componentWillUnmount: function () {
 	    this.dishListener.remove();
-	    this.currentuserListener.remove();
+	    // this.currentuserListener.remove();
 	  },
 	
 	  render: function () {
-	    var greetings = ["You look lovely today,", "Nice to have you here,", "Your smile is contagious,", "You're a smart cookie,", "You are appreciated,", "You are enough,", "You should be proud of yourself,", "You've got all the right moves,", "I bet you sweat glitter,", "You are inspiring,", "You are a great example to others,", "You are like a breath of fresh air,", "You are loved,", "You are someone's reason to smile,", "You are a gift to those around you,", "You're truly special,"];
-	    var randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
-	    var current_user = this.state.current_user;
-	    var greeting;
-	    if (current_user.id !== -1) {
-	      greeting = React.createElement(
-	        'h3',
-	        { id: 'greeting', className: 'center-align' },
-	        randomGreeting,
-	        ' ',
-	        current_user.username,
-	        '!'
-	      );
-	    } else {
-	      greeting = React.createElement(
-	        'h3',
-	        { id: 'greeting', className: 'center-align' },
-	        randomGreeting,
-	        ' guest!'
-	      );
-	    }
+	    var current_user = this.props.current_user;
+	
 	    var dishForm;
 	    if (current_user.id !== -1) {
 	      dishForm = React.createElement(DishForm, null);
@@ -19750,7 +19735,7 @@
 	          'Dishes Offered'
 	        )
 	      ),
-	      React.createElement(AutoComplete, { currentUser: this.state.current_user, dishes: this.state.dishes })
+	      React.createElement(AutoComplete, { currentUser: this.props.current_user, dishes: this.state.dishes })
 	    );
 	  }
 	});
@@ -32446,7 +32431,6 @@
 	CurrentUserStore.__onDispatch = function (payload) {
 	  switch (payload.actionType) {
 	    case "CURRENTUSER_RECEIVED":
-	      // debugger;
 	      current_user = payload.current_user;
 	      CurrentUserStore.__emitChange();
 	      break;
@@ -32512,7 +32496,6 @@
 	  //   this.setState({ inputVal: dish })
 	  // },
 	  render: function () {
-	    var currentUser = this.props.currentUser;
 	    var fullDishes = this.fullDishes();
 	    var that = this;
 	    var matchingDishes;
@@ -32530,7 +32513,7 @@
 	          return React.createElement(
 	            'li',
 	            { key: idx },
-	            React.createElement(DishIndexItem, { currentUser: currentUser, dish: dish })
+	            React.createElement(DishIndexItem, { dish: dish })
 	          );
 	        })
 	      );
@@ -32584,11 +32567,11 @@
 	  mixins: [History],
 	
 	  getStateFromStore: function () {
-	    return { dish: DishStore.find(parseInt(this.props.params.dishId)),
-	      current_user: CurrentUserStore.find()
+	    return { dish: DishStore.find(parseInt(this.props.params.dishId))
 	    };
 	  },
 	
+	  // current_user: CurrentUserStore.find()
 	  getInitialState: function () {
 	    return this.getStateFromStore();
 	  },
@@ -32602,14 +32585,14 @@
 	    this._onChange();
 	  },
 	  componentDidMount: function () {
-	    this.currentuserListener = CurrentUserStore.addListener(this._onChange);
-	    ApiUtil.fetchCurrentUser();
+	    // this.currentuserListener = CurrentUserStore.addListener(this._onChange);
+	    // ApiUtil.fetchCurrentUser();
 	    this.dishListener = DishStore.addListener(this._onChange);
 	    ApiUtil.fetchDish(parseInt(this.props.params.dishId));
 	  },
 	  componentWillUnmount: function () {
 	    this.dishListener.remove();
-	    this.currentuserListener.remove();
+	    // this.currentuserListener.remove();
 	  },
 	  handleDelete: function (e) {
 	    e.preventDefault();
@@ -32620,7 +32603,7 @@
 	  render: function () {
 	    var Link = ReactRouter.Link;
 	    var dish = this.state.dish;
-	    var current_user = this.state.current_user;
+	    var current_user = this.props.current_user;
 	
 	    var commentForm;
 	    if (current_user.id !== -1) {
@@ -32662,7 +32645,6 @@
 	      React.createElement(
 	        'h4',
 	        null,
-	        'Dish: ',
 	        dish.name
 	      ),
 	      React.createElement(
@@ -32850,6 +32832,8 @@
 	var ApiUtil = __webpack_require__(182);
 	var CurrentUserStore = __webpack_require__(253);
 	
+	var History = __webpack_require__(186).History;
+	
 	var Scroll = __webpack_require__(242);
 	
 	var Link = Scroll.Link;
@@ -32858,6 +32842,8 @@
 	
 	var App = React.createClass({
 	  displayName: 'App',
+	
+	  mixins: [History],
 	
 	  getInitialState: function () {
 	    return { current_user: CurrentUserStore.find() };
@@ -32875,6 +32861,10 @@
 	    Events.scrollEvent.register('end', function (to, element) {
 	      console.log("end", arguments);
 	    });
+	  },
+	  showMyDishes: function () {
+	    scrollTo(0, 1000);
+	    this.history.pushState(null, 'mydishes/', {});
 	  },
 	  componentWillUnmount: function () {
 	    this.currentuserListener.remove();
@@ -32952,6 +32942,29 @@
 	          null,
 	          React.createElement(
 	            'a',
+	            { onClick: this.showMyDishes },
+	            'My Dishes'
+	          )
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            'a',
+	            { onClick: this.signOut },
+	            'Sign Out'
+	          )
+	        )
+	      );
+	    } else if (displayName === 'CurrentuserDishes') {
+	      currentUser = React.createElement(
+	        'ul',
+	        { id: 'nav-mobile', className: 'right' },
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            'a',
 	            { onClick: this.signOut },
 	            'Sign Out'
 	          )
@@ -32961,6 +32974,15 @@
 	      currentUser = React.createElement(
 	        'ul',
 	        { id: 'nav-mobile', className: 'right' },
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            'a',
+	            { onClick: this.showMyDishes },
+	            'My Dishes'
+	          )
+	        ),
 	        React.createElement(
 	          'li',
 	          null,
@@ -33044,13 +33066,102 @@
 	        React.createElement(
 	          'div',
 	          { className: 'everything-but-nav' },
-	          this.props.children
+	          React.cloneElement(this.props.children, { current_user: this.state.current_user })
 	        )
 	      )
 	    );
 	  }
 	});
 	module.exports = App;
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ApiUtil = __webpack_require__(182);
+	var DishIndexItem = __webpack_require__(185);
+	
+	var CurrentuserDishes = React.createClass({
+	  displayName: 'CurrentuserDishes',
+	
+	  componentDidMount: function () {
+	    console.log(this.props.current_user);
+	  },
+	  showDetail: function () {
+	    scrollTo(0, 1000);
+	    this.history.pushState(null, 'dishes/' + this.props.dish.id, {});
+	  },
+	  render: function () {
+	    var dish;
+	    var pickupDetails = React.createElement(
+	      'p',
+	      { onClick: this.showDetail },
+	      'View PickUp Details'
+	    );
+	
+	    return React.createElement(
+	      'div',
+	      { className: 'card' },
+	      React.createElement(
+	        'h3',
+	        { className: 'center-align' },
+	        'My Dishes'
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'card-image waves-effect waves-block waves-light' },
+	        React.createElement(
+	          'ul',
+	          null,
+	          dish.images.map(function (image) {
+	            return React.createElement(
+	              'div',
+	              { key: image.id },
+	              React.createElement('img', { className: 'activator responsive-img', src: "https://res.cloudinary.com/littlef00t/image/upload/w_300,h_300/" + image.url + ".png" })
+	            );
+	          })
+	        )
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'card-content' },
+	        React.createElement(
+	          'span',
+	          { className: 'card-title activator grey-text text-darken-4' },
+	          dish.name,
+	          React.createElement(
+	            'i',
+	            { className: 'material-icons right' },
+	            'more_vert'
+	          )
+	        ),
+	        pickupDetails
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'card-reveal' },
+	        React.createElement(
+	          'span',
+	          { className: 'card-title grey-text text-darken-4' },
+	          'Description',
+	          React.createElement(
+	            'i',
+	            { className: 'material-icons right' },
+	            'close'
+	          )
+	        ),
+	        React.createElement(
+	          'p',
+	          null,
+	          dish.description
+	        )
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = CurrentuserDishes;
 
 /***/ }
 /******/ ]);

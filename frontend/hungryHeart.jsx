@@ -4,6 +4,7 @@ var ReactDOM = require('react-dom');
 var DishIndex = require('./components/dishIndex');
 var DishIndexItem = require('./components/DishIndexItem');
 var DishDetail = require('./components/dishDetail');
+var CurrentuserDishes = require('./components/currentuserDishes');
 
 
 var Router = require('react-router').Router;
@@ -17,6 +18,7 @@ var routes = (
     <IndexRoute component={DishIndex}/>
     <Route path="dishes" component={DishIndex}/>
     <Route path="dishes/:dishId" component={DishDetail}></Route>
+    <Route path="mydishes" component={CurrentuserDishes}></Route>
   </Route>
 );
 

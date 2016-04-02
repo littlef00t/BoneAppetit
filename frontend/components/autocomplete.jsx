@@ -50,7 +50,6 @@ var AutoComplete = React.createClass({
   //   this.setState({ inputVal: dish })
   // },
   render: function () {
-    var currentUser = this.props.currentUser;
     var fullDishes = this.fullDishes();
     var that = this;
     var matchingDishes;
@@ -63,7 +62,7 @@ var AutoComplete = React.createClass({
             fullDishes.map(function (dish, idx) {
               return (
                 <li key={idx}>
-                  <DishIndexItem currentUser={currentUser} dish={dish}/>
+                  <DishIndexItem dish={dish}/>
                 </li>
               )
             })

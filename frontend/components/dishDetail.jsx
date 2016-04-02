@@ -12,7 +12,7 @@ var DishDetail = React.createClass({
 
   getStateFromStore: function () {
     return { dish: DishStore.find(parseInt(this.props.params.dishId)),
-              current_user: CurrentUserStore.find()
+              // current_user: CurrentUserStore.find()
      };
   },
 
@@ -29,14 +29,14 @@ var DishDetail = React.createClass({
     this._onChange();
   },
   componentDidMount: function () {
-    this.currentuserListener = CurrentUserStore.addListener(this._onChange);
-    ApiUtil.fetchCurrentUser();
+    // this.currentuserListener = CurrentUserStore.addListener(this._onChange);
+    // ApiUtil.fetchCurrentUser();
     this.dishListener = DishStore.addListener(this._onChange);
     ApiUtil.fetchDish(parseInt(this.props.params.dishId));
   },
   componentWillUnmount: function () {
     this.dishListener.remove();
-    this.currentuserListener.remove();
+    // this.currentuserListener.remove();
   },
   handleDelete: function (e) {
     e.preventDefault();
@@ -47,7 +47,7 @@ var DishDetail = React.createClass({
   render: function () {
     var Link = ReactRouter.Link;
     var dish = this.state.dish;
-    var current_user = this.state.current_user;
+    var current_user = this.props.current_user;
 
     var commentForm;
     if (current_user.id !== -1) {
@@ -81,7 +81,7 @@ var DishDetail = React.createClass({
           }
           {deleteButton}
         </div>
-        <h4>Dish: {dish.name}</h4>
+        <h4>{dish.name}</h4>
           <h5>Pickup Location: {dish.location}</h5>
           <h5>Pickup Date and Time: {dish.pickup_time}</h5>
           <small className="purple-color">posted by {dish.username}</small>

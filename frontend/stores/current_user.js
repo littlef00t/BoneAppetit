@@ -12,10 +12,9 @@ CurrentUserStore.find = function () {
 CurrentUserStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case "CURRENTUSER_RECEIVED":
-    // debugger;
-    current_user = payload.current_user;
-    CurrentUserStore.__emitChange();
-    break;
+      current_user = payload.current_user;
+      CurrentUserStore.__emitChange();
+      break;
   }
 }
 
